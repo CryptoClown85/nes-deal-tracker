@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NES Deal Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div>
+      <h1>NES DEAL TRACKER</h1>
+      <p class="sub">New complete-in-box (cart + box + manual) NES listings on Marktplaats, Tradera &amp; eBay, checked against PriceCharting. Tap “All listings” to see loose and partial games too.</p>
+    </div>
+  </div>
+  <div class="meta" id="meta"></div>
+</header>
+
+<div class="scope" id="scope" role="group" aria-label="Which listings">
+  <button type="button" class="seg" data-scope="cib" aria-pressed="true">Complete in box</button>
+  <button type="button" class="seg" data-scope="all" aria-pressed="false">All listings</button>
+</div>
+
+<nav class="tabs" id="tabs" role="tablist"></nav>
+
+<section class="controls">
+  <label>Verdict
+    <select id="f-verdict">
+      <option value="">All</option><option>Good buy</option><option>Fair</option><option>Overpriced</option><option>Unclear</option>
+    </select>
+  </label>
+  <label>Sort
+    <select id="f-sort">
+      <option value="new">Newest first</option>
+      <option value="deal">Best deal (% vs value)</option>
+      <option value="price-asc">Price low → high</option>
+      <option value="price-desc">Price high → low</option>
+    </select>
+  </label>
+  <label class="grow">Search
+    <input id="f-q" type="search" placeholder="title, e.g. zelda">
+  </label>
+  <label class="chk"><input type="checkbox" id="f-new"> New today only</label>
+  <label class="chk"><input type="checkbox" id="f-archive"> Show archive (older / gone)</label>
+</section>
+
+<p class="summary" id="summary"></p>
+<main id="grid" class="grid"></main>
+
+<footer class="foot">
+  <p><b>About the values.</b> PriceCharting prices are a guide, not a quote. European (PAL) values come from thin sales data
+  (often ~1 sale/month); US (NTSC) values are used for eBay and for US carts. Verdicts: <span class="badge good">Good buy</span>
+  ≥20% below the matching value, <span class="badge fair">Fair</span> within ±20%, <span class="badge over">Overpriced</span>
+  &gt;20% above, <span class="badge unclear">Unclear</span> when condition, game or price is unknown. Totals include shipping
+  when known (Tradera shipping is the cheapest Swedish domestic rate; delivery to NL may differ). US/Canada eBay imports may add
+  ~21% VAT plus handling fees.</p>
+  <p id="fx"></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
