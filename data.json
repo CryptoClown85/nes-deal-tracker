@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T19:02:45+02:00",
+ "generated_at": "2026-10-08T19:10:37+02:00",
  "today": "2026-10-08",
  "fx": {
   "date": "2026-10-08",
@@ -16,7 +16,7 @@
   "tradera_feed": 80,
   "2dehands_feed": 120,
   "ebay_de_feed": 116,
-  "ebay_it_feed": 173,
+  "ebay_it_feed": 172,
   "ebay_uk_feed": 130,
   "2dehands_dupes_of_marktplaats": 28,
   "ebay_inbox": 60
@@ -48,11 +48,11 @@
    "ok": true,
    "cards": 244,
    "unique": 215,
-   "ships_to_nl": 173,
+   "ships_to_nl": 172,
    "dropped": {
     "placeholder": 1,
-    "not NES": 6,
-    "ok": 173,
+    "not NES": 7,
+    "ok": 172,
     "no shipping to NL": 14,
     "seller in JP (Famicom / repro risk)": 21
    },
@@ -61,19 +61,199 @@
   "ebay_uk": {
    "ok": true,
    "cards": 244,
-   "unique": 218,
+   "unique": 219,
    "ships_to_nl": 130,
    "dropped": {
     "placeholder": 1,
+    "no shipping to NL": 54,
     "ok": 130,
     "other platform": 9,
-    "seller in JP (Famicom / repro risk)": 25,
-    "no shipping to NL": 53
+    "seller in JP (Famicom / repro risk)": 25
    },
    "blocked_attempts": 0
   }
  },
+ "sources_checked_at": "2026-10-08T19:10:37+02:00",
  "listings": [
+  {
+   "key": "ebay_it:960038144346",
+   "marketplace": "ebay_it",
+   "id": "960038144346",
+   "title": "RESCUE THE EMBASSY MISSION COMPLETO NINTENDO NES PAL B FRA CIB IMBALLO ORIGINALE Kemco buone condizioni",
+   "url": "https://www.ebay.it/itm/960038144346",
+   "image_url": "https://i.ebayimg.com/images/g/KygAAeSwZPtqwn24/s-l500.jpg",
+   "thumb_url": "https://i.ebayimg.com/images/g/KygAAeSwZPtqwn24/s-l500.jpg",
+   "location": "FR",
+   "price": {
+    "amount": 1.0,
+    "currency": "EUR",
+    "type": "auction"
+   },
+   "buy_now": null,
+   "bids": 0,
+   "end_time": null,
+   "shipping": {
+    "amount": 8.0,
+    "currency": "EUR",
+    "note": "quoted to NL by eBay"
+   },
+   "region": "PAL",
+   "condition": "CIB",
+   "pc_title": "Rescue the Embassy Mission",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/rescue-the-embassy-mission",
+   "pc_usd": {
+    "loose": 10.08,
+    "cib": 43.36,
+    "as_of": "2026-10-07T21:52:20+02:00"
+   },
+   "eur": {
+    "price": 1.0,
+    "buy_now": null,
+    "shipping": 8.0,
+    "total": 9.0,
+    "pc_loose": 9.01,
+    "pc_cib": 38.76,
+    "import": null,
+    "pc_new": 124.26
+   },
+   "verdict": "Good buy",
+   "pct": -0.768,
+   "notes": [
+    "auction: verdict at current bid, will likely rise"
+   ],
+   "first_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-08T19:10:37+02:00",
+     "amount": 1.0,
+     "currency": "EUR"
+    }
+   ],
+   "promoted": null,
+   "condition_label": "Di seconda mano | Venditore professionale",
+   "img": "img/ebay_it_960038144346.jpg",
+   "ask_shipping": false,
+   "seller_country": "FR"
+  },
+  {
+   "key": "marktplaats:m2451506587",
+   "marketplace": "marktplaats",
+   "id": "m2451506587",
+   "title": "Blue shadow Nintendo NES",
+   "url": "https://www.marktplaats.nl/v/spelcomputers-en-games/games-nintendo-nes/m2451506587-blue-shadow-nintendo-nes",
+   "image_url": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/10046add-c303-43bc-820b-7b03333bc7b8?rule=ecg_mp_eps$_86.jpg",
+   "thumb_url": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/10046add-c303-43bc-820b-7b03333bc7b8?rule=ecg_mp_eps$_83.jpg",
+   "location": "Utrecht",
+   "price": {
+    "amount": 70.0,
+    "currency": "EUR",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "PAL",
+   "condition": "unclear",
+   "pc_title": "Blue Shadow",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/blue-shadow",
+   "pc_usd": {
+    "loose": 24.44,
+    "cib": 99.99,
+    "as_of": "2026-10-07T21:52:20+02:00"
+   },
+   "eur": {
+    "price": 70.0,
+    "buy_now": null,
+    "shipping": null,
+    "total": 70.0,
+    "pc_loose": 21.85,
+    "pc_cib": 89.39,
+    "import": null,
+    "pc_new": 402.96
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "condition 'unclear': between loose and CIB value",
+    "shipping not stated (pickup possible)"
+   ],
+   "first_seen": "2026-10-08T19:09:43+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-08T19:09:43+02:00",
+     "amount": 70.0,
+     "currency": "EUR"
+    }
+   ],
+   "promoted": false,
+   "condition_label": null,
+   "img": "img/marktplaats_m2451506587.jpg",
+   "ask_shipping": false,
+   "seller_country": "NL"
+  },
+  {
+   "key": "tradera:754678125",
+   "marketplace": "tradera",
+   "id": "754678125",
+   "title": "Metroid - 5 skruvar - Yapon hyrkasett - NES",
+   "url": "https://www.tradera.com/item/340700/754678125/metroid-5-skruvar-yapon-hyrkasett-nes",
+   "image_url": "https://img.tradera.net/images/077/663285077_74192818-6ff8-4cbf-9296-bf680b00a95e.jpg",
+   "thumb_url": "https://img.tradera.net/medium-fit/077/663285077_74192818-6ff8-4cbf-9296-bf680b00a95e.jpg",
+   "location": "SE",
+   "price": {
+    "amount": 1.0,
+    "currency": "SEK",
+    "type": "auction"
+   },
+   "buy_now": null,
+   "bids": 0,
+   "end_time": "2026-10-18T17:06:02.0720000Z",
+   "shipping": {
+    "amount": 0.0,
+    "currency": "SEK",
+    "note": "cheapest domestic (SE) option; to NL may differ"
+   },
+   "region": "PAL",
+   "condition": "unclear",
+   "pc_title": null,
+   "pc_url": null,
+   "pc_usd": null,
+   "eur": {
+    "price": 0.09,
+    "buy_now": null,
+    "shipping": 0.0,
+    "total": 0.09,
+    "pc_loose": null,
+    "pc_cib": null,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "auction: verdict at current bid, will likely rise",
+    "game not matched on PriceCharting"
+   ],
+   "first_seen": "2026-10-08T19:07:52+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-08T19:07:52+02:00",
+     "amount": 1.0,
+     "currency": "SEK"
+    }
+   ],
+   "promoted": null,
+   "condition_label": "Mycket gott skick",
+   "img": "img/tradera_754678125.jpg",
+   "ask_shipping": false,
+   "seller_country": null
+  },
   {
    "key": "marktplaats:m2451501133",
    "marketplace": "marktplaats",
@@ -114,7 +294,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -177,7 +357,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -235,7 +415,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -293,7 +473,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -351,7 +531,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -409,7 +589,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -463,7 +643,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -521,7 +701,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -579,7 +759,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -633,7 +813,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -691,7 +871,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -750,7 +930,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -809,7 +989,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -868,7 +1048,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -922,7 +1102,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -980,7 +1160,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1034,7 +1214,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1092,7 +1272,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1150,7 +1330,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1208,7 +1388,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1266,7 +1446,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1324,7 +1504,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1378,7 +1558,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1436,7 +1616,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1494,7 +1674,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1552,7 +1732,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1610,7 +1790,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1664,7 +1844,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1722,7 +1902,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1776,7 +1956,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1830,7 +2010,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1884,7 +2064,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1938,7 +2118,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -1992,7 +2172,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2046,7 +2226,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2100,7 +2280,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2155,7 +2335,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2214,7 +2394,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2268,7 +2448,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2326,7 +2506,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2380,7 +2560,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2435,7 +2615,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2490,7 +2670,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2544,7 +2724,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2599,7 +2779,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2653,7 +2833,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2707,7 +2887,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2762,7 +2942,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2816,7 +2996,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2874,7 +3054,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2929,7 +3109,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -2987,7 +3167,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3046,7 +3226,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3108,7 +3288,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3170,7 +3350,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3232,7 +3412,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:55:53+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3287,7 +3467,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3341,7 +3521,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3399,7 +3579,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3458,7 +3638,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3516,7 +3696,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3575,7 +3755,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3633,7 +3813,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3692,7 +3872,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3751,7 +3931,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3810,7 +3990,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3868,7 +4048,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3926,7 +4106,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -3985,7 +4165,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4043,7 +4223,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4101,7 +4281,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4159,7 +4339,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4218,7 +4398,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4277,7 +4457,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4335,7 +4515,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4393,7 +4573,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4451,7 +4631,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4510,7 +4690,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4569,7 +4749,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4627,7 +4807,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4686,7 +4866,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4745,7 +4925,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4804,7 +4984,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4863,7 +5043,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4922,7 +5102,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -4981,7 +5161,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5040,7 +5220,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5098,7 +5278,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5156,7 +5336,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5214,7 +5394,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5273,7 +5453,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5331,7 +5511,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5506,7 +5686,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5569,7 +5749,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5632,7 +5812,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5694,7 +5874,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5756,7 +5936,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5814,7 +5994,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5876,7 +6056,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -5939,7 +6119,7 @@
     "below even the loose value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6002,7 +6182,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6064,7 +6244,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6126,7 +6306,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6186,7 +6366,7 @@
    "pct": -0.241,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6249,7 +6429,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6312,7 +6492,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6374,7 +6554,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6434,7 +6614,7 @@
    "pct": 4.076,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6494,7 +6674,7 @@
    "pct": 2.384,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6557,7 +6737,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6619,7 +6799,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6681,7 +6861,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6741,7 +6921,7 @@
    "pct": 4.572,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6803,7 +6983,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6861,7 +7041,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6923,7 +7103,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -6985,7 +7165,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7047,7 +7227,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7109,7 +7289,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7171,7 +7351,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7234,7 +7414,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7296,7 +7476,7 @@
     "verdict uses buy-now price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7359,7 +7539,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7422,7 +7602,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7485,7 +7665,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7548,7 +7728,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7606,7 +7786,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7665,7 +7845,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7724,7 +7904,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7778,7 +7958,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7832,7 +8012,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7886,7 +8066,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price (seller lists pickup only)"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -7945,7 +8125,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8004,7 +8184,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8062,7 +8242,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8120,7 +8300,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8178,7 +8358,7 @@
     "ask seller about NL shipping: 2dehands' own shipping is Belgium-only, verdict is on the asking price"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8240,7 +8420,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8302,7 +8482,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8365,7 +8545,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8425,7 +8605,7 @@
    "pct": 0.321,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8485,7 +8665,7 @@
    "pct": -0.115,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8545,7 +8725,7 @@
    "pct": 0.232,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8605,7 +8785,7 @@
    "pct": -0.155,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8667,7 +8847,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8729,7 +8909,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8791,7 +8971,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8853,7 +9033,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8915,7 +9095,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -8977,7 +9157,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9039,7 +9219,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9101,7 +9281,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9163,7 +9343,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9225,7 +9405,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9287,7 +9467,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9349,7 +9529,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9411,7 +9591,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9471,7 +9651,7 @@
    "pct": 0.581,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9533,7 +9713,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9593,7 +9773,7 @@
    "pct": 0.917,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9651,7 +9831,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9711,7 +9891,7 @@
    "pct": 0.839,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9773,7 +9953,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9833,7 +10013,7 @@
    "pct": 2.376,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9895,7 +10075,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -9955,7 +10135,7 @@
    "pct": 2.85,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10015,7 +10195,7 @@
    "pct": 0.757,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10072,7 +10252,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10132,7 +10312,7 @@
    "pct": 0.304,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10192,7 +10372,7 @@
    "pct": 0.292,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10254,7 +10434,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10314,7 +10494,7 @@
    "pct": 2.049,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10371,7 +10551,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10433,7 +10613,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10493,7 +10673,7 @@
    "pct": 1.249,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10553,7 +10733,7 @@
    "pct": 4.314,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10615,7 +10795,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10675,7 +10855,7 @@
    "pct": 0.943,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10737,7 +10917,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10799,7 +10979,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10859,7 +11039,7 @@
    "pct": 0.862,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10919,7 +11099,7 @@
    "pct": 0.344,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -10979,7 +11159,7 @@
    "pct": 3.44,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11039,7 +11219,7 @@
    "pct": 1.587,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11101,7 +11281,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11163,7 +11343,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11225,7 +11405,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11287,7 +11467,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11349,7 +11529,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11409,7 +11589,7 @@
    "pct": 2.48,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11471,7 +11651,7 @@
     "no PAL PriceCharting entry; US (NTSC) value used"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11528,7 +11708,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11590,7 +11770,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11660,7 +11840,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11729,7 +11909,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11798,7 +11978,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11867,7 +12047,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -11936,7 +12116,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12005,7 +12185,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12070,7 +12250,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12139,7 +12319,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12208,7 +12388,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12277,7 +12457,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12346,7 +12526,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12415,7 +12595,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12484,7 +12664,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12553,7 +12733,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12622,7 +12802,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12691,7 +12871,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12751,7 +12931,7 @@
    "pct": 0.202,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12811,7 +12991,7 @@
    "pct": 1.014,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12880,7 +13060,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -12949,7 +13129,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13009,7 +13189,7 @@
    "pct": 0.624,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13078,7 +13258,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13147,7 +13327,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13216,7 +13396,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13276,7 +13456,7 @@
    "pct": -0.123,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13345,7 +13525,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13414,7 +13594,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13483,7 +13663,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13552,7 +13732,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13621,7 +13801,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13690,7 +13870,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13759,7 +13939,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13828,7 +14008,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13897,7 +14077,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -13957,7 +14137,7 @@
    "pct": 1.403,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14017,7 +14197,7 @@
    "pct": 0.931,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14077,7 +14257,7 @@
    "pct": 0.432,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14135,7 +14315,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14197,7 +14377,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14259,7 +14439,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14321,7 +14501,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14388,7 +14568,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14455,7 +14635,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14517,7 +14697,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14579,7 +14759,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14646,7 +14826,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14715,7 +14895,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14777,7 +14957,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14846,7 +15026,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14915,7 +15095,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -14984,7 +15164,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15053,7 +15233,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15123,7 +15303,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15185,7 +15365,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15245,7 +15425,7 @@
    "pct": 0.763,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15310,7 +15490,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15444,7 +15624,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15513,7 +15693,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15582,7 +15762,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15648,7 +15828,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15717,7 +15897,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15786,7 +15966,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15855,7 +16035,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15924,7 +16104,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -15990,7 +16170,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16060,7 +16240,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16130,7 +16310,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16200,7 +16380,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16270,7 +16450,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16340,7 +16520,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16409,7 +16589,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16478,7 +16658,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16548,7 +16728,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16617,7 +16797,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16686,7 +16866,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16755,7 +16935,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16824,7 +17004,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16893,7 +17073,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -16962,7 +17142,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17031,7 +17211,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17100,7 +17280,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17169,7 +17349,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17239,7 +17419,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17308,7 +17488,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17377,7 +17557,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17446,7 +17626,7 @@
     "graded: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17511,7 +17691,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17580,7 +17760,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17649,7 +17829,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17718,7 +17898,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17787,7 +17967,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17856,7 +18036,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17925,7 +18105,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -17994,7 +18174,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18063,7 +18243,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18132,7 +18312,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18201,7 +18381,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18270,7 +18450,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18340,7 +18520,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18405,7 +18585,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18475,7 +18655,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18545,7 +18725,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18615,7 +18795,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18685,7 +18865,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18751,7 +18931,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18817,7 +18997,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18887,7 +19067,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -18952,7 +19132,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19021,7 +19201,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19090,7 +19270,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19159,7 +19339,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19228,7 +19408,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19297,7 +19477,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19366,7 +19546,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19431,7 +19611,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19500,7 +19680,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19569,7 +19749,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19638,7 +19818,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19707,7 +19887,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19772,7 +19952,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19842,7 +20022,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19912,7 +20092,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -19981,7 +20161,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20050,7 +20230,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20115,7 +20295,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20184,7 +20364,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:07:52+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20253,7 +20433,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:07:52+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20598,7 +20778,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20668,7 +20848,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20737,7 +20917,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20802,7 +20982,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20872,7 +21052,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -20942,7 +21122,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21011,7 +21191,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21080,7 +21260,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21149,7 +21329,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21218,7 +21398,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21280,7 +21460,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21349,7 +21529,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21418,7 +21598,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21484,7 +21664,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21554,7 +21734,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21623,7 +21803,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21693,7 +21873,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21762,7 +21942,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21832,7 +22012,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21902,7 +22082,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -21972,7 +22152,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22035,7 +22215,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22104,7 +22284,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22173,7 +22353,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22243,7 +22423,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22312,7 +22492,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22381,7 +22561,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22451,7 +22631,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22520,7 +22700,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22589,7 +22769,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22659,7 +22839,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22729,7 +22909,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22799,7 +22979,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22869,7 +23049,7 @@
     "condition 'cart+manual': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -22939,7 +23119,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23008,7 +23188,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23079,7 +23259,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23149,7 +23329,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23219,7 +23399,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23289,7 +23469,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23355,7 +23535,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23424,7 +23604,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23493,7 +23673,7 @@
     "import from US: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23562,7 +23742,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23631,7 +23811,7 @@
     "graded: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23696,7 +23876,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23766,7 +23946,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23836,7 +24016,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23906,7 +24086,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -23976,7 +24156,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24046,7 +24226,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24116,7 +24296,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24181,7 +24361,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24250,7 +24430,7 @@
     "import from US: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24319,7 +24499,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24389,7 +24569,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24458,7 +24638,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24527,7 +24707,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24596,7 +24776,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24661,7 +24841,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24731,7 +24911,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24801,7 +24981,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24871,7 +25051,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -24941,7 +25121,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25010,7 +25190,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25079,7 +25259,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25148,7 +25328,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25217,7 +25397,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25286,7 +25466,7 @@
     "import from CA: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25356,7 +25536,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25426,7 +25606,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25496,7 +25676,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25566,7 +25746,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25635,7 +25815,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25704,7 +25884,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25773,7 +25953,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25842,7 +26022,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25912,7 +26092,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -25981,7 +26161,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26050,7 +26230,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26120,7 +26300,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26189,7 +26369,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26258,7 +26438,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26327,7 +26507,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26397,7 +26577,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26467,7 +26647,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26537,7 +26717,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26607,7 +26787,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26677,7 +26857,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26739,7 +26919,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26796,7 +26976,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26856,7 +27036,7 @@
    "pct": 6.571,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26918,7 +27098,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -26978,7 +27158,7 @@
    "pct": 0.176,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27038,7 +27218,7 @@
    "pct": 1.253,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27108,7 +27288,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27178,7 +27358,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27247,7 +27427,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27316,7 +27496,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27376,7 +27556,7 @@
    "pct": 0.898,
    "notes": [],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27445,7 +27625,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27514,7 +27694,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27583,7 +27763,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27648,7 +27828,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27713,7 +27893,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27778,7 +27958,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27848,7 +28028,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27917,7 +28097,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -27986,7 +28166,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28055,7 +28235,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28124,7 +28304,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28194,7 +28374,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28263,7 +28443,7 @@
     "import from GB: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28333,7 +28513,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28402,7 +28582,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28472,7 +28652,7 @@
     "import from GB: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28541,7 +28721,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28610,7 +28790,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28679,7 +28859,7 @@
     "import from GB: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28748,7 +28928,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28817,7 +28997,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28886,7 +29066,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -28955,7 +29135,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29024,7 +29204,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29093,7 +29273,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29162,7 +29342,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29231,7 +29411,7 @@
     "import from GB: +21% NL VAT included in total; above €150 a carrier clearance fee may also apply"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29300,7 +29480,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29369,7 +29549,7 @@
     "import from CA: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29438,7 +29618,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29507,7 +29687,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29576,7 +29756,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29645,7 +29825,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29714,7 +29894,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29783,7 +29963,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29848,7 +30028,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29918,7 +30098,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -29988,7 +30168,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30053,7 +30233,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30122,7 +30302,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30191,7 +30371,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30260,7 +30440,7 @@
     "import from GB: +21% NL VAT + €3 EU duty included in total"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30325,7 +30505,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-08T18:44:14+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30387,7 +30567,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30447,7 +30627,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30506,7 +30686,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30565,7 +30745,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30623,7 +30803,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30685,7 +30865,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30748,7 +30928,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30811,7 +30991,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30874,7 +31054,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30937,7 +31117,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30996,7 +31176,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31054,7 +31234,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31116,7 +31296,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31174,7 +31354,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31232,7 +31412,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31294,7 +31474,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31354,7 +31534,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31414,7 +31594,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31476,7 +31656,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31539,7 +31719,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31599,7 +31779,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31661,7 +31841,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31721,7 +31901,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31781,7 +31961,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31844,7 +32024,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31899,7 +32079,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31961,7 +32141,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32021,7 +32201,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32081,7 +32261,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32143,7 +32323,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32206,7 +32386,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32261,7 +32441,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32321,7 +32501,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32381,7 +32561,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32441,7 +32621,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32501,7 +32681,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32561,7 +32741,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32621,7 +32801,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32681,7 +32861,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -33785,7 +33965,7 @@
     "verdict uses buy-now price"
    ],
    "first_seen": "2026-10-08T08:20:24+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -33848,7 +34028,7 @@
     "auction with condition 'boxed': not judged until it ends"
    ],
    "first_seen": "2026-10-08T08:20:24+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -33911,7 +34091,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-08T08:20:24+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -33973,7 +34153,7 @@
     "verdict uses buy-now price"
    ],
    "first_seen": "2026-10-08T08:20:24+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -34035,7 +34215,7 @@
     "verdict uses buy-now price"
    ],
    "first_seen": "2026-10-08T08:20:24+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -34216,7 +34396,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -35682,7 +35862,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -35849,7 +36029,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36027,7 +36207,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36203,7 +36383,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36379,7 +36559,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36555,7 +36735,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36729,7 +36909,7 @@
     "shipping not stated (pickup possible)"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36789,7 +36969,7 @@
    "pct": 0.426,
    "notes": [],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36851,7 +37031,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36913,7 +37093,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -36975,7 +37155,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37037,7 +37217,7 @@
     "verdict uses buy-now price"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37100,7 +37280,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37163,7 +37343,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37226,7 +37406,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37289,7 +37469,7 @@
     "condition 'cart+manual': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37351,7 +37531,7 @@
     "box only: not auto-priced"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37415,7 +37595,7 @@
     "condition 'cart+manual': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37478,7 +37658,7 @@
     "condition 'cart+manual': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37541,7 +37721,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37604,7 +37784,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37667,7 +37847,7 @@
     "condition 'cart+manual': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37724,7 +37904,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37849,7 +38029,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37912,7 +38092,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -37974,7 +38154,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38032,7 +38212,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38092,7 +38272,7 @@
    "pct": -0.154,
    "notes": [],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38154,7 +38334,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38216,7 +38396,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38278,7 +38458,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38400,7 +38580,7 @@
     "condition 'boxed': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38462,7 +38642,7 @@
     "auction: verdict at current bid, will likely rise"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38524,7 +38704,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38581,7 +38761,7 @@
     "game not matched on PriceCharting"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38643,7 +38823,7 @@
     "condition 'unclear': between loose and CIB value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38706,7 +38886,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -38831,7 +39011,7 @@
     "auction with condition 'unclear': not judged until it ends"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -39017,7 +39197,7 @@
     "above the complete-in-box value"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -39077,7 +39257,7 @@
    "pct": 1.943,
    "notes": [],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {
@@ -39134,7 +39314,7 @@
     "lot: not auto-priced"
    ],
    "first_seen": "2026-10-07T21:52:15+02:00",
-   "last_seen": "2026-10-08T19:02:45+02:00",
+   "last_seen": "2026-10-08T19:10:37+02:00",
    "status": "active",
    "price_history": [
     {

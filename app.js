@@ -48,6 +48,11 @@
       var n = L.filter(function(r){return inTab(r,t.id) && visible(r,opts);}).length;
       return '<button class="tab" role="tab" data-tab="'+t.id+'" aria-selected="'+(t.id===state.tab)+'">'+esc(t.label)+'<span class="n">'+n+'</span></button>';
     }).join("");
+    var act = $("tabs").querySelector('.tab[aria-selected="true"]'), box = $("tabs");
+    if (act && box.scrollWidth > box.clientWidth) {  // keep the active tab in view on narrow screens
+      var l = act.offsetLeft - box.offsetLeft, r = l + act.offsetWidth;
+      if (l < box.scrollLeft || r > box.scrollLeft + box.clientWidth) box.scrollLeft = Math.max(0, l - 12);
+    }
   }
   function card(r){
     var p = r.price||{}, e = r.eur||{}, pc = r.pc_usd;
