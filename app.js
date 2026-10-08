@@ -6,13 +6,18 @@
     {id:"best", label:"★ Best deals"},
     {id:"marktplaats", label:"Marktplaats"},
     {id:"tradera", label:"Tradera"},
-    {id:"ebay", label:"eBay"}
+    {id:"ebay", label:"eBay.com"},
+    {id:"ebay_de", label:"eBay.de"},
+    {id:"ebay_it", label:"eBay.it"},
+    {id:"ebay_uk", label:"eBay.co.uk"},
+    {id:"2dehands", label:"2dehands"}
   ];
+  var MKLABEL = {}; TABS.forEach(function(t){ MKLABEL[t.id]=t.label; });
   var qsAll = /[?&]all(=1|=true)?(&|$)/.test(location.search);
   var state = {tab: (location.hash||"").replace("#","") || "best", scope: qsAll ? "all" : "cib"};  // always opens on complete-in-box; ?all opens on everything
   if (!TABS.some(function(t){return t.id===state.tab;})) state.tab = "best";
   var $ = function(id){return document.getElementById(id);};
-  var CUR = {EUR:"€", USD:"$", SEK:"SEK "};
+  var CUR = {EUR:"€", USD:"$", SEK:"SEK ", GBP:"£"};
   function money(a, c){ if (a==null) return "—"; var s=(Math.round(a*100)/100).toFixed(2); return c==="SEK" ? s.replace(/\.00$/,"")+" SEK" : (CUR[c]||c+" ")+s; }
   function eur(a){ return a==null ? "—" : "€"+a.toFixed(2); }
   function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
@@ -26,7 +31,7 @@
 
   $("meta").innerHTML = "Last updated: <b>"+esc(fmtAms(D.generated_at))+"</b><br>"+
     L.filter(function(r){return r.status==="active";}).length+" active · "+L.length+" tracked in total";
-  $("fx").textContent = D.fx ? ("Exchange rates (ECB, "+D.fx.date+"): 1 EUR = "+D.fx.USD+" USD = "+D.fx.SEK+" SEK. PriceCharting lists cached: PAL "+
+  $("fx").textContent = D.fx ? ("Exchange rates (ECB, "+D.fx.date+"): 1 EUR = "+D.fx.USD+" USD = "+D.fx.SEK+" SEK"+(D.fx.GBP?" = "+D.fx.GBP+" GBP":"")+". PriceCharting lists cached: PAL "+
     day((D.pricecharting_as_of||{})["pal-nes"])+", NTSC "+day((D.pricecharting_as_of||{}).nes)+".") : "";
 
   function inTab(r, tab){ return tab==="best" ? r.verdict==="Good buy" : r.marketplace===tab; }
@@ -47,12 +52,18 @@
   function card(r){
     var p = r.price||{}, e = r.eur||{}, pc = r.pc_usd;
     var img = r.img;  // local copy (img/...) or inlined data URI; never hotlinked
-    var pills = '<span class="pill mk-'+r.marketplace+'">'+esc(r.marketplace)+'</span>' + (isNew(r)?'<span class="pill new">NEW TODAY</span>':'') +
+    var pills = '<span class="pill mk-'+r.marketplace+'">'+esc(MKLABEL[r.marketplace]||r.marketplace)+'</span>' + (isNew(r)?'<span class="pill new">NEW TODAY</span>':'') +
+      (r.ask_shipping ? '<span class="pill ask">ASK SELLER: NL SHIPPING</span>' : '') +
       (r.status!=="active" ? '<span class="pill gone">'+esc(r.status.toUpperCase())+'</span>' : '');
     var priceLine = money(p.amount, p.currency) + (p.currency!=="EUR" && e.price!=null ? ' <small>≈ '+eur(e.price)+'</small>' : '') +
       (p.type ? ' <small>· '+esc(p.type)+'</small>' : '');
     if (r.buy_now && p.type && p.type.indexOf("buy now")>=0) priceLine += '<br><small>buy now '+money(r.buy_now,p.currency)+(e.buy_now!=null?' ≈ '+eur(e.buy_now):'')+'</small>';
-    var ship = r.shipping ? money(r.shipping.amount, r.shipping.currency) + (r.shipping.currency!=="EUR" && e.shipping!=null ? " ≈ "+eur(e.shipping) : "") +
+    var imp = e["import"];
+    var impRow = imp ? '<dt>Import</dt><dd>from '+esc(imp.origin)+': goods + shipping '+eur(imp.base)+' + 21% VAT '+eur(imp.vat)+
+      (imp.duty?' + duty '+eur(imp.duty):'')+(imp.handling?' + handling '+eur(imp.handling):'')+' = <b>'+eur(imp.total)+'</b></dd>' : '';
+    var ship = r.ask_shipping && !r.shipping ? '<b class="ask-txt">ask seller (not included)</b>' :
+      r.shipping && r.shipping.amount===0 ? 'free to NL' :
+      r.shipping ? money(r.shipping.amount, r.shipping.currency) + (r.shipping.currency!=="EUR" && e.shipping!=null ? " ≈ "+eur(e.shipping) : "") +
       (r.shipping.note ? ' <span title="'+esc(r.shipping.note)+'">ⓘ</span>' : '') : "not stated";
     var pcLine = pc ? (eur(e.pc_loose)+" / "+eur(e.pc_cib)) + (r.condition==="sealed" ? "<br>new: "+eur(e.pc_new) : "") : "—";
     var ends = r.end_time && /auction/.test(p.type||"") ? '<dt>Ends</dt><dd>'+esc(fmtAms(r.end_time))+(r.bids!=null?' · '+r.bids+' bid'+(r.bids===1?'':'s'):'')+'</dd>' : '';
@@ -68,11 +79,12 @@
         '<div class="vrow"><span class="badge '+vclass(r.verdict)+'">'+esc(r.verdict)+'</span>'+pctTxt+
           (e.total!=null?'<small>total '+eur(e.total)+'</small>':'')+'</div>'+
         '<dl class="rows">'+
-          '<dt>Shipping</dt><dd>'+ship+'</dd>'+
+          '<dt>Shipping</dt><dd>'+ship+'</dd>'+ impRow +
           '<dt>Condition</dt><dd>'+esc(r.condition)+' · '+esc(r.region)+'</dd>'+
           '<dt>PriceCharting</dt><dd>'+(r.pc_title?'<a href="'+esc(r.pc_url)+'" target="_blank" rel="noopener">'+esc(r.pc_title)+'</a><br>':'')+
             'loose / CIB: '+pcLine+'</dd>'+
-          ends + '<dt>First seen</dt><dd>'+esc(day(r.first_seen))+(r.location?' · '+esc(r.location):'')+'</dd>'+
+          ends + (r.bids!=null && !ends ? '<dt>Bids</dt><dd>'+r.bids+'</dd>' : '') +
+          '<dt>First seen</dt><dd>'+esc(day(r.first_seen))+(r.location?' · '+esc(r.location):'')+'</dd>'+
           lastPrice + hist +
         '</dl>'+
         ((r.notes||[]).length?'<ul class="notes">'+r.notes.map(function(n){return '<li>'+esc(n)+'</li>';}).join("")+'</ul>':'')+

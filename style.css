@@ -40,6 +40,9 @@ select,input[type=search]{font:inherit;padding:7px 9px;border:2px solid #777;bor
 .pill.new{background:var(--red)}
 .pill.gone{background:#555}
 .pill.mk-marktplaats{background:#004e8c}.pill.mk-tradera{background:#e5a100;color:#111}.pill.mk-ebay{background:#6b2fb3}
+.pill.mk-ebay_de{background:#2c5f9e}.pill.mk-ebay_it{background:#1f7a4d}.pill.mk-ebay_uk{background:#7a1f3d}.pill.mk-2dehands{background:#0a8fa3}
+.pill.ask{background:#f08c00;color:#111}
+.ask-txt{color:#b35900}
 .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
 .title{font-weight:700;font-size:.98rem;line-height:1.25;margin:0}
 .title a{color:inherit;text-decoration:none}.title a:hover{text-decoration:underline}
