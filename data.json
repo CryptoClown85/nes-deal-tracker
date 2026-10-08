@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T19:10:37+02:00",
+ "generated_at": "2026-10-08T19:32:27+02:00",
  "today": "2026-10-08",
  "fx": {
   "date": "2026-10-08",
@@ -12,13 +12,7 @@
   "nes": "2026-10-07T21:52:46+02:00"
  },
  "counts": {
-  "marktplaats_feed": 60,
-  "tradera_feed": 80,
-  "2dehands_feed": 120,
-  "ebay_de_feed": 116,
-  "ebay_it_feed": 172,
-  "ebay_uk_feed": 130,
-  "2dehands_dupes_of_marktplaats": 28,
+  "2dehands_dupes_of_marktplaats": 0,
   "ebay_inbox": 60
  },
  "sources_ok": [
@@ -30567,7 +30561,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30627,7 +30621,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30686,7 +30680,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30745,7 +30739,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30803,7 +30797,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30865,7 +30859,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30928,7 +30922,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -30991,7 +30985,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31054,7 +31048,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31117,7 +31111,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31176,7 +31170,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31234,7 +31228,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31296,7 +31290,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31354,7 +31348,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31412,7 +31406,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31474,7 +31468,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31534,7 +31528,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31594,7 +31588,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31656,7 +31650,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31719,7 +31713,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31779,7 +31773,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31841,7 +31835,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31901,7 +31895,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -31961,7 +31955,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32024,7 +32018,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32079,7 +32073,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32141,7 +32135,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32201,7 +32195,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32261,7 +32255,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32323,7 +32317,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32386,7 +32380,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32441,7 +32435,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32501,7 +32495,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32561,7 +32555,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32621,7 +32615,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32681,7 +32675,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32741,7 +32735,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32801,7 +32795,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {
@@ -32861,7 +32855,7 @@
     "US/CA import: ~21% VAT + handling fee may apply"
    ],
    "first_seen": "2026-10-08T08:22:32+02:00",
-   "last_seen": "2026-10-08T19:10:37+02:00",
+   "last_seen": "2026-10-08T19:32:27+02:00",
    "status": "active",
    "price_history": [
     {

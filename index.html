@@ -4,18 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NES Deal Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 fill=%27%23bdbab3%27/%3E%3Crect y=%279%27 width=%2716%27 height=%277%27 fill=%27%23111%27/%3E%3Crect x=%272%27 y=%2711%27 width=%275%27 height=%273%27 fill=%27%23d42020%27/%3E%3Crect x=%279%27 y=%2711%27 width=%275%27 height=%273%27 fill=%27%23777%27/%3E%3C/svg%3E">
+<link rel="preload" href="assets/PressStart2P.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top">
-  <div class="brand">
-    <div class="logo" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div>
-      <h1>NES DEAL TRACKER</h1>
-      <p class="sub">New complete-in-box (cart + box + manual) NES listings on Marktplaats, Tradera, eBay (.com, .de, .it, .co.uk) &amp; 2dehands, checked against PriceCharting. Tap “All listings” to see loose and partial games too.</p>
+  <div class="console">
+    <div class="logo-panel">
+      <img class="nes-logo" src="assets/nes-logo.svg" width="139" height="51" alt="Nintendo Entertainment System">
+    </div>
+    <div class="band">
+      <h1 class="title-px">Deal Tracker</h1>
+      <p class="sub">Complete-in-box NES deals from Marktplaats, Tradera, eBay (.com .de .it .co.uk) &amp; 2dehands, checked against PriceCharting.</p>
+      <div class="meta" id="meta"></div>
     </div>
   </div>
-  <div class="meta" id="meta"></div>
+  <div class="pixsep" aria-hidden="true"></div>
 </header>
 
 <div class="scope" id="scope" role="group" aria-label="Which listings">
@@ -49,7 +54,9 @@
 <p class="summary" id="summary"></p>
 <main id="grid" class="grid"></main>
 
+<div class="pixsep" aria-hidden="true"></div>
 <footer class="foot">
+  <p><b>What this is.</b> New complete-in-box (cart + box + manual) NES listings on Marktplaats, Tradera, eBay (.com, .de, .it, .co.uk) and 2dehands, checked against PriceCharting. Tap “All listings” to see loose and partial games too.</p>
   <p><b>About the values.</b> PriceCharting prices are a guide, not a quote. European (PAL) values come from thin sales data
   (often ~1 sale/month); US (NTSC) values are used for eBay and for US carts. Verdicts: <span class="badge good">Good buy</span>
   ≥20% below the matching value, <span class="badge fair">Fair</span> within ±20%, <span class="badge over">Overpriced</span>

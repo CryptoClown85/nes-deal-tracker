@@ -29,8 +29,9 @@
   function isNew(r){ return day(r.first_seen) === D.today; }
   function vclass(v){ return {"Good buy":"good","Fair":"fair","Overpriced":"over"}[v] || "unclear"; }
 
-  $("meta").innerHTML = "Last updated: <b>"+esc(fmtAms(D.generated_at))+"</b><br>"+
-    L.filter(function(r){return r.status==="active";}).length+" active · "+L.length+" tracked in total";
+  $("meta").innerHTML = '<span class="chip" title="Amsterdam time">Updated <b>'+esc(fmtAms(D.generated_at).replace(" (Amsterdam)",""))+'</b></span>'+
+    '<span class="chip"><b>'+L.filter(function(r){return r.status==="active";}).length+'</b> active</span>'+
+    '<span class="chip"><b>'+L.length+'</b> tracked</span>';
   $("fx").textContent = D.fx ? ("Exchange rates (ECB, "+D.fx.date+"): 1 EUR = "+D.fx.USD+" USD = "+D.fx.SEK+" SEK"+(D.fx.GBP?" = "+D.fx.GBP+" GBP":"")+". PriceCharting lists cached: PAL "+
     day((D.pricecharting_as_of||{})["pal-nes"])+", NTSC "+day((D.pricecharting_as_of||{}).nes)+".") : "";
 
