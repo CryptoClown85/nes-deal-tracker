@@ -70,7 +70,9 @@
     var lab = esc(s.label);
     if (!s.n) return '<div class="s5 none">'+(grid?'Last 5 sales: none':'Last 5 sales ('+lab+'): no recent sales')+'</div>';
     var head = s.n>=5 ? 'Avg last 5 sales' : 'Avg of '+s.n+' recent sale'+(s.n===1?'':'s');
-    var cmp = s.pct==null ? '' : ' <span class="s5pct '+(s.pct<=-0.2?'lo':s.pct>0.2?'hi':'mid')+'">'+pctTxt(s.pct)+' vs last '+s.n+'</span>';
+    // when the verdict is based on these sales, the % is already next to the verdict badge: don't repeat it here
+    var cmp = r.basis==="last5" ? ' <span class="s5tag">verdict basis</span>' :
+      s.pct==null ? '' : ' <span class="s5pct sec">'+pctTxt(s.pct)+' vs last '+s.n+'</span>';
     if (grid) return '<div class="s5"><span class="s5h">'+(s.n>=5?'Last 5 avg':'Avg of '+s.n)+'</span> <b>'+eur(s.avg_eur)+'</b>'+cmp+'</div>';
     return '<div class="s5"><span class="s5h">'+head+' ('+lab+')</span> <b>'+eur(s.avg_eur)+'</b>'+cmp+
       '<small class="s5d">'+esc(s.from===s.to?s.to:s.from+' → '+s.to)+' · PriceCharting sold listings</small></div>';
@@ -101,7 +103,8 @@
       (r.shipping.note ? ' <span title="'+esc(r.shipping.note)+'">ⓘ</span>' : '') : "not stated";
     var pcLine = pc ? (eur(e.pc_loose)+" / "+eur(e.pc_cib)) + (r.condition==="sealed" ? "<br>new: "+eur(e.pc_new) : "") : "—";
     var ends = r.end_time && /auction/.test(p.type||"") ? '<dt>Ends</dt><dd>'+esc(fmtAms(r.end_time))+(r.bids!=null?' · '+r.bids+' bid'+(r.bids===1?'':'s'):'')+'</dd>' : '';
-    var pctTxt = r.pct==null ? "" : '<span class="pct">'+(r.pct>0?"+":"")+Math.round(r.pct*100)+'%</span>';
+    var basisTxt = r.basis==="last5" ? "vs last "+((r.sales5||{}).n||5)+" sales" : r.basis==="pricecharting" ? "vs PriceCharting value" : "";
+    var pctHtml = r.pct==null ? "" : '<span class="pct">'+pctTxt(r.pct)+'</span><span class="basis">'+basisTxt+'</span>';
     var lastPrice = r.status!=="active" ? '<dt>Last seen</dt><dd>'+esc(day(r.last_seen))+' at '+money(p.amount,p.currency)+'</dd>' : '';
     var hist = (r.price_history||[]).length>1 ? '<dt>Price hist.</dt><dd>'+r.price_history.map(function(h){return money(h.amount,h.currency)+" ("+day(h.t)+")";}).join(" → ")+'</dd>' : '';
     return '<article class="card'+(r.status!=="active"?" gone":"")+'">'+
@@ -110,7 +113,7 @@
       '<div class="body">'+
         '<h2 class="title"><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a></h2>'+
         '<div class="price">'+typeBadge(r)+priceLine+'</div>'+
-        '<div class="vrow"><span class="badge '+vclass(r.verdict)+'">'+esc(r.verdict)+'</span>'+pctTxt+
+        '<div class="vrow"><span class="badge '+vclass(r.verdict)+'">'+esc(r.verdict)+'</span>'+pctHtml+
           (e.total!=null?'<small>total '+eur(e.total)+'</small>':'')+'</div>'+
         s5Line(r, grid)+
         (grid?'<details class="more"><summary>Details</summary>':'')+
@@ -118,7 +121,7 @@
           '<dt>Shipping</dt><dd>'+ship+'</dd>'+ impRow +
           '<dt>Condition</dt><dd>'+esc(r.condition)+' · '+esc(r.region)+'</dd>'+
           '<dt>PriceCharting</dt><dd>'+(r.pc_title?'<a href="'+esc(r.pc_url)+'" target="_blank" rel="noopener">'+esc(r.pc_title)+'</a><br>':'')+
-            'loose / CIB: '+pcLine+'</dd>'+
+            'loose / CIB: '+pcLine+(r.basis==="last5" && r.pc_pct!=null ? '<br><small class="sec">listing '+pctTxt(r.pc_pct)+' vs this value (not used for the verdict)</small>' : '')+'</dd>'+
           s5Rows(r)+
           ends + (r.bids!=null && !ends ? '<dt>Bids</dt><dd>'+r.bids+'</dd>' : '') +
           '<dt>First seen</dt><dd>'+esc(day(r.first_seen))+(r.location?' · '+esc(r.location):'')+'</dd>'+
