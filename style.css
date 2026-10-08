@@ -116,6 +116,14 @@ select,input[type=search]{font:15px var(--sans);min-height:42px;padding:7px 9px;
 .tbadge{display:inline-block;vertical-align:.2em;margin-right:8px;font:400 .5rem/1 var(--px);padding:5px 6px 4px;letter-spacing:.02em;
   text-transform:uppercase;border:2px solid #000}
 .tbadge.auc{background:#ffd23f;color:#111}.tbadge.bin{background:#fff;color:#111}
+.s5{font-size:.84rem;line-height:1.35;padding:6px 8px;background:#fff;border:2px solid #1b1b1b;box-shadow:2px 2px 0 rgba(0,0,0,.18)}
+.s5 .s5h{color:#444}
+.s5 b{font-size:.95rem}
+.s5.none{color:#666;background:#f3f2ee}
+.s5pct{display:inline-block;margin-left:4px;font-weight:800;white-space:nowrap}
+.s5pct.lo{color:var(--good)}.s5pct.hi{color:var(--over)}.s5pct.mid{color:#7a5a00}
+.s5d{display:block;color:#666;font-size:.74rem}
+.s5list a{color:#0b4f8a}.s5date{color:#666;font-size:.76rem}
 .vrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .vrow small{font-size:.84rem;color:#333}
 .pct{font:800 .92rem var(--sans)}
@@ -152,6 +160,9 @@ select,input[type=search]{font:15px var(--sans);min-height:42px;padding:7px 9px;
 .view-grid .price small{display:none}
 .view-grid .price .tbadge{display:table;margin:0 0 5px}
 .view-grid .vrow small{flex-basis:100%;font-size:.78rem}
+.view-grid .s5{font-size:.76rem;padding:4px 6px}
+.view-grid .s5 b{font-size:.84rem}
+.view-grid .s5pct{display:block;margin:1px 0 0}
 .view-grid .more summary{cursor:pointer;font:400 .52rem/1 var(--px);text-transform:uppercase;letter-spacing:.03em;padding:9px 0;color:#333}
 .view-grid .more .rows{font-size:.78rem;grid-template-columns:1fr}
 .view-grid .more .rows dt{font-weight:700;margin-top:3px}

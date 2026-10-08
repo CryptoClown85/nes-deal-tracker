@@ -64,6 +64,24 @@
     if (r.sale_type==="buy_now") return '<span class="tbadge bin">Buy now</span>';
     return '';
   }
+  function pctTxt(x){ return (x>0?"+":x<0?"−":"±")+Math.abs(Math.round(x*100))+"%"; }
+  function s5Line(r, grid){
+    var s = r.sales5; if (!s) return "";
+    var lab = esc(s.label);
+    if (!s.n) return '<div class="s5 none">'+(grid?'Last 5 sales: none':'Last 5 sales ('+lab+'): no recent sales')+'</div>';
+    var head = s.n>=5 ? 'Avg last 5 sales' : 'Avg of '+s.n+' recent sale'+(s.n===1?'':'s');
+    var cmp = s.pct==null ? '' : ' <span class="s5pct '+(s.pct<=-0.2?'lo':s.pct>0.2?'hi':'mid')+'">'+pctTxt(s.pct)+' vs last '+s.n+'</span>';
+    if (grid) return '<div class="s5"><span class="s5h">'+(s.n>=5?'Last 5 avg':'Avg of '+s.n)+'</span> <b>'+eur(s.avg_eur)+'</b>'+cmp+'</div>';
+    return '<div class="s5"><span class="s5h">'+head+' ('+lab+')</span> <b>'+eur(s.avg_eur)+'</b>'+cmp+
+      '<small class="s5d">'+esc(s.from===s.to?s.to:s.from+' → '+s.to)+' · PriceCharting sold listings</small></div>';
+  }
+  function s5Rows(r){
+    var s = r.sales5; if (!s || !s.n) return '';
+    return '<dt>Last '+s.n+' sales</dt><dd class="s5list">'+s.sales.map(function(x){
+      var t = eur(x.eur)+' <span class="s5date">'+esc(x.date)+'</span>';
+      return x.url ? '<a href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title||"")+'">'+t+'</a>' : t;
+    }).join('<br>')+'</dd>';
+  }
   function card(r){
     var grid = state.view==="grid";
     var p = r.price||{}, e = r.eur||{}, pc = r.pc_usd;
@@ -94,12 +112,14 @@
         '<div class="price">'+typeBadge(r)+priceLine+'</div>'+
         '<div class="vrow"><span class="badge '+vclass(r.verdict)+'">'+esc(r.verdict)+'</span>'+pctTxt+
           (e.total!=null?'<small>total '+eur(e.total)+'</small>':'')+'</div>'+
+        s5Line(r, grid)+
         (grid?'<details class="more"><summary>Details</summary>':'')+
         '<dl class="rows">'+
           '<dt>Shipping</dt><dd>'+ship+'</dd>'+ impRow +
           '<dt>Condition</dt><dd>'+esc(r.condition)+' · '+esc(r.region)+'</dd>'+
           '<dt>PriceCharting</dt><dd>'+(r.pc_title?'<a href="'+esc(r.pc_url)+'" target="_blank" rel="noopener">'+esc(r.pc_title)+'</a><br>':'')+
             'loose / CIB: '+pcLine+'</dd>'+
+          s5Rows(r)+
           ends + (r.bids!=null && !ends ? '<dt>Bids</dt><dd>'+r.bids+'</dd>' : '') +
           '<dt>First seen</dt><dd>'+esc(day(r.first_seen))+(r.location?' · '+esc(r.location):'')+'</dd>'+
           lastPrice + hist +
