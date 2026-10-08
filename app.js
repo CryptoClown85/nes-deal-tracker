@@ -16,6 +16,7 @@
   var qsAll = /[?&]all(=1|=true)?(&|$)/.test(location.search);
   var state = {tab: (location.hash||"").replace("#","") || "best", scope: qsAll ? "all" : "cib"};  // always opens on complete-in-box; ?all opens on everything
   if (!TABS.some(function(t){return t.id===state.tab;})) state.tab = "best";
+  try { state.view = localStorage.getItem("nes-view")==="grid" ? "grid" : "list"; } catch(e){ state.view = "list"; }
   var $ = function(id){return document.getElementById(id);};
   var CUR = {EUR:"€", USD:"$", SEK:"SEK ", GBP:"£"};
   function money(a, c){ if (a==null) return "—"; var s=(Math.round(a*100)/100).toFixed(2); return c==="SEK" ? s.replace(/\.00$/,"")+" SEK" : (CUR[c]||c+" ")+s; }
@@ -29,9 +30,9 @@
   function isNew(r){ return day(r.first_seen) === D.today; }
   function vclass(v){ return {"Good buy":"good","Fair":"fair","Overpriced":"over"}[v] || "unclear"; }
 
-  $("meta").innerHTML = '<span class="chip" title="Amsterdam time">Updated <b>'+esc(fmtAms(D.generated_at).replace(" (Amsterdam)",""))+'</b></span>'+
-    '<span class="chip"><b>'+L.filter(function(r){return r.status==="active";}).length+'</b> active</span>'+
-    '<span class="chip"><b>'+L.length+'</b> tracked</span>';
+  $("meta").innerHTML = '<span title="Amsterdam time">Updated <b>'+esc(fmtAms(D.generated_at).replace(" (Amsterdam)",""))+'</b></span>'+
+    '<span class="dot"> · </span><span><b>'+L.filter(function(r){return r.status==="active";}).length+'</b> active</span>'+
+    '<span class="dot"> · </span><span><b>'+L.length+'</b> tracked</span>';
   $("fx").textContent = D.fx ? ("Exchange rates (ECB, "+D.fx.date+"): 1 EUR = "+D.fx.USD+" USD = "+D.fx.SEK+" SEK"+(D.fx.GBP?" = "+D.fx.GBP+" GBP":"")+". PriceCharting lists cached: PAL "+
     day((D.pricecharting_as_of||{})["pal-nes"])+", NTSC "+day((D.pricecharting_as_of||{}).nes)+".") : "";
 
@@ -55,7 +56,16 @@
       if (l < box.scrollLeft || r > box.scrollLeft + box.clientWidth) box.scrollLeft = Math.max(0, l - 12);
     }
   }
+  function typeBadge(r){
+    if (r.sale_type==="auction") {
+      var bid = r.marketplace==="marktplaats" || r.marketplace==="2dehands";
+      return '<span class="tbadge auc">'+(bid?"Bidding":"Auction")+(r.also_buy_now?" + buy now":"")+'</span>';
+    }
+    if (r.sale_type==="buy_now") return '<span class="tbadge bin">Buy now</span>';
+    return '';
+  }
   function card(r){
+    var grid = state.view==="grid";
     var p = r.price||{}, e = r.eur||{}, pc = r.pc_usd;
     var img = r.img;  // local copy (img/...) or inlined data URI; never hotlinked
     var pills = '<span class="pill mk-'+r.marketplace+'">'+esc(MKLABEL[r.marketplace]||r.marketplace)+'</span>' + (isNew(r)?'<span class="pill new">NEW TODAY</span>':'') +
@@ -81,9 +91,10 @@
       '<div class="ribbon">'+pills+'</div></div>'+
       '<div class="body">'+
         '<h2 class="title"><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.title)+'</a></h2>'+
-        '<div class="price">'+priceLine+'</div>'+
+        '<div class="price">'+typeBadge(r)+priceLine+'</div>'+
         '<div class="vrow"><span class="badge '+vclass(r.verdict)+'">'+esc(r.verdict)+'</span>'+pctTxt+
           (e.total!=null?'<small>total '+eur(e.total)+'</small>':'')+'</div>'+
+        (grid?'<details class="more"><summary>Details</summary>':'')+
         '<dl class="rows">'+
           '<dt>Shipping</dt><dd>'+ship+'</dd>'+ impRow +
           '<dt>Condition</dt><dd>'+esc(r.condition)+' · '+esc(r.region)+'</dd>'+
@@ -94,8 +105,14 @@
           lastPrice + hist +
         '</dl>'+
         ((r.notes||[]).length?'<ul class="notes">'+r.notes.map(function(n){return '<li>'+esc(n)+'</li>';}).join("")+'</ul>':'')+
-        '<a class="go" href="'+esc(r.url)+'" target="_blank" rel="noopener">View listing ▶</a>'+
+        (grid?'</details>':'')+
+        '<a class="go" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+(grid?'View ▶':'View listing ▶')+'</a>'+
       '</div></article>';
+  }
+  function renderView(){
+    var bs = document.querySelectorAll("#viewsw .vbtn, .viewsw .vbtn");
+    for (var i=0;i<bs.length;i++) bs[i].setAttribute("aria-pressed", String(bs[i].getAttribute("data-view")===state.view));
+    $("grid").className = "grid view-"+state.view;
   }
   function renderScope(){
     var bs = document.querySelectorAll("#scope .seg");
@@ -103,12 +120,15 @@
   }
   function render(){
     renderScope();
+    renderView();
     renderTabs();
     var opts = {archive:$("f-archive").checked};
-    var v = $("f-verdict").value, q = $("f-q").value.trim().toLowerCase(), onlyNew = $("f-new").checked, sort = $("f-sort").value;
+    var ty = $("f-type").value, v = $("f-verdict").value, q = $("f-q").value.trim().toLowerCase(), onlyNew = $("f-new").checked, sort = $("f-sort").value;
     var rows = L.filter(function(r){
       if (!inTab(r, state.tab) || !visible(r, opts)) return false;
       if (v && r.verdict!==v) return false;
+      if (ty==="auction" && r.sale_type!=="auction") return false;
+      if (ty==="buy_now" && !(r.sale_type==="buy_now" || r.also_buy_now)) return false;
       if (onlyNew && !isNew(r)) return false;
       if (q && (r.title+" "+(r.pc_title||"")).toLowerCase().indexOf(q)<0) return false;
       return true;
@@ -121,7 +141,7 @@
       return (b.first_seen||"").localeCompare(a.first_seen||"");
     });
     if (state.tab==="best" && sort==="new") rows.sort(function(a,b){return (a.pct==null?9:a.pct)-(b.pct==null?9:b.pct);});
-    $("summary").textContent = rows.length+(state.scope==="cib"?" complete-in-box":"")+" listing"+(rows.length===1?"":"s")+" shown"+(state.tab==="best"?" · Good-buy verdicts across all marketplaces, best discount first":"");
+    $("summary").textContent = rows.length+(state.scope==="cib"?" complete-in-box":"")+(ty==="auction"?" auction":ty==="buy_now"?" buy-now":"")+" listing"+(rows.length===1?"":"s")+" shown"+(state.tab==="best"?" · Good-buy verdicts across all marketplaces, best discount first":"");
     $("grid").innerHTML = rows.length ? rows.map(card).join("") : '<p class="empty">Nothing matches these filters.</p>';
   }
   $("scope").addEventListener("click", function(ev){
@@ -129,11 +149,17 @@
     state.scope = b.getAttribute("data-scope");
     render();
   });
+  document.querySelector(".viewsw").addEventListener("click", function(ev){
+    var b = ev.target.closest(".vbtn"); if (!b) return;
+    state.view = b.getAttribute("data-view");
+    try { localStorage.setItem("nes-view", state.view); } catch(e){}
+    render();
+  });
   $("tabs").addEventListener("click", function(ev){
     var b = ev.target.closest(".tab"); if (!b) return;
     state.tab = b.getAttribute("data-tab"); history.replaceState(null,"","#"+state.tab); render();
   });
-  ["f-verdict","f-sort","f-new","f-archive"].forEach(function(id){ $(id).addEventListener("change", render); });
+  ["f-verdict","f-type","f-sort","f-new","f-archive"].forEach(function(id){ $(id).addEventListener("change", render); });
   $("f-q").addEventListener("input", render);
   render();
 })();

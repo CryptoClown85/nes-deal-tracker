@@ -10,15 +10,11 @@
 </head>
 <body>
 <header class="top">
-  <div class="console">
-    <div class="logo-panel">
-      <img class="nes-logo" src="assets/nes-logo.svg" width="139" height="51" alt="Nintendo Entertainment System">
-    </div>
-    <div class="band">
-      <h1 class="title-px">Deal Tracker</h1>
-      <p class="sub">Complete-in-box NES deals from Marktplaats, Tradera, eBay (.com .de .it .co.uk) &amp; 2dehands, checked against PriceCharting.</p>
-      <div class="meta" id="meta"></div>
-    </div>
+  <div class="hb">
+    <img class="nes-logo" src="assets/nes-logo.svg" width="139" height="51" alt="Nintendo Entertainment System">
+    <h1 class="title-px"><span>Deal</span> <span>Tracker</span></h1>
+    <p class="sub">Complete-in-box NES deals from Marktplaats, Tradera, eBay (.com .de .it .co.uk) &amp; 2dehands, checked against PriceCharting.</p>
+    <p class="meta" id="meta"></p>
   </div>
   <div class="pixsep" aria-hidden="true"></div>
 </header>
@@ -36,7 +32,12 @@
       <option value="">All</option><option>Good buy</option><option>Fair</option><option>Overpriced</option><option>Unclear</option>
     </select>
   </label>
-  <label>Sort
+  <label>Type
+    <select id="f-type">
+      <option value="">All</option><option value="auction">Auction</option><option value="buy_now">Buy now</option>
+    </select>
+  </label>
+  <label class="sortl">Sort
     <select id="f-sort">
       <option value="new">Newest first</option>
       <option value="deal">Best deal (% vs value)</option>
@@ -44,6 +45,12 @@
       <option value="price-desc">Price high → low</option>
     </select>
   </label>
+  <div class="viewsw" role="group" aria-label="Layout">
+    <span class="vlab">View</span>
+    <div class="vbtns">
+      <button type="button" class="vbtn" data-view="list" aria-pressed="true" title="One card per row">&#9636; List</button><button type="button" class="vbtn" data-view="grid" aria-pressed="false" title="Two cards per row">&#9638; Grid</button>
+    </div>
+  </div>
   <label class="grow">Search
     <input id="f-q" type="search" placeholder="title, e.g. zelda">
   </label>
