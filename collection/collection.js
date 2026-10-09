@@ -52,7 +52,8 @@
     if (!L || own[g.id]==="C") return "";
     if (!L.bestCib) return "";   // shelves: complete-in-box listings only
     var x = L.bestCib;
-    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.nCib+' · CIB from '+eur(x.eur.total)+' ›</a>';
+    // small yellow pill inside the title plate (tap the plate/box: the popup lists the CIB listings with links)
+    return '<span class="'+cls+'" title="'+L.nCib+' CIB listing'+(L.nCib>1?'s':'')+' for sale, cheapest '+eur(x.eur.total)+' incl. shipping">FOR SALE '+eur(x.eur.total)+'</span>';
   }
   var ARTOV = window.NES_ART_OVERRIDES || {};   // per-game picture swaps (art_overrides.js)
   function art(g){ return ARTOV[g.id] ? ARTOV[g.id].src : g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/hi/"+g.id+".jpg"; }  // black box = NTSC original scan; others = PAL (360px)
@@ -65,11 +66,11 @@
   function tile(g, k){
     var s = own[g.id] || "M", c = SH[k];
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
-    var tag = s!=="C" ? saleTag(g, "sale") : "";
+    var tag = s==="C" ? '<span class="pill cib">CIB</span>' : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
-      (s!=="M" ? '<span class="st">'+lab+'</span>' : '')+'</div></div>'+
-      '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span>'+esc(g.t)+'</span></span>'+tag+'</div>';
+      '</div></div>'+
+      '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span class="ctw"><span class="ct">'+esc(g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
   }
   function vclass(v){ return v==="Good buy"?"good":v==="Fair"?"fair":v==="Overpriced"?"over":"unclear"; }
   function pct(x){ return x==null ? "" : (x>0?"+":x<0?"−":"±")+Math.abs(Math.round(x*100))+"%"; }

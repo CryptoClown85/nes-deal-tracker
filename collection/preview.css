@@ -346,3 +346,19 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .cswrap{position:relative}
 .csjump{position:sticky;top:0;z-index:8;background:var(--bg);margin:0 0 8px;padding:6px 3px 6px 0;box-shadow:0 4px 6px -4px rgba(0,0,0,.7)}
 #cshelf .slot{scroll-margin-top:62px}
+
+/* ---------- status pills in the title plate (CIB / LOOSE / FOR SALE), nothing on the box art ---------- */
+.slot .cap{display:grid;grid-template-rows:calc(2.6em) 18px;row-gap:5px;align-items:center;justify-items:center;
+  padding:6px 6px 7px;min-height:0}
+.slot .cap>.ctw{display:flex;align-items:center;justify-content:center;height:100%;min-width:0;width:100%;overflow:hidden}
+.slot .cap .ct{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+  hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+.slot .cap>.pills{display:flex;justify-content:center;min-width:0;max-width:100%;height:18px}
+.pill{display:inline-flex;align-items:center;height:18px;box-sizing:border-box;padding:0 7px;border-radius:9px;max-width:100%;
+  font:700 10.5px/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;letter-spacing:.05em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:none;border:1px solid rgba(0,0,0,.55)}
+.pill.cib{background:#23a046;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.pill.loose{background:var(--fair);color:#fff}
+.pill.fs{background:var(--gold);color:#111;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+@media(min-width:900px){.slot .cap{grid-template-rows:calc(2.6em) 20px}.slot .cap>.pills,.pill{height:20px}.pill{font-size:11px;padding:0 8px;border-radius:10px}}
+@media(max-width:899px){.pill.fs{font-size:10px;letter-spacing:.01em;padding:0 6px}.slot .cap{padding-left:4px;padding-right:4px}}
