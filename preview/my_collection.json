@@ -1,10 +1,10 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball (CIB), - DuckTales 2, + TaleSpin (CIB), + Metal Gear (CIB)",
-  "updated": "2026-10-09T19:20:27+02:00",
-  "count": 45,
-  "cib": 45,
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2 (all CIB)",
+  "updated": "2026-10-09T19:20:50+02:00",
+  "count": 46,
+  "cib": 46,
   "loose": 0,
   "black_box": 14,
   "list": "games_master.json (PAL, 347)"
@@ -265,6 +265,12 @@
   {
    "id": "tennis",
    "title": "Tennis",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "terminator-2-judgment-day",
+   "title": "Terminator 2: Judgment Day",
    "condition": "CIB",
    "added": "2026-10-09"
   },
