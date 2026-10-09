@@ -51,8 +51,9 @@
   function saleTag(g, cls){
     var L = liveFor(g);
     if (!L || own[g.id]==="C") return "";
+    if (g.bb && !L.bestCib) return "";   // black box shelf: complete-in-box listings only
     var x = L.bestCib || L.best;
-    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.n+' · '+
+    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+(g.bb ? L.nCib : L.n)+' · '+
       (L.bestCib ? 'CIB from ' : 'from ')+eur(x.eur.total)+' ›</a>';
   }
   function art(g){ return g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/"+g.id+".jpg"; }  // black box = NTSC original scan
@@ -107,8 +108,8 @@
     }).join("") || '<p class="note">No CIB listings for missing games right now.</p>';
   }
   /* ---------- black box shelf: filters, sort, detail popup ---------- */
-  function forSale(g){ return own[g.id]!=="C" && liveFor(g); }
-  function cheapest(g){ var L = forSale(g); if (!L) return null; return (L.bestCib || L.best); }
+  function forSale(g){ var L = own[g.id]!=="C" && liveFor(g); return L && L.bestCib ? L : null; }   // CIB listings only
+  function cheapest(g){ var L = forSale(g); return L ? L.bestCib : null; }
   function bbIs(g, show){ var s = own[g.id];
     return show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
   var BBEMPTY = {own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!",
@@ -129,8 +130,8 @@
       list.sort(function(a,b){ var x=cheapest(a), y=cheapest(b);
         if (x && y) return x.eur.total - y.eur.total; if (x) return -1; if (y) return 1; return az(a,b); });
       if (!liveLoaded) hint = "Loading live listings…";
-      else if (bbf.show==="own") hint = "Owned games have no listings to compare – showing A–Z.";
-      else if (bbf.show!=="sale") hint = "Games with a listing first (cheapest total incl. shipping), then the rest A–Z.";
+      else if (bbf.show==="own") hint = "Owned games have no CIB listings to compare – showing A–Z.";
+      else if (bbf.show!=="sale") hint = "Games with a complete-in-box listing first (cheapest total incl. shipping), then the rest A–Z.";
     } else list.sort(az);
     $("bb-hint").textContent = hint; $("bb-hint").hidden = !hint;
     $("shelf").innerHTML = list.map(tile).join("") ||
@@ -156,10 +157,10 @@
       '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd></dl></div></div>';
     if (s!=="C") {
       if (!liveLoaded) h += '<p class="note">Loading live listings…</p>';
-      else if (!L) h += '<p class="bbd-none">No listings for sale right now.</p>';
+      else if (!L || !L.cib.length) h += '<p class="bbd-none">No complete-in-box copy for sale right now.</p>';
       else {
-        var xs = L.all.slice().sort(function(a,b){ return a.eur.total-b.eur.total; }).slice(0,3);
-        h += '<h4 class="bbd-h">Cheapest for sale now <small>('+L.n+' listing'+(L.n>1?'s':'')+', total incl. shipping)</small></h4><div class="bbd-ls">'+xs.map(function(x){
+        var xs = L.cib.slice().sort(function(a,b){ return a.eur.total-b.eur.total; }).slice(0,3);
+        h += '<h4 class="bbd-h">Cheapest complete-in-box for sale <small>('+L.cib.length+' CIB listing'+(L.cib.length>1?'s':'')+', total incl. shipping)</small></h4><div class="bbd-ls">'+xs.map(function(x){
           return '<div class="bbd-l"><div><b>'+eur(x.eur.total)+'</b> <span class="vb '+vclass(x.verdict)+'">'+esc(x.verdict)+(x.pct!=null?' '+pct(x.pct):'')+'</span>'+
             '<small>'+(MK[x.marketplace]||x.marketplace)+' · '+esc(x.condition==="CIB"?"CIB":x.condition)+(x.sale_type==="auction"?' · auction (current bid)':'')+'<br>'+esc(x.title)+'</small></div>'+
             '<a class="btn sm" href="'+esc(x.url)+'" target="_blank" rel="noopener">View listing ›</a></div>'; }).join("")+'</div>';
