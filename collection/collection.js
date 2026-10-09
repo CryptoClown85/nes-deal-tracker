@@ -27,7 +27,17 @@
   function sortKey(t){ return t.toLowerCase().replace(/^(the|a) /,""); }
   function letter(t){ var c = sortKey(t).charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; }
   function norm(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/\b(the|a|an|of|in)\b/g," ").replace(/[^a-z0-9]+/g,""); }
-  function value(g){ var s = own[g.id]; return s==="C" ? g.b : s==="L" ? g.l : 0; }
+  var VAL = {games:{}, graded:{}, method:{}};   // valuation.json: per owned game careful (median) / good (P70) / PriceCharting, from real sold prices
+  function full(s){ return s==="C" || s==="S"; }   // complete copy owned (CIB or factory sealed): no upgrade listings
+  var CONDN = {C:"CIB", S:"Sealed", L:"loose"};
+  function vals(g){   // value of an owned game in its condition; falls back to the PriceCharting value when there is no valuation row
+    var s = own[g.id]; if (!s) return null;
+    var v = VAL.games[g.id];
+    if (v && v.condition === CONDN[s]) return v;
+    var pc = s==="C" ? g.b : s==="L" ? g.l : (v && v.pc) || g.b;
+    return {careful:pc, good:pc, pc:pc, n:0, few:true, fallback:true};
+  }
+  function value(g){ var v = vals(g); return v ? v.pc : 0; }
   var MK = {marktplaats:"Marktplaats", tradera:"Tradera", ebay:"eBay.com", ebay_de:"eBay.de", ebay_it:"eBay.it", ebay_uk:"eBay.co.uk", "2dehands":"2dehands"};
 
   function hash(s){ var h=2166136261; for (var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; }
@@ -50,7 +60,7 @@
   }
   function saleTag(g, cls){
     var L = liveFor(g);
-    if (!L || own[g.id]==="C") return "";
+    if (!L || full(own[g.id])) return "";
     if (!L.bestCib) return "";   // shelves: complete-in-box listings only
     var x = L.bestCib;
     // small yellow pill inside the title plate (tap the plate/box: the popup lists the CIB listings with links)
@@ -66,8 +76,8 @@
   }
   function tile(g, k){
     var s = own[g.id] || "M", c = SH[k];
-    var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
-    var tag = s==="C" ? "" : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");   // no CIB badge on the shelves
+    var lab = s==="C" ? "CIB" : s==="S" ? "SEALED" : s==="L" ? "LOOSE" : "MISSING";
+    var tag = s==="C" ? "" : s==="S" ? '<span class="pill sl">SEALED</span>' : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");   // no CIB badge on the shelves
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       '</div></div>'+
@@ -96,7 +106,7 @@
     }).join("") || '<p class="note">All 30 black box games owned!</p>';
     if (!liveLoaded) return;
     var deals = [];
-    G.forEach(function(g){ if (own[g.id]==="C") return; var L = liveFor(g); if (!L) return;
+    G.forEach(function(g){ if (full(own[g.id])) return; var L = liveFor(g); if (!L) return;
       var c = L.cib.filter(function(x){ return wtype==="all" || (wtype==="auction" ? x.sale_type==="auction" : x.sale_type!=="auction"); })
         .sort(function(a,b){ return a.eur.total-b.eur.total; })[0];
       if (c) deals.push({g:g, x:c}); });
@@ -110,7 +120,7 @@
     }).join("") || '<p class="note">No CIB listings for missing games right now.</p>';
   }
   /* ---------- black box shelf: filters, sort, detail popup ---------- */
-  function forSale(g){ var L = own[g.id]!=="C" && liveFor(g); return L && L.bestCib ? L : null; }   // CIB listings only
+  function forSale(g){ var L = !full(own[g.id]) && liveFor(g); return L && L.bestCib ? L : null; }   // CIB listings only
   function cheapest(g){ var L = forSale(g); return L ? L.bestCib : null; }
   function bbIs(g, show){ var s = own[g.id];
     return show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
@@ -161,26 +171,36 @@
       '<dl><dt>Grade</dt><dd><b>'+esc(x.grader+' '+x.grade)+'</b> · '+esc(x.item)+'</dd>'+
       '<dt>Variant</dt><dd>'+esc(x.variant)+'</dd>'+
       '<dt>Region</dt><dd>'+esc(x.region)+'</dd>'+
-      '<dt>Value</dt><dd>'+(x.value_eur!=null ? '<b>'+eur(x.value_eur)+'</b>' : 'not valued')+'</dd>'+
-      '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd></dl></div></div>'+
+      (VAL.graded[x.id] ? (function(v){ return '<dt>Value</dt><dd>careful <b>'+eur(v.careful)+'</b> · good condition <b>'+eur(v.good)+'</b>'+(v.few?' <span class="few">few sales</span>':'')+'</dd>'+
+        '<dd class="wide xnote"><small>'+esc(v.basis)+' '+(v.sources||[]).map(function(s){ return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.label)+' ›</a>'; }).join(" · ")+'</small></dd>'; })(VAL.graded[x.id])
+      : '<dt>Value</dt><dd>'+(x.value_eur!=null ? '<b>'+eur(x.value_eur)+'</b>' : 'not valued')+'</dd>'+
+      '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd>')+'</dl></div></div>'+
       (x.image_label ? '<div class="bbd-lbl"><img src="'+esc(x.image_label)+'" alt="Close-up of the WATA label of the photographed copy" width="720" height="191" loading="lazy"></div>' : '')+
       '<p class="note bbd-src"><b>Photo:</b> '+esc(x.image_note||"")+' Source: <a href="'+esc(x.image_source)+'" target="_blank" rel="noopener">'+esc(x.image_source_label||x.image_source)+'</a>.</p>'+
       '<p class="note">Not counted as a separate game (the CIB Legend of Zelda is), and not part of the checklist.</p>';
+  }
+  function valRow(g){   // owned games: careful / good-condition value from real sold prices
+    var v = vals(g); if (!v) return "";
+    if (v.fallback) return '<dt>Value</dt><dd>'+eur(v.pc)+' <small>(PriceCharting; no sales valuation)</small></dd>';
+    var few = v.few ? ' <span class="few">few sales</span>' : '';
+    var span = v.n ? v.n+' sale'+(v.n>1?'s':'')+(v.from ? ', '+(v.from===v.to ? v.to : v.from+' → '+v.to) : '') : 'no recent sales – PriceCharting value';
+    return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · good condition <b>'+eur(v.good)+'</b>'+
+      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+esc(span)+few+'</small></dd>';
   }
   function openBB(id){
     var g = BYID[id];
     if (!g && EXID[id]) { $("bbd-body").innerHTML = popupX(EXID[id]); return showBB(id); }
     if (!g) return;
-    var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="L" ? "Owned · loose" : "Missing";
+    var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="S" ? "Owned · Sealed" : s==="L" ? "Owned · loose" : "Missing";
     var s5 = s5For(g), L = liveFor(g);
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+
       '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
-      '<dl><dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
+      '<dl>'+valRow(g)+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
-      '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd></dl></div></div>';
-    if (s!=="C") {
+      (s==="S" ? '' : '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd>')+'</dl></div></div>';
+    if (!full(s)) {
       if (!liveLoaded) h += '<p class="note">Loading live listings…</p>';
       else if (!L || !L.cib.length) h += '<p class="bbd-none">No complete-in-box copy for sale right now.</p>';
       else {
@@ -236,27 +256,39 @@
     wanted();
   }
   function stats(){
-    var c=0,l=0,b=0,val=0, nbb=G.filter(function(g){return g.bb;}).length;
-    G.forEach(function(g){ var s=own[g.id]; if(s==="C")c++; else if(s==="L")l++; if(s&&g.bb)b++; val += value(g)||0; });
-    var n=G.length, o=c+l;
-    var xv = EX.reduce(function(a,x){ return a + (x.value_eur||0); }, 0), xnv = EX.filter(function(x){ return x.value_eur==null; }).length;
+    var c=0,l=0,sl=0,b=0, nbb=G.filter(function(g){return g.bb;}).length, T={careful:0,good:0,pc:0}, TG={careful:0,good:0,pc:0}, nv=0;
+    G.forEach(function(g){ var s=own[g.id]; if(!s) return; if(s==="C")c++; else if(s==="S")sl++; else if(s==="L")l++; if(g.bb)b++;
+      var v = vals(g); ["careful","good","pc"].forEach(function(k){ T[k] += v[k]||0; }); });
+    var n=G.length, o=c+l+sl;
+    EX.forEach(function(x){ var v = VAL.graded[x.id] || {careful:x.value_eur, good:x.value_eur, pc:x.value_eur};
+      if (v.careful==null) nv++; ["careful","good","pc"].forEach(function(k){ TG[k] += v[k]||0; }); });
     function pc(a,t){ return t ? (Math.round(1000*a/t)/10).toLocaleString("nl-NL") + "%" : "–"; }
     function bar(id, a, t){ var w = $(id+"-wrap"); $(id).style.width = (t ? 100*a/t : 0)+"%";
       w.setAttribute("aria-valuemax", t); w.setAttribute("aria-valuenow", a); w.setAttribute("aria-valuetext", a+" of "+t+" ("+pc(a,t)+")"); }
+    function brk(k){ return "games " + eur(T[k]) + (EX.length ? " · graded " + eur(TG[k]) : ""); }
     $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-own-pct").textContent = pc(o,n); bar("pb-own", o, n);
     $("s-bb").innerHTML = b+'<small> / '+nbb+'</small>'; $("s-bb-pct").textContent = pc(b,nbb); bar("pb-bb", b, nbb);
-    $("s-total").textContent = (xv ? "≈ " : "") + eur(val + xv) + (xv ? " total" : "");
-    $("s-break").textContent = "games " + eur(val) + (EX.length ? " · graded " + eur(xv) + (xnv ? " (" + xnv + " not valued)" : "") : "");
-    var chips = [l ? "CIB " + c + " · Loose " + l : (o ? "All CIB" : "")];
+    $("s-total").textContent = "≈ " + eur(T.good + TG.good);
+    $("s-break").textContent = brk("good");
+    $("s-careful").textContent = eur(T.careful + TG.careful); $("s-careful-b").textContent = brk("careful");
+    $("s-pc").textContent = eur(T.pc + TG.pc); $("s-pc-b").textContent = brk("pc") + (nv ? " (" + nv + " not valued)" : "");
+    var parts = [];
+    if (c && !l && !sl) parts.push("All CIB"); else { if (c) parts.push("CIB " + c); if (sl) parts.push("Sealed " + sl); if (l) parts.push("Loose " + l); }
+    var chips = [parts.join(" · ")];
     if (EX.length) chips.push(EX.length + " graded extra" + (EX.length>1 ? "s" : ""));
     $("s-chips").innerHTML = chips.filter(Boolean).map(function(t){ return '<span class="chip-s">'+esc(t)+'</span>'; }).join("");
     var upd = (pubMeta.updated||"").slice(0,10);
     $("st-upd").textContent = src==="pub" ? (upd ? "updated " + upd : "") : "this device";
     $("ribbon").innerHTML = src==="pub" ? "<b>My collection</b>"+(upd?" · updated "+upd:"") : "<b>Ticks from this device</b> (not the saved collection)";
-    $("srcnote").textContent = (src==="pub" ? "Showing the saved collection (" : "Showing this device's checklist ticks (") + o + " games). "
-      + "Game value = PriceCharting PAL value for each owned game in its condition (CIB or loose)."
-      + (EX.length ? " Graded extras (" + EX.map(function(x){ return x.short||x.title; }).join(", ") + ") are not counted as games; their value comes from graded sales"
-         + (xnv ? " and " + xnv + " has no matching sale, so it is not valued" : "") + ". Total = games + graded." : "");
+    var M = VAL.method || {}, vd = VAL.valued ? new Date(VAL.valued+"T12:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}) : "";
+    $("srcnote").innerHTML = esc((src==="pub" ? "Showing the saved collection (" : "Showing this device's checklist ticks (") + o + " games). ") +
+      (VAL.valued ? esc("Valued on " + vd + " from " + (M.sales_used||"") + " real PAL sales of complete-in-box copies (PriceCharting's record of eBay sales) from the past 12 months, or 24–36 months when a game sold fewer than 5 times. "
+        + "Left out: graded, sealed, bundles and lots, reproductions, incomplete copies, NTSC/other versions and extreme outliers (" + ((M.sales_excluded||0)+(M.outliers_dropped||0)) + " sales). "
+        + "Careful = the median sale. Good condition = the 70th percentile (what the nicer copies sold for) when a game has 6 or more sales, otherwise the median. "
+        + (sl ? "Sealed games (Kung Fu) are valued from sealed sales. " : "")
+        + (EX.length ? "Graded extras use the nearest WATA/CGC auction and eBay sales. " : "")
+        + "PriceCharting = PriceCharting's own current values, for comparison. ") + '<a href="valuation_2026-10-09.md" target="_blank" rel="noopener">Full table with every sale ›</a>'
+       : esc("Game value = PriceCharting PAL value for each owned game in its condition."));
     var differs = hasLocal && JSON.stringify(sortObj(local)) !== JSON.stringify(sortObj(pub||{}));
     $("src-local").hidden = !(src==="pub" && differs); $("src-pub").hidden = src!=="local";
   }
@@ -281,8 +313,10 @@
     pub = {}; pubMeta = (d && d.meta) || {};
     EX = ((d && d.extras) || []).filter(function(x){ return x && x.id && x.base && BYID[x.base] && !BYID[x.id]; });
     EX.forEach(function(x){ EXID[x.id] = x; });
-    ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) pub[x.id] = x.condition==="CIB" ? "C" : x.condition==="loose" ? "L" : "C"; });
+    ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) pub[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
   }).catch(function(){ pub = {}; }).then(function(){
+    return fetch("valuation.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) VAL = v; }).catch(function(){});
+  }).then(function(){
     if (src==="pub") own = pub;
     stats(); render();
   });

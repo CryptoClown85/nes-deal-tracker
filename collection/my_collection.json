@@ -1,14 +1,15 @@
 {
   "meta": {
     "owner": "w van der bellen",
-    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB)",
+    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed",
     "updated": "2026-10-09T22:35:00+02:00",
     "count": 50,
-    "cib": 50,
+    "cib": 49,
     "loose": 0,
     "black_box": 13,
     "list": "games_master.json (PAL, 347)",
-    "extras": 2
+    "extras": 2,
+    "sealed": 1
   },
   "games": [
     {
@@ -158,8 +159,9 @@
     {
       "id": "kung-fu",
       "title": "Kung Fu",
-      "condition": "CIB",
-      "added": "2026-10-09"
+      "condition": "Sealed",
+      "added": "2026-10-09",
+      "note": "factory sealed (user, 2026-10-09)"
     },
     {
       "id": "mario-bros",

@@ -1,6 +1,6 @@
 (function(){
   "use strict";
-  var KEY = "nes-collection-v1";            // {id: "L" | "C"}  (shared with the collection page, index.html)
+  var KEY = "nes-collection-v1";            // {id: "L" | "C" | "S"} (S = factory sealed)  (shared with the collection page, index.html)
   var G = window.NES_GAMES || [];
   var own = load();
   var show = "all";
@@ -26,7 +26,8 @@
       '<div class="pick" role="group" aria-label="'+esc(g.t)+'">'+
       '<button class="o0" data-v="" aria-pressed="'+(st===""?"true":"false")+'" title="Not owned">NO</button>'+
       '<button class="oL" data-v="L" aria-pressed="'+(st==="L"?"true":"false")+'">LOOSE</button>'+
-      '<button class="oC" data-v="C" aria-pressed="'+(st==="C"?"true":"false")+'">CIB</button></div></div>';
+      '<button class="oC" data-v="C" aria-pressed="'+(st==="C"?"true":"false")+'">CIB</button>'+
+      '<button class="oS" data-v="S" aria-pressed="'+(st==="S"?"true":"false")+'" title="Factory sealed">SEALED</button></div></div>';
   }
   function match(g, q){
     if (show==="own" && !own[g.id]) return false;
@@ -53,13 +54,13 @@
     stats();
   }
   function stats(){
-    var c=0,l=0,b=0;
-    G.forEach(function(g){ var s=own[g.id]; if(s==="C")c++; else if(s==="L")l++; if(s&&g.bb)b++; });
-    var n = G.length, o = c+l;
-    $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").textContent = c; $("s-loose").textContent = l;
+    var c=0,l=0,b=0,sl=0;
+    G.forEach(function(g){ var s=own[g.id]; if(s==="C")c++; else if(s==="S")sl++; else if(s==="L")l++; if(s&&g.bb)b++; });
+    var n = G.length, o = c+l+sl;
+    $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").innerHTML = c + (sl ? '<small> + '+sl+' sealed</small>' : ''); $("s-loose").textContent = l;
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-need").textContent = n-o;
-    $("pb-all").style.width = (100*o/n)+"%"; $("pb-cib").style.width = (100*c/n)+"%";
-    $("dock-sum").textContent = o+"/"+n+" owned · "+c+" CIB · "+l+" loose";
+    $("pb-all").style.width = (100*o/n)+"%"; $("pb-cib").style.width = (100*(c+sl)/n)+"%";
+    $("dock-sum").textContent = o+"/"+n+" owned · "+c+" CIB"+(sl ? " · "+sl+" sealed" : "")+(l ? " · "+l+" loose" : "");
   }
   document.addEventListener("click", function(e){
     var b = e.target.closest(".pick button");
@@ -79,11 +80,11 @@
   var t; $("q").addEventListener("input", function(){ clearTimeout(t); t = setTimeout(render, 120); });
 
   function summary(){
-    var cib=[], loose=[];
-    G.forEach(function(g){ if(own[g.id]==="C") cib.push(g.t); else if(own[g.id]==="L") loose.push(g.t); });
+    var cib=[], loose=[], sealed=[];
+    G.forEach(function(g){ if(own[g.id]==="C") cib.push(g.t); else if(own[g.id]==="S") sealed.push(g.t); else if(own[g.id]==="L") loose.push(g.t); });
     var bbOwned = G.filter(function(g){return g.bb && own[g.id];}).length;
-    return "My NES collection (PAL list, "+G.length+" games): "+(cib.length+loose.length)+" owned ("+cib.length+" CIB, "+loose.length+" loose; black box "+bbOwned+"/30)\n"+
-      "CIB: "+(cib.join(", ")||"none")+"\nLoose: "+(loose.join(", ")||"none");
+    return "My NES collection (PAL list, "+G.length+" games): "+(cib.length+loose.length+sealed.length)+" owned ("+cib.length+" CIB, "+(sealed.length ? sealed.length+" sealed, " : "")+loose.length+" loose; black box "+bbOwned+"/30)\n"+
+      "CIB: "+(cib.join(", ")||"none")+(sealed.length ? "\nSealed: "+sealed.join(", ") : "")+"\nLoose: "+(loose.join(", ")||"none");
   }
   function toast(msg){ var el=$("toast"); el.textContent=msg; el.style.display="block"; clearTimeout(el._t); el._t=setTimeout(function(){el.style.display="none";},2200); }
   function showDialog(text){ $("dlg-text").value = text; if ($("dlg").showModal) $("dlg").showModal(); else $("dlg").setAttribute("open",""); $("dlg-text").select(); }
@@ -101,7 +102,7 @@
   if (localStorage.getItem(KEY) === null) {
     fetch("my_collection.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
       if (!d || !d.games || localStorage.getItem(KEY) !== null) return;
-      d.games.forEach(function(x){ own[x.id] = x.condition==="loose" ? "L" : "C"; });
+      d.games.forEach(function(x){ own[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
       var rb = document.querySelector(".ribbon");
       if (rb) rb.innerHTML = "<b>Pre-filled</b> from your saved collection ("+d.games.length+" games) · change any tick to update";
       render();

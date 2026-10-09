@@ -483,3 +483,22 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .st-link:hover{color:var(--red)}
 .st-tick{min-height:34px}
 @media(min-width:700px){.st-big{font-size:1.8rem}.st-big.gold{font-size:1.5rem}.st-k{font-size:.55rem}.st-scr{padding:12px 14px 14px}}
+
+/* ================= sealed condition + value range (v3) ================= */
+.pill.sl{background:linear-gradient(180deg,#ffffff,#d5d8de);color:#1d2230;border:1px solid #8d929c;box-shadow:inset 0 1px 0 #fff;letter-spacing:.04em}
+.chip.S{background:linear-gradient(180deg,#f4f5f7,#c8ccd3);color:#1d2230}
+.row.S{border-left-color:#b9bec8}
+.pick button[aria-pressed=true].oS{background:linear-gradient(180deg,#ffffff,#c8ccd3);color:#1d2230}
+@media(max-width:480px){.pick button{width:41px;font-size:.38rem}}
+.few{display:inline-block;margin-left:4px;padding:0 6px;border-radius:8px;background:#5a4a12;color:#ffd96a;font:600 .72rem/1.5 var(--sans);vertical-align:1px}
+.st-valt .st-break{margin-bottom:6px}
+.st-alt{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:6px 0 0;margin-top:6px;border-top:1px solid #2e2e31;font:500 .82rem/1.35 var(--sans);color:#d9d7d1}
+.st-alt>span small{color:#a9a7a1;font-size:.72rem}
+.st-alt>b{margin-left:auto;font:700 .95rem/1.2 var(--sans);color:#fff}
+.st-alt>small{flex-basis:100%;color:#a9a7a1;font-size:.74rem}
+.st-alt.st-pc{font-size:.76rem}.st-alt.st-pc>b{font-size:.84rem;color:#cfcdc7;font-weight:600}
+.st-valt .st-chips{margin-top:9px}
+.st-info .note a{color:#8a1010;font-weight:600}
+.bbd dt.vt{grid-column:1/-1;margin-bottom:-4px}
+.bbd dd.vr{font-size:15px}
+.bbd dd.vr small{margin-top:3px}
