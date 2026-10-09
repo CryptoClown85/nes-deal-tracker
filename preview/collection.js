@@ -28,7 +28,15 @@
   }
   var HUES = ["#d42020","#ffd23f","#2f8cff","#38b85a","#ff8a1c","#c04bff","#25c7c7","#ff5aa5"];
 
-  function liveFor(g){ return live[g.u] || live["t:"+norm(g.pt)] || null; }
+  function liveFor(g){   // merge listings matched by PriceCharting URL and by title (same listing counted once)
+    var a = live[g.u], b = live["t:"+norm(g.pt)];
+    if (!a || !b || a===b) return a || b || null;
+    var seen = {}, all = [];
+    a.all.concat(b.all).forEach(function(x){ if (!seen[x.key]) { seen[x.key]=1; all.push(x); } });
+    var cib = all.filter(function(x){ return x.condition==="CIB"; });
+    var by = function(p,q){ return p.eur.total-q.eur.total; };
+    return {n:all.length, nCib:cib.length, cib:cib, best:all.slice().sort(by)[0], bestCib:cib.slice().sort(by)[0]||null};
+  }
   function keep(g, q){
     var s = own[g.id];
     if (f.own==="own" && !s) return false;
@@ -145,8 +153,8 @@
       if (["lot","graded","box only"].indexOf(x.condition) >= 0) return;
       [x.pc_url, "t:"+norm(x.pc_title)].forEach(function(k){
         if (!k) return;
-        var L = live[k] || (live[k] = {n:0, nCib:0, best:null, bestCib:null, cib:[]});
-        L.n++;
+        var L = live[k] || (live[k] = {n:0, nCib:0, best:null, bestCib:null, cib:[], all:[]});
+        L.n++; L.all.push(x);
         if (!L.best || x.eur.total < L.best.eur.total) L.best = x;
         if (x.condition==="CIB") { L.nCib++; L.cib.push(x); if (!L.bestCib || x.eur.total < L.bestCib.eur.total) L.bestCib = x; }
       });
