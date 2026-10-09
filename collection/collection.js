@@ -66,7 +66,7 @@
   function tile(g, k){
     var s = own[g.id] || "M", c = SH[k];
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
-    var tag = s==="C" ? '<span class="pill cib">CIB</span>' : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");
+    var tag = s==="C" ? "" : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");   // no CIB badge on the shelves
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       '</div></div>'+
