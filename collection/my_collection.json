@@ -1,351 +1,363 @@
 {
- "meta": {
-  "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game)",
-  "updated": "2026-10-09T22:00:00+02:00",
-  "count": 48,
-  "cib": 48,
-  "loose": 0,
-  "black_box": 13,
-  "list": "games_master.json (PAL, 347)",
-  "extras": 2
- },
- "games": [
-  {
-   "id": "airwolf",
-   "title": "Airwolf",
-   "condition": "CIB",
-   "added": "2026-10-09"
+  "meta": {
+    "owner": "w van der bellen",
+    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB)",
+    "updated": "2026-10-09T22:35:00+02:00",
+    "count": 50,
+    "cib": 50,
+    "loose": 0,
+    "black_box": 13,
+    "list": "games_master.json (PAL, 347)",
+    "extras": 2
   },
-  {
-   "id": "balloon-fight",
-   "title": "Balloon Fight",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "batman-return-of-the-joker",
-   "title": "Batman: Return of the Joker",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "batman-the-video-game",
-   "title": "Batman: The Video Game",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "battletoads",
-   "title": "Battletoads",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "blue-shadow",
-   "title": "Blue Shadow",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "castlevania",
-   "title": "Castlevania",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "castlevania-ii-simon-s-quest",
-   "title": "Castlevania II: Simon's Quest",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "castlevania-iii-dracula-s-curse",
-   "title": "Castlevania III: Dracula's Curse",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "chip-n-dale-rescue-rangers",
-   "title": "Chip 'n Dale: Rescue Rangers",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "chip-n-dale-rescue-rangers-2",
-   "title": "Chip 'n Dale: Rescue Rangers 2",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "defender-of-the-crown",
-   "title": "Defender of the Crown",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "donkey-kong",
-   "title": "Donkey Kong",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "double-dragon",
-   "title": "Double Dragon",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "double-dragon-ii-the-revenge",
-   "title": "Double Dragon II: The Revenge",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "double-dragon-iii-the-sacred-stones",
-   "title": "Double Dragon III: The Sacred Stones",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "duck-hunt",
-   "title": "Duck Hunt",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "ducktales",
-   "title": "DuckTales",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "excitebike",
-   "title": "Excitebike",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "gyromite",
-   "title": "Gyromite",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "ice-climber",
-   "title": "Ice Climber",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "joe-mac-caveman-ninja",
-   "title": "Joe & Mac: Caveman Ninja",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "kid-icarus",
-   "title": "Kid Icarus",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "knight-rider",
-   "title": "Knight Rider",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "kung-fu",
-   "title": "Kung Fu",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "the-legend-of-zelda",
-   "title": "The Legend of Zelda",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "the-lion-king",
-   "title": "The Lion King",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "mario-bros",
-   "title": "Mario Bros.",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "mega-man",
-   "title": "Mega Man",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "mega-man-2",
-   "title": "Mega Man 2",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "metal-gear",
-   "title": "Metal Gear",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "pinball",
-   "title": "Pinball",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "popeye",
-   "title": "Popeye",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "probotector",
-   "title": "Probotector",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "punch-out",
-   "title": "Punch-Out!!",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "rad-racer",
-   "title": "Rad Racer",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "rush-n-attack",
-   "title": "Rush'n Attack",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "section-z",
-   "title": "Section Z",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "shadow-warriors",
-   "title": "Shadow Warriors",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "soccer",
-   "title": "Soccer",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "super-mario-bros",
-   "title": "Super Mario Bros.",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "super-mario-bros-2",
-   "title": "Super Mario Bros. 2",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "super-mario-bros-3",
-   "title": "Super Mario Bros. 3",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "talespin",
-   "title": "TaleSpin",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "tennis",
-   "title": "Tennis",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "terminator-2-judgment-day",
-   "title": "Terminator 2: Judgment Day",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "wwf-wrestlemania-challenge",
-   "title": "WWF WrestleMania Challenge",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "zelda-ii-the-adventure-of-link",
-   "title": "Zelda II: The Adventure of Link",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  }
- ],
- "extras": [
-  {
-   "id": "the-legend-of-zelda--wata-7-5-cib-rev-a",
-   "base": "the-legend-of-zelda",
-   "title": "The Legend of Zelda – CIB WATA 7.5 (Rev-A)",
-   "short": "Zelda – CIB WATA 7.5",
-   "kind": "graded",
-   "grader": "WATA",
-   "grade": "7.5",
-   "item": "Complete in box (CIB)",
-   "variant": "Rev-A",
-   "condition": "Graded (WATA 7.5, CIB)",
-   "region": "NTSC (USA)",
-   "image": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a.jpg",
-   "image_large": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a@2x.jpg",
-   "image_note": "Photo of another copy, not yours, but the same grade: a WATA 7.5 CIB Rev-A. Its label reads \"Promotional Copy; Rev-A, Oval SOQ TM, Large Warranty No Mexico, 9-Digit ZIP, Promotional Copy (USA* Code)\", with a gold 3-screw Oval SOQ TM cart and an Oval SOQ TM manual. So it is a Rev-A promotional-copy variant, which may differ from yours. Front photo plus a close-up of the label from the same listing.",
-   "image_source": "https://www.ebay.com/itm/235336303501",
-   "image_source_label": "eBay listing 235336303501 \"The Legend of Zelda Promotional Ver WATA Certified Rev A Oval SOQ Grade 7.5 Rare\" (active, asking $2,400 – not a sale)",
-   "value_eur": 343,
-   "value_usd": 384,
-   "value_note": "Estimate: $384 ≈ €343 (tracker FX rate, 9 Oct 2026) = median of the three Heritage sales of a WATA 7.5 CIB Rev-A Zelda: $384 (13 Dec 2022, Rev-A Round SOQ mid production), $690 (20 Sep 2022, same), $372 (10 Aug 2020, Rev-A Round SOQ early production). Recent WATA 7.5 CIB sales with the variant not stated (eBay, Apr–Sep 2026, via PriceCharting) were $380–$600. The photo listing (eBay 235336303501, promotional copy) is an active ask of $2,400, not a sale, and is not used for the value.",
-   "value_source": "https://whattheslab.com/nes/the-legend-of-zelda/",
-   "added": "2026-10-09",
-   "image_label": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a-label.jpg"
-  },
-  {
-   "id": "the-legend-of-zelda--wata-7-0-gold-5screw",
-   "base": "the-legend-of-zelda",
-   "title": "The Legend of Zelda (Gold cartridge) – WATA 7.0",
-   "short": "Zelda – Gold WATA 7.0",
-   "kind": "graded",
-   "grader": "WATA",
-   "grade": "7.0",
-   "item": "Cartridge only",
-   "variant": "5-screw, no Made in Japan",
-   "condition": "Graded (WATA 7.0, cart)",
-   "region": "NTSC (USA)",
-   "image": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw.jpg",
-   "image_large": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw@2x.jpg",
-   "image_note": "Stand-in photo, not this copy: a WATA 7.5 cart of the same 5-screw, no Made in Japan variant (label: \"Gold, 5 Screw, Round SOQ, NES R, No Made in Japan, No Code (Cart)\"). No photo of a WATA 7.0 cart of this variant was found.",
-   "image_source": "https://www.ebay.com/itm/377329264737",
-   "image_source_label": "eBay listing 377329264737 \"The Legend of Zelda (Early Production) NES Wata 7.5 CART\"",
-   "value_eur": null,
-   "value_note": "No sale of a WATA 7.0 cart of this variant found, so no value is counted. Nearest results: WATA 7.5 cart (Round SoQ, 5 Screw) $168, eBay 29 Apr 2024; CGC 7.5 cart (5-screw, NES TM) $252, Heritage 21 Dec 2023 – both via PriceCharting 'Legend of Zelda [5 Screw]'.",
-   "value_source": "https://www.pricecharting.com/game/nes/legend-of-zelda-5-screw",
-   "added": "2026-10-09"
-  }
- ]
+  "games": [
+    {
+      "id": "airwolf",
+      "title": "Airwolf",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "balloon-fight",
+      "title": "Balloon Fight",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "batman-return-of-the-joker",
+      "title": "Batman: Return of the Joker",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "batman-the-video-game",
+      "title": "Batman: The Video Game",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "battletoads",
+      "title": "Battletoads",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "blue-shadow",
+      "title": "Blue Shadow",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "castlevania",
+      "title": "Castlevania",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "castlevania-ii-simon-s-quest",
+      "title": "Castlevania II: Simon's Quest",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "castlevania-iii-dracula-s-curse",
+      "title": "Castlevania III: Dracula's Curse",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "chip-n-dale-rescue-rangers",
+      "title": "Chip 'n Dale: Rescue Rangers",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "chip-n-dale-rescue-rangers-2",
+      "title": "Chip 'n Dale: Rescue Rangers 2",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "defender-of-the-crown",
+      "title": "Defender of the Crown",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "donkey-kong",
+      "title": "Donkey Kong",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "double-dragon",
+      "title": "Double Dragon",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "double-dragon-ii-the-revenge",
+      "title": "Double Dragon II: The Revenge",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "double-dragon-iii-the-sacred-stones",
+      "title": "Double Dragon III: The Sacred Stones",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "duck-hunt",
+      "title": "Duck Hunt",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "ducktales",
+      "title": "DuckTales",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "excitebike",
+      "title": "Excitebike",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "gyromite",
+      "title": "Gyromite",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "ice-climber",
+      "title": "Ice Climber",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "joe-mac-caveman-ninja",
+      "title": "Joe & Mac: Caveman Ninja",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "kid-icarus",
+      "title": "Kid Icarus",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "knight-rider",
+      "title": "Knight Rider",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "kung-fu",
+      "title": "Kung Fu",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "mario-bros",
+      "title": "Mario Bros.",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "mega-man",
+      "title": "Mega Man",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "mega-man-2",
+      "title": "Mega Man 2",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "metal-gear",
+      "title": "Metal Gear",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "nintendo-world-cup",
+      "title": "Nintendo World Cup",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "pinball",
+      "title": "Pinball",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "popeye",
+      "title": "Popeye",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "probotector",
+      "title": "Probotector",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "punch-out",
+      "title": "Punch-Out!!",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "rad-racer",
+      "title": "Rad Racer",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "rush-n-attack",
+      "title": "Rush'n Attack",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "section-z",
+      "title": "Section Z",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "shadow-warriors",
+      "title": "Shadow Warriors",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "snake-s-revenge",
+      "title": "Snake's Revenge",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "soccer",
+      "title": "Soccer",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "super-mario-bros",
+      "title": "Super Mario Bros.",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "super-mario-bros-2",
+      "title": "Super Mario Bros. 2",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "super-mario-bros-3",
+      "title": "Super Mario Bros. 3",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "talespin",
+      "title": "TaleSpin",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "tennis",
+      "title": "Tennis",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "terminator-2-judgment-day",
+      "title": "Terminator 2: Judgment Day",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "the-legend-of-zelda",
+      "title": "The Legend of Zelda",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "the-lion-king",
+      "title": "The Lion King",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "wwf-wrestlemania-challenge",
+      "title": "WWF WrestleMania Challenge",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
+      "id": "zelda-ii-the-adventure-of-link",
+      "title": "Zelda II: The Adventure of Link",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    }
+  ],
+  "extras": [
+    {
+      "id": "the-legend-of-zelda--wata-7-5-cib-rev-a",
+      "base": "the-legend-of-zelda",
+      "title": "The Legend of Zelda – CIB WATA 7.5 (Rev-A)",
+      "short": "Zelda – CIB WATA 7.5",
+      "kind": "graded",
+      "grader": "WATA",
+      "grade": "7.5",
+      "item": "Complete in box (CIB)",
+      "variant": "Rev-A",
+      "condition": "Graded (WATA 7.5, CIB)",
+      "region": "NTSC (USA)",
+      "image": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a.jpg",
+      "image_large": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a@2x.jpg",
+      "image_note": "Photo of another copy, not yours, but the same grade: a WATA 7.5 CIB Rev-A. Its label reads \"Promotional Copy; Rev-A, Oval SOQ TM, Large Warranty No Mexico, 9-Digit ZIP, Promotional Copy (USA* Code)\", with a gold 3-screw Oval SOQ TM cart and an Oval SOQ TM manual. So it is a Rev-A promotional-copy variant, which may differ from yours. Front photo plus a close-up of the label from the same listing.",
+      "image_source": "https://www.ebay.com/itm/235336303501",
+      "image_source_label": "eBay listing 235336303501 \"The Legend of Zelda Promotional Ver WATA Certified Rev A Oval SOQ Grade 7.5 Rare\" (active, asking $2,400 – not a sale)",
+      "value_eur": 343,
+      "value_usd": 384,
+      "value_note": "Estimate: $384 ≈ €343 (tracker FX rate, 9 Oct 2026) = median of the three Heritage sales of a WATA 7.5 CIB Rev-A Zelda: $384 (13 Dec 2022, Rev-A Round SOQ mid production), $690 (20 Sep 2022, same), $372 (10 Aug 2020, Rev-A Round SOQ early production). Recent WATA 7.5 CIB sales with the variant not stated (eBay, Apr–Sep 2026, via PriceCharting) were $380–$600. The photo listing (eBay 235336303501, promotional copy) is an active ask of $2,400, not a sale, and is not used for the value.",
+      "value_source": "https://whattheslab.com/nes/the-legend-of-zelda/",
+      "added": "2026-10-09",
+      "image_label": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a-label.jpg"
+    },
+    {
+      "id": "the-legend-of-zelda--wata-7-0-gold-5screw",
+      "base": "the-legend-of-zelda",
+      "title": "The Legend of Zelda (Gold cartridge) – WATA 7.0",
+      "short": "Zelda – Gold WATA 7.0",
+      "kind": "graded",
+      "grader": "WATA",
+      "grade": "7.0",
+      "item": "Cartridge only",
+      "variant": "5-screw, no Made in Japan",
+      "condition": "Graded (WATA 7.0, cart)",
+      "region": "NTSC (USA)",
+      "image": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw.jpg",
+      "image_large": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw@2x.jpg",
+      "image_note": "Stand-in photo, not this copy: a WATA 7.5 cart of the same 5-screw, no Made in Japan variant (label: \"Gold, 5 Screw, Round SOQ, NES R, No Made in Japan, No Code (Cart)\"). No photo of a WATA 7.0 cart of this variant was found.",
+      "image_source": "https://www.ebay.com/itm/377329264737",
+      "image_source_label": "eBay listing 377329264737 \"The Legend of Zelda (Early Production) NES Wata 7.5 CART\"",
+      "value_eur": null,
+      "value_note": "No sale of a WATA 7.0 cart of this variant found, so no value is counted. Nearest results: WATA 7.5 cart (Round SoQ, 5 Screw) $168, eBay 29 Apr 2024; CGC 7.5 cart (5-screw, NES TM) $252, Heritage 21 Dec 2023 – both via PriceCharting 'Legend of Zelda [5 Screw]'.",
+      "value_source": "https://www.pricecharting.com/game/nes/legend-of-zelda-5-screw",
+      "added": "2026-10-09"
+    }
+  ]
 }
