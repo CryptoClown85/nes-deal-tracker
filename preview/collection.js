@@ -8,7 +8,9 @@
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
   var f = {own:"all", cond:"all"};
-  var BBKEY = "nes-bbshelf-v1", bbf = {show:"all", sort:"az"};
+  var BBDEF = {show:"own", sort:"az"};   // default: Owned (v2 key so older saved "All" choices reset once)
+  var BBKEY = "nes-bbshelf-v2", bbf = {show:BBDEF.show, sort:BBDEF.sort};
+  try { localStorage.removeItem("nes-bbshelf-v1"); } catch(e){}
   try { var sv = JSON.parse(localStorage.getItem(BBKEY)||"null"); if (sv) { if (/^(all|own|miss|sale)$/.test(sv.show)) bbf.show=sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) bbf.sort=sv.sort; } } catch(e){}
   var live = {};                      // key -> {n, best, bestCib}
   var liveLoaded = false, wtype = "all";
@@ -120,7 +122,7 @@
       $("bn-"+k).textContent = (k==="sale" && !liveLoaded) ? "…" : all.filter(function(g){ return bbIs(g,k); }).length; });
     document.querySelectorAll("[data-bs]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.bs===bbf.show ? "true":"false"); });
     $("bb-sort").value = bbf.sort;
-    $("bb-reset").hidden = !(bbf.show!=="all" && bbf.sort!=="az");
+    $("bb-reset").hidden = !(bbf.show!==BBDEF.show && bbf.sort!==BBDEF.sort);
     var list = all.filter(function(g){ return bbIs(g, bbf.show); });
     var az = function(a,b){ return sortKey(a.t) < sortKey(b.t) ? -1 : sortKey(a.t) > sortKey(b.t) ? 1 : 0; };
     var hint = "";
@@ -193,7 +195,7 @@
     if (e.target!==this) return; var r = this.getBoundingClientRect();
     if (e.clientX<r.left || e.clientX>r.right || e.clientY<r.top || e.clientY>r.bottom) closeBB(); });
   $("bb-sort").addEventListener("change", function(){ bbf.sort = this.value; saveBB(); renderShelf(); });
-  $("bb-reset").addEventListener("click", function(){ bbf = {show:"all", sort:"az"}; saveBB(); renderShelf(); });
+  $("bb-reset").addEventListener("click", function(){ bbf = {show:BBDEF.show, sort:BBDEF.sort}; saveBB(); renderShelf(); });
   $("shelf").addEventListener("keydown", function(e){ var b = e.target.closest("[data-bb]");
     if (b && (e.key==="Enter" || e.key===" ")) { e.preventDefault(); openBB(b.dataset.bb); } });
 
