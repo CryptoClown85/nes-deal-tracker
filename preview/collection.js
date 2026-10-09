@@ -8,6 +8,8 @@
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
   var f = {own:"all", cond:"all"};
+  var BBKEY = "nes-bbshelf-v1", bbf = {show:"all", sort:"az"};
+  try { var sv = JSON.parse(localStorage.getItem(BBKEY)||"null"); if (sv) { if (/^(all|own|miss|sale)$/.test(sv.show)) bbf.show=sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) bbf.sort=sv.sort; } } catch(e){}
   var live = {};                      // key -> {n, best, bestCib}
   var liveLoaded = false, wtype = "all";
   var $ = function(id){ return document.getElementById(id); };
@@ -35,7 +37,7 @@
     a.all.concat(b.all).forEach(function(x){ if (!seen[x.key]) { seen[x.key]=1; all.push(x); } });
     var cib = all.filter(function(x){ return x.condition==="CIB"; });
     var by = function(p,q){ return p.eur.total-q.eur.total; };
-    return {n:all.length, nCib:cib.length, cib:cib, best:all.slice().sort(by)[0], bestCib:cib.slice().sort(by)[0]||null};
+    return {n:all.length, nCib:cib.length, cib:cib, all:all, best:all.slice().sort(by)[0], bestCib:cib.slice().sort(by)[0]||null};
   }
   function keep(g, q){
     var s = own[g.id];
@@ -63,10 +65,10 @@
     var s = own[g.id] || "M";
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
     var tag = s!=="C" ? saleTag(g, "sale") : "";
-    if (g.bb) return '<div class="slot '+s+'" id="bb-'+g.id+'"><div class="stand"><div class="pbox '+s+'" title="'+esc(g.t)+' – '+lab+'">'+
+    if (g.bb) return '<div class="slot '+s+'" id="bb-'+g.id+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box" loading="lazy" decoding="async" width="252" height="360">'+
       (s!=="M" ? '<span class="st">'+lab+'</span>' : '')+'</div></div>'+
-      '<span class="cap">'+esc(g.t)+'</span>'+tag+'</div>';
+      '<span class="cap" data-bb="'+g.id+'">'+esc(g.t)+'</span>'+tag+'</div>';
     var h = HUES[hash(g.id) % HUES.length];
     return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
       '<span class="art"><i style="--hue:'+h+';--pix:'+sprite(g.id)+'"></i></span><span class="bt">'+esc(g.t)+'</span></div>'+tag+'</div>';
@@ -104,10 +106,78 @@
         '<div class="pr"><b>'+eur(x.eur.total)+'</b><span class="vb '+vclass(x.verdict)+'">'+esc(x.verdict)+(x.pct!=null?' '+pct(x.pct):'')+'</span></div></a>';
     }).join("") || '<p class="note">No CIB listings for missing games right now.</p>';
   }
+  /* ---------- black box shelf: filters, sort, detail popup ---------- */
+  function forSale(g){ return own[g.id]!=="C" && liveFor(g); }
+  function cheapest(g){ var L = forSale(g); if (!L) return null; return (L.bestCib || L.best); }
+  function bbIs(g, show){ var s = own[g.id];
+    return show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
+  var BBEMPTY = {own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!",
+    sale:"No black box games for sale right now.", all:"No black box games."};
+  function renderShelf(){
+    var all = G.filter(function(g){ return g.bb; });
+    ["all","own","miss","sale"].forEach(function(k){
+      $("bn-"+k).textContent = (k==="sale" && !liveLoaded) ? "…" : all.filter(function(g){ return bbIs(g,k); }).length; });
+    document.querySelectorAll("[data-bs]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.bs===bbf.show ? "true":"false"); });
+    $("bb-sort").value = bbf.sort;
+    $("bb-reset").hidden = !(bbf.show!=="all" && bbf.sort!=="az");
+    var list = all.filter(function(g){ return bbIs(g, bbf.show); });
+    var az = function(a,b){ return sortKey(a.t) < sortKey(b.t) ? -1 : sortKey(a.t) > sortKey(b.t) ? 1 : 0; };
+    var hint = "";
+    if (bbf.sort==="val") list.sort(function(a,b){ return (b.b||0)-(a.b||0) || az(a,b); });
+    else if (bbf.sort==="rel") list.sort(function(a,b){ return (a.y||9999)-(b.y||9999) || az(a,b); });
+    else if (bbf.sort==="cheap") {
+      list.sort(function(a,b){ var x=cheapest(a), y=cheapest(b);
+        if (x && y) return x.eur.total - y.eur.total; if (x) return -1; if (y) return 1; return az(a,b); });
+      if (!liveLoaded) hint = "Loading live listings…";
+      else if (bbf.show==="own") hint = "Owned games have no listings to compare – showing A–Z.";
+      else if (bbf.show!=="sale") hint = "Games with a listing first (cheapest total incl. shipping), then the rest A–Z.";
+    } else list.sort(az);
+    $("bb-hint").textContent = hint; $("bb-hint").hidden = !hint;
+    $("shelf").innerHTML = list.map(tile).join("") ||
+      '<p class="empty bbempty">'+(bbf.show==="sale" && !liveLoaded ? "Loading live listings…" : BBEMPTY[bbf.show])+'</p>';
+  }
+  function saveBB(){ try { localStorage.setItem(BBKEY, JSON.stringify(bbf)); } catch(e){} }
+  function s5For(g){   // last-5 CIB sales average, if the tracker fetched it for a listing of this game
+    var L = liveFor(g); if (!L) return null; var r = null;
+    L.all.forEach(function(x){ var s = x.sales5; if (s && s.bucket==="cib" && s.n && (!r || s.n > r.n)) r = s; });
+    return r;
+  }
+  function openBB(id){
+    var g = BYID[id]; if (!g) return;
+    var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="L" ? "Owned · loose" : "Missing";
+    var s5 = s5For(g), L = liveFor(g);
+    var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box (NTSC art)" width="252" height="360"></div>'+
+      '<div class="bbd-info"><h3 id="bbd-t">'+esc(g.t)+'</h3>'+
+      '<span class="chip '+(s||"M")+'">'+lab+'</span>'+
+      '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
+      '<dl><dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
+      '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
+      '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+'</small>' : '<small>not available</small>')+'</dd></dl></div></div>';
+    if (s!=="C") {
+      if (!liveLoaded) h += '<p class="note">Loading live listings…</p>';
+      else if (!L) h += '<p class="bbd-none">No listings for sale right now.</p>';
+      else {
+        var xs = L.all.slice().sort(function(a,b){ return a.eur.total-b.eur.total; }).slice(0,3);
+        h += '<h4 class="bbd-h">Cheapest for sale now <small>('+L.n+' listing'+(L.n>1?'s':'')+', total incl. shipping)</small></h4><div class="bbd-ls">'+xs.map(function(x){
+          return '<div class="bbd-l"><div><b>'+eur(x.eur.total)+'</b> <span class="vb '+vclass(x.verdict)+'">'+esc(x.verdict)+(x.pct!=null?' '+pct(x.pct):'')+'</span>'+
+            '<small>'+(MK[x.marketplace]||x.marketplace)+' · '+esc(x.condition==="CIB"?"CIB":x.condition)+(x.sale_type==="auction"?' · auction (current bid)':'')+'<br>'+esc(x.title)+'</small></div>'+
+            '<a class="btn sm" href="'+esc(x.url)+'" target="_blank" rel="noopener">View listing ›</a></div>'; }).join("")+'</div>';
+      }
+    }
+    $("bbd-body").innerHTML = h;
+    var d = $("bbdlg"); if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute("open","");
+  }
+  function closeBB(){ var d = $("bbdlg"); if (d.close) d.close(); else d.removeAttribute("open"); }
+  $("bbd-x").addEventListener("click", closeBB);
+  $("bbdlg").addEventListener("click", function(e){ if (e.target===this) closeBB(); });   // tap outside (backdrop)
+  $("bb-sort").addEventListener("change", function(){ bbf.sort = this.value; saveBB(); renderShelf(); });
+  $("bb-reset").addEventListener("click", function(){ bbf = {show:"all", sort:"az"}; saveBB(); renderShelf(); });
+  $("shelf").addEventListener("keydown", function(e){ var b = e.target.closest("[data-bb]");
+    if (b && (e.key==="Enter" || e.key===" ")) { e.preventDefault(); openBB(b.dataset.bb); } });
+
   function render(){
     var q = $("q").value.trim().toLowerCase();
-    var bb = G.filter(function(g){ return g.bb && keep(g,q); });
-    $("shelf").innerHTML = bb.map(tile).join("") || '<p class="empty" style="grid-column:1/-1">No black box games match.</p>';
+    renderShelf();
     var rest = G.filter(function(g){ return !g.bb && keep(g,q); });
     var groups = {}, order = [];
     rest.forEach(function(g){ var L = letter(g.t); if (!groups[L]) { groups[L]=[]; order.push(L); } groups[L].push(g); });
@@ -115,7 +185,7 @@
       return '<h3 class="letter" id="L-'+(L==="#"?"0":L)+'">'+L+'</h3><div class="list">'+groups[L].map(crow).join("")+'</div>'; }).join("");
     $("jump").innerHTML = '<a href="#wanted">★</a><a href="#bb">BB</a>' + "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(L){
       return '<a href="#L-'+(L==="#"?"0":L)+'" class="'+(groups[L]?"":"off")+'">'+L+'</a>'; }).join("");
-    $("none").hidden = !!(bb.length || rest.length);
+    $("none").hidden = !!rest.length;
     var allBB = G.filter(function(g){return g.bb;});
     $("bb-cnt").textContent = allBB.filter(function(g){return own[g.id];}).length + "/" + allBB.length + " owned";
     $("all-cnt").textContent = G.filter(function(g){return !g.bb && own[g.id];}).length + "/" + (G.length-allBB.length) + " owned";
@@ -136,6 +206,12 @@
   }
   function sortObj(o){ var r={}; Object.keys(o).sort().forEach(function(k){ r[k]=o[k]; }); return r; }
   document.addEventListener("click", function(e){
+    var bs = e.target.closest("[data-bs]");
+    if (bs) { bbf.show = bs.dataset.bs; saveBB(); renderShelf(); return; }
+    var bx = e.target.closest("#shelf [data-bb]");
+    if (bx) { openBB(bx.dataset.bb); return; }
+    var jl = e.target.closest('a[href^="#bb-"]');   // Wanted chip -> shelf box hidden by a filter? show all first
+    if (jl && !document.getElementById(jl.getAttribute("href").slice(1))) { bbf.show = "all"; saveBB(); renderShelf(); }
     var w = e.target.closest("[data-w]");
     if (w) { wtype = w.dataset.w; document.querySelectorAll("[data-w]").forEach(function(x){ x.setAttribute("aria-pressed", x===w?"true":"false"); }); wanted(); return; }
     var b = e.target.closest("[data-f]");

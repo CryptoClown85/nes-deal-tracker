@@ -38,6 +38,22 @@
   </section>
 
   <h2 class="sec" id="bb">Black box shelf <span class="cnt" id="bb-cnt"></span></h2>
+  <div class="bbbar" id="bbbar">
+    <div class="bbshow" role="group" aria-label="Show black box games">
+      <button type="button" data-bs="all" aria-pressed="true">All<span class="n" id="bn-all">30</span></button><button type="button" data-bs="own" aria-pressed="false">Owned<span class="n" id="bn-own">–</span></button><button type="button" data-bs="miss" aria-pressed="false">Missing<span class="n" id="bn-miss">–</span></button><button type="button" data-bs="sale" aria-pressed="false">For sale<span class="n" id="bn-sale">…</span></button>
+    </div>
+    <div class="bbsort">
+      <label class="lbl" for="bb-sort">Sort</label>
+      <select id="bb-sort">
+        <option value="az">A–Z</option>
+        <option value="val">Value high → low</option>
+        <option value="cheap">Cheapest for sale first</option>
+        <option value="rel">Release order (PAL year)</option>
+      </select>
+      <button type="button" class="btn alt sm" id="bb-reset" hidden>Reset</button>
+    </div>
+    <p class="bbhint" id="bb-hint" hidden></p>
+  </div>
   <div class="shelf" id="shelf"></div>
 
   <section class="panel wanted" id="wanted" aria-label="Wanted">
@@ -75,6 +91,10 @@
   <b>For sale</b> tags link to matching live listings found by the <a href="../">NES Deal Tracker</a> (cheapest total incl. shipping).</p>
   <p>Preview page – not in the main menu yet. Game list: officially released PAL NES games from Wikipedia's NES games list, cross-checked with PriceCharting's PAL list.</p>
 </footer>
+<dialog class="bbdlg" id="bbdlg" aria-labelledby="bbd-t">
+  <button type="button" class="bbx" id="bbd-x" aria-label="Close">✕</button>
+  <div id="bbd-body"></div>
+</dialog>
 <script src="games.js"></script>
 <script src="collection.js"></script>
 </body>
