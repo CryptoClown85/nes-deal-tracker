@@ -54,9 +54,11 @@
     var x = L.bestCib;
     return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.nCib+' · CIB from '+eur(x.eur.total)+' ›</a>';
   }
-  function art(g){ return g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/hi/"+g.id+".jpg"; }  // black box = NTSC original scan; others = PAL (360px)
+  var ARTOV = window.NES_ART_OVERRIDES || {};   // per-game picture swaps (art_overrides.js)
+  function art(g){ return ARTOV[g.id] ? ARTOV[g.id].src : g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/hi/"+g.id+".jpg"; }  // black box = NTSC original scan; others = PAL (360px)
   function thumb(g, cls){   // small box-art thumbnail (lazy) or retro placeholder
     if (g.bb) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360">';
+    if (ARTOV[g.id]) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360">';
     if (g.im) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">';
     return '<span class="'+cls+' ph" style="--hue:'+HUES[hash(g.id)%HUES.length]+'" aria-hidden="true">'+esc(g.t.replace(/^(the|a) /i,"").charAt(0))+'</span>';
   }

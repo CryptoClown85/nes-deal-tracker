@@ -17,7 +17,9 @@
     var sub = [g.p, g.y].filter(Boolean).join(" · ");
     if (g.c) sub += " · compilation";
     if (g.r) sub += " · " + g.r;
-    var th = g.bb ? '<img class="th" src="boxart/blackbox/'+g.id+'.jpg" alt="" loading="lazy" decoding="async" width="252" height="360">'
+    var ov = (window.NES_ART_OVERRIDES || {})[g.id];
+    var th = ov ? '<img class="th" src="'+ov.src+'" alt="" loading="lazy" decoding="async" width="252" height="360">'
+      : g.bb ? '<img class="th" src="boxart/blackbox/'+g.id+'.jpg" alt="" loading="lazy" decoding="async" width="252" height="360">'
       : g.im ? '<img class="th" src="boxart/'+g.id+'.jpg" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">'
       : '<span class="th ph" aria-hidden="true">'+esc(g.t.replace(/^(the|a) /i,"").charAt(0))+'</span>';
     return '<div class="row '+st+'" data-id="'+g.id+'">'+th+'<div class="nm"><b>'+esc(g.t)+'</b><small>'+sub+'</small></div>'+
