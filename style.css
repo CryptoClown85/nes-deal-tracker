@@ -17,11 +17,11 @@ a{color:inherit}
 
 /* ---------- header: one compact console-grey band, logo left, title + stats right ---------- */
 .top{background:linear-gradient(#dcdad4,#c3c0b9);border-bottom:3px solid var(--black)}
-.hb{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"logo title" "meta meta";align-items:center;
+.hb{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"logo title" "logo nav" "meta meta";align-items:center;
   column-gap:12px;padding:10px 12px 0;max-width:1240px;margin:0 auto}
-.nes-logo{grid-area:logo;display:block;width:min(222px,57vw);height:auto;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.18))}
+.nes-logo{grid-area:logo;display:block;width:min(222px,52vw);height:auto;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.18))}
 .title-px{grid-area:title;font:400 .78rem/1.55 var(--px);letter-spacing:.06em;margin:0;color:var(--black);text-transform:uppercase;
-  text-shadow:2px 2px 0 rgba(212,32,32,.55)}
+  text-shadow:2px 2px 0 rgba(212,32,32,.55);align-self:end}
 .title-px span{display:block}
 .title-px span:first-child::before{content:"";display:inline-block;width:.75em;height:.75em;margin-right:.5em;background:var(--red);
   box-shadow:2px 2px 0 var(--red-dark);vertical-align:0}
@@ -31,7 +31,7 @@ a{color:inherit}
 .meta b{color:#fff}
 .meta .dot{color:var(--red)}
 @media (min-width:760px){
-  .hb{grid-template-columns:auto 1fr;grid-template-areas:"logo title" "logo sub" "logo meta";column-gap:22px;row-gap:5px;padding:10px 24px}
+  .hb{grid-template-columns:auto 1fr auto;grid-template-areas:"logo title nav" "logo sub nav" "logo meta nav";column-gap:22px;row-gap:5px;padding:10px 24px}
   .nes-logo{width:250px}
   .title-px{font-size:1.2rem;line-height:1.3;align-self:end}
   .title-px span{display:inline}
@@ -39,6 +39,15 @@ a{color:inherit}
   .meta{margin:0;padding:0;background:none;color:#333;font-size:.82rem;align-self:start;white-space:normal}
   .meta b{color:var(--black)}
 }
+
+/* retro header button: MY COLLECTION (same style as the collection page's DEAL TRACKER button) */
+.navbtn{grid-area:nav;justify-self:start;align-self:start;margin-top:6px;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:6px 11px;
+  box-sizing:border-box;background:var(--red);color:#fff;text-decoration:none;border:3px solid var(--black);
+  box-shadow:3px 3px 0 var(--black),inset 0 -3px 0 var(--red-dark);font:400 .58rem/1.35 var(--px);letter-spacing:.04em;text-transform:uppercase}
+.navbtn span{font-size:.7em}
+.navbtn:hover{background:#e83030}
+.navbtn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black),inset 0 -3px 0 var(--red-dark)}
+@media (min-width:760px){.navbtn{align-self:center;margin:0;font-size:.66rem;padding:8px 14px;white-space:nowrap}}
 
 /* pixel separator: red/black squares (thin) */
 .pixsep{height:5px;background:repeating-linear-gradient(90deg,var(--red) 0 5px,var(--black) 5px 10px)}

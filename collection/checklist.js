@@ -1,6 +1,6 @@
 (function(){
   "use strict";
-  var KEY = "nes-collection-v1";            // {id: "L" | "C"}  (shared with collection.html on the same site)
+  var KEY = "nes-collection-v1";            // {id: "L" | "C"}  (shared with the collection page, index.html)
   var G = window.NES_GAMES || [];
   var own = load();
   var show = "all";
@@ -103,7 +103,7 @@
       if (!d || !d.games || localStorage.getItem(KEY) !== null) return;
       d.games.forEach(function(x){ own[x.id] = x.condition==="loose" ? "L" : "C"; });
       var rb = document.querySelector(".ribbon");
-      if (rb) rb.innerHTML = "<b>PREVIEW</b> · pre-filled with your saved collection ("+d.games.length+" games) · change any tick to update";
+      if (rb) rb.innerHTML = "<b>Pre-filled</b> from your saved collection ("+d.games.length+" games) · change any tick to update";
       render();
     }).catch(function(){});
   }

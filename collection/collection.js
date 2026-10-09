@@ -209,7 +209,7 @@
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
     $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
     var upd = (pubMeta.updated||"").slice(0,10);
-    $("ribbon").innerHTML = src==="pub" ? "<b>PREVIEW</b> · my collection"+(upd?" · updated "+upd:"") : "<b>PREVIEW</b> · ticks saved on this phone (not the saved collection)";
+    $("ribbon").innerHTML = src==="pub" ? "<b>My collection</b>"+(upd?" · updated "+upd:"") : "<b>This phone's ticks</b> (not the saved collection)";
     $("srcnote").textContent = (src==="pub" ? "Saved collection: " : "This phone's checklist ticks: ") + o + " games. Value = PriceCharting PAL value for each game in its condition.";
     var differs = hasLocal && JSON.stringify(sortObj(local)) !== JSON.stringify(sortObj(pub||{}));
     $("src-local").hidden = !(src==="pub" && differs); $("src-pub").hidden = src!=="local";
