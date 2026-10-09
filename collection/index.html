@@ -39,7 +39,10 @@
     </p>
   </section>
 
-  <h2 class="sec" id="bb">Black box shelf <span class="cnt" id="bb-cnt"></span></h2>
+  <section class="cab cab-bb" aria-labelledby="bb">
+  <div class="cab-top" aria-hidden="true"></div>
+  <div class="cab-band"><span class="cab-led" aria-hidden="true"></span><h2 class="cab-sign" id="bb">Black box series <span class="cnt" id="bb-cnt"></span></h2><span class="cab-btns" aria-hidden="true"><i>Power</i><i>Reset</i></span></div>
+  <div class="cab-in">
   <div class="bbbar" id="bbbar">
     <div class="bbshow" role="group" aria-label="Show black box games">
       <button type="button" data-sh="bb" data-show="all" aria-pressed="false">All<span class="n" id="bb-n-all">–</span></button><button type="button" data-sh="bb" data-show="own" aria-pressed="true">Owned<span class="n" id="bb-n-own">–</span></button><button type="button" data-sh="bb" data-show="miss" aria-pressed="false">Missing<span class="n" id="bb-n-miss">–</span></button><button type="button" data-sh="bb" data-show="sale" aria-pressed="false">For sale<span class="n" id="bb-n-sale">–</span></button>
@@ -57,8 +60,14 @@
     <p class="bbhint" id="bb-hint" hidden></p>
   </div>
   <div class="shelf" id="shelf"></div>
+  </div>
+  <div class="cab-base" aria-hidden="true"></div>
+</section>
 
-  <h2 class="sec" id="cs">Classic shelf <span class="cnt" id="cs-cnt"></span></h2>
+  <section class="cab cab-cs" aria-labelledby="cs">
+  <div class="cab-top" aria-hidden="true"></div>
+  <div class="cab-band"><span class="cab-led" aria-hidden="true"></span><h2 class="cab-sign" id="cs">Classic collection <span class="cnt" id="cs-cnt"></span></h2><span class="cab-btns" aria-hidden="true"><i>Power</i><i>Reset</i></span></div>
+  <div class="cab-in">
   <div class="bbbar" id="csbar">
     <div class="bbshow" role="group" aria-label="Show other games">
       <button type="button" data-sh="cs" data-show="all" aria-pressed="false">All<span class="n" id="cs-n-all">–</span></button><button type="button" data-sh="cs" data-show="own" aria-pressed="true">Owned<span class="n" id="cs-n-own">–</span></button><button type="button" data-sh="cs" data-show="miss" aria-pressed="false">Missing<span class="n" id="cs-n-miss">–</span></button><button type="button" data-sh="cs" data-show="sale" aria-pressed="false">For sale<span class="n" id="cs-n-sale">–</span></button>
@@ -82,6 +91,9 @@
   <nav class="csjump" id="cs-jump" aria-label="Jump to letter"></nav>
   <div class="shelf" id="cshelf"></div>
   </div>
+  </div>
+  <div class="cab-base" aria-hidden="true"></div>
+</section>
 
   <section class="panel wanted" id="wanted" aria-label="Wanted">
     <h2 class="sec" style="margin-top:0">Wanted <span class="cnt" id="w-cnt"></span></h2>

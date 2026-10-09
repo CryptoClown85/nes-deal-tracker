@@ -388,3 +388,60 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .bbd dd.xnote{text-align:left}
 .bbd-lbl{margin:12px 0 0;border:2px solid #000;box-shadow:3px 3px 0 #000;background:#000}
 .bbd-lbl img{display:block;width:100%;height:auto}
+
+/* ================= NES-console cabinets around the two shelves (CSS only) =================
+   light-grey body + ridged top vents, dark-grey label band with pixel-font sign, red power LED,
+   grey POWER/RESET buttons, dark back panel, dark-grey shelf edges with a thin red line, plinth. */
+.cab{--cg:#c6c4be;--cg2:#a9a7a1;--cd:#4a4a4c;--cd2:#2f2f31;--side:8px;
+  margin:22px 0 18px;position:relative;background:linear-gradient(90deg,var(--cg2) 0,var(--cg) 3px,var(--cg) calc(100% - 3px),var(--cg2) 100%);
+  border:3px solid #000;border-radius:4px 4px 2px 2px;box-shadow:4px 5px 0 #000,0 10px 18px rgba(0,0,0,.45)}
+/* crown: ridged vent lines like the NES top */
+.cab-top{height:14px;border-bottom:2px solid #000;border-radius:2px 2px 0 0;
+  background:repeating-linear-gradient(180deg,#d6d4ce 0 2px,#9d9b95 2px 3px,#c6c4be 3px 5px)}
+/* label band: raised dark grey strip with the embossed sign */
+.cab-band{display:flex;align-items:center;gap:8px;margin:6px var(--side) 0;padding:6px 8px;min-height:32px;box-sizing:border-box;
+  background:linear-gradient(180deg,#5a5a5c,var(--cd) 45%,#3c3c3e);border:2px solid #000;border-radius:2px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.35)}
+.cab-sign{flex:1;min-width:0;margin:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+  font:400 .56rem/1.4 var(--px);letter-spacing:.06em;text-transform:uppercase;color:#e9e7e1;
+  text-shadow:0 -1px 0 #000,0 1px 0 rgba(255,255,255,.12)}
+.cab-sign .cnt{margin-left:auto;font-size:.44rem;color:#d8d6cf;letter-spacing:.04em;text-shadow:0 -1px 0 #000}
+.cab-led{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff8a8a,#e01818 55%,#7a0606);
+  box-shadow:0 0 6px rgba(255,40,40,.75),0 0 0 2px #1c1c1d}
+.cab-btns{display:none;gap:6px;flex:0 0 auto}
+.cab-btns i{font:400 .38rem/1 var(--px);font-style:normal;text-transform:uppercase;color:#d6d4ce;display:flex;flex-direction:column;align-items:center;gap:3px}
+.cab-btns i::before{content:"";width:26px;height:10px;background:linear-gradient(#d8d6d0,#9e9c96);border:2px solid #000;border-radius:2px;box-shadow:inset 0 -2px 0 rgba(0,0,0,.2)}
+/* inside: side panels = the grey padding; filter bar sits on the grey header area */
+.cab-in{padding:8px var(--side) 0}
+.cab .bbbar{margin:0 0 8px}
+.cab .bbhint{color:#222}
+.cab .bbsort .lbl{color:#222}
+/* back panel: dark, recessed */
+.cab .shelf{border:2px solid #000;border-bottom:0;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px),
+  linear-gradient(180deg,#1b1b1d,#121214 60%,#0d0d0f);box-shadow:inset 0 8px 18px rgba(0,0,0,.8),inset 6px 0 10px rgba(0,0,0,.5),inset -6px 0 10px rgba(0,0,0,.5)}
+/* shelf planks: dark grey edge with a thin red line, spanning to the side panels */
+.cab .stand::after{background:linear-gradient(180deg,#6a6a6d 0,#4a4a4c 35%,#333335 75%,#1c1c1d 100%);
+  border-top:2px solid #e01818;box-shadow:0 3px 4px rgba(0,0,0,.7);height:10px}
+/* plinth / base */
+.cab-base{height:16px;margin:0 var(--side);position:relative;border:2px solid #000;border-top:0;
+  background:linear-gradient(180deg,#3d3d3f,var(--cd2))}
+.cab-base::after{content:"";position:absolute;left:-11px;right:-11px;bottom:-11px;height:9px;border:3px solid #000;border-top:0;border-radius:0 0 3px 3px;
+  background:repeating-linear-gradient(90deg,#4a4a4c 0 2px,#3a3a3c 2px 4px)}
+.cab{margin-bottom:26px}
+/* letter jump inside the cabinet */
+.cab .csjump{background:var(--cg)}
+.cab .csfind .search{background:#f1f0ec}
+@media(min-width:700px){
+  .cab{--side:16px}
+  .cab-top{height:22px}
+  .cab-band{padding:8px 12px;min-height:40px;gap:12px}
+  .cab-sign{font-size:.78rem}
+  .cab-sign .cnt{font-size:.5rem}
+  .cab-led{width:10px;height:10px}
+  .cab-btns{display:flex}
+  .cab-in{padding-top:12px}
+  .cab .stand::after{left:-16px;right:-16px}
+  .cab-base{height:22px}
+  .cab-base::after{left:-19px;right:-19px}
+}
