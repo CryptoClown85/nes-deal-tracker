@@ -21,23 +21,36 @@
 </header>
 
 <main class="wrap">
-  <section class="panel" aria-label="Progress">
-    <div class="stats">
-      <div class="stat big"><div class="k">Owned</div><div class="v" id="s-own">0</div><div class="xtra" id="s-xtra" hidden></div>
-        <div class="pbar" aria-hidden="true"><i id="pb-all"></i><i class="c" id="pb-cib"></i></div>
-        <div class="legend"><span class="sw" style="background:var(--good)"></span>CIB <span class="sw" style="background:var(--red)"></span>loose</div></div>
-      <div class="stat"><div class="k">CIB</div><div class="v" id="s-cib">0</div></div>
-      <div class="stat"><div class="k">Loose</div><div class="v" id="s-loose">0</div></div>
-      <div class="stat"><div class="k">Black box</div><div class="v" id="s-bb">0</div></div>
-      <div class="stat"><div class="k">Est. value</div><div class="v" id="s-val">€0</div><div class="xtra" id="s-xval" hidden></div></div>
+  <section class="cab cab-st" aria-labelledby="st-h">
+  <div class="cab-top" aria-hidden="true"></div>
+  <div class="cab-band"><span class="cab-led" aria-hidden="true"></span><h2 class="cab-sign" id="st-h">My collection <span class="cnt" id="st-upd"></span></h2><span class="cab-btns" aria-hidden="true"><i>Power</i><i>Reset</i></span></div>
+  <div class="cab-in st-in">
+    <div class="st-grid">
+      <div class="st-scr st-prog">
+        <div class="st-row"><span class="st-k">Owned</span><span class="st-pct" id="s-own-pct">–</span></div>
+        <div class="st-big" id="s-own">0<small> / 0</small></div>
+        <div class="segbar" role="progressbar" aria-label="Owned games" aria-valuemin="0" id="pb-own-wrap"><i id="pb-own"></i></div>
+        <div class="st-row st-row2"><span class="st-k">Black box</span><span class="st-mid" id="s-bb">0<small> / 0</small></span><span class="st-pct" id="s-bb-pct">–</span></div>
+        <div class="segbar bb" role="progressbar" aria-label="Black box games" aria-valuemin="0" id="pb-bb-wrap"><i id="pb-bb"></i></div>
+      </div>
+      <div class="st-scr st-valt">
+        <div class="st-row"><span class="st-k">Est. value</span></div>
+        <div class="st-big gold" id="s-total">€0</div>
+        <p class="st-break" id="s-break"></p>
+        <div class="st-chips" id="s-chips"></div>
+      </div>
     </div>
-    <p class="note" id="srcnote" style="margin-bottom:0"></p>
-    <p style="margin:8px 0 0;display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn alt sm" id="src-local" type="button" hidden>Show this phone's ticks</button>
-      <button class="btn alt sm" id="src-pub" type="button" hidden>Show saved collection</button>
-      <a class="btn alt sm" href="checklist.html">Edit checklist</a>
-    </p>
-  </section>
+    <div class="st-foot">
+      <details class="st-info"><summary><span aria-hidden="true">ⓘ</span> How is this calculated?</summary><p class="note" id="srcnote"></p></details>
+      <span class="st-acts">
+        <button class="btn sm st-tick" id="src-local" type="button" hidden>Use ticks from this device</button>
+        <button class="btn sm st-tick" id="src-pub" type="button" hidden>Back to saved collection</button>
+        <a class="st-link" href="checklist.html">Edit checklist ›</a>
+      </span>
+    </div>
+  </div>
+  <div class="cab-base" aria-hidden="true"></div>
+</section>
 
   <section class="cab cab-bb" aria-labelledby="bb">
   <div class="cab-top" aria-hidden="true"></div>

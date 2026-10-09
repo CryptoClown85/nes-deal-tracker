@@ -236,20 +236,27 @@
     wanted();
   }
   function stats(){
-    var c=0,l=0,b=0,val=0;
+    var c=0,l=0,b=0,val=0, nbb=G.filter(function(g){return g.bb;}).length;
     G.forEach(function(g){ var s=own[g.id]; if(s==="C")c++; else if(s==="L")l++; if(s&&g.bb)b++; val += value(g)||0; });
     var n=G.length, o=c+l;
-    $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").textContent=c; $("s-loose").textContent=l;
-    $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
-    var xv = EX.reduce(function(a,x){ return a + (x.value_eur||0); }, 0);
-    $("s-xtra").hidden = !EX.length;
-    $("s-xval").hidden = !xv; $("s-xval").textContent = xv ? "+ " + eur(xv) + " graded extras" : "";
-    $("s-xtra").innerHTML = EX.length ? '+ <b>'+EX.length+'</b> graded extra'+(EX.length>1?'s':'')+(xv ? ' · '+eur(xv) : ' · not valued') : "";
-    $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
+    var xv = EX.reduce(function(a,x){ return a + (x.value_eur||0); }, 0), xnv = EX.filter(function(x){ return x.value_eur==null; }).length;
+    function pc(a,t){ return t ? (Math.round(1000*a/t)/10).toLocaleString("nl-NL") + "%" : "–"; }
+    function bar(id, a, t){ var w = $(id+"-wrap"); $(id).style.width = (t ? 100*a/t : 0)+"%";
+      w.setAttribute("aria-valuemax", t); w.setAttribute("aria-valuenow", a); w.setAttribute("aria-valuetext", a+" of "+t+" ("+pc(a,t)+")"); }
+    $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-own-pct").textContent = pc(o,n); bar("pb-own", o, n);
+    $("s-bb").innerHTML = b+'<small> / '+nbb+'</small>'; $("s-bb-pct").textContent = pc(b,nbb); bar("pb-bb", b, nbb);
+    $("s-total").textContent = (xv ? "≈ " : "") + eur(val + xv) + (xv ? " total" : "");
+    $("s-break").textContent = "games " + eur(val) + (EX.length ? " · graded " + eur(xv) + (xnv ? " (" + xnv + " not valued)" : "") : "");
+    var chips = [l ? "CIB " + c + " · Loose " + l : (o ? "All CIB" : "")];
+    if (EX.length) chips.push(EX.length + " graded extra" + (EX.length>1 ? "s" : ""));
+    $("s-chips").innerHTML = chips.filter(Boolean).map(function(t){ return '<span class="chip-s">'+esc(t)+'</span>'; }).join("");
     var upd = (pubMeta.updated||"").slice(0,10);
-    $("ribbon").innerHTML = src==="pub" ? "<b>My collection</b>"+(upd?" · updated "+upd:"") : "<b>This phone's ticks</b> (not the saved collection)";
-    $("srcnote").textContent = (src==="pub" ? "Saved collection: " : "This phone's checklist ticks: ") + o + " games. Value = PriceCharting PAL value for each game in its condition."
-      + (EX.length ? " Graded extras (" + EX.map(function(x){ return x.short||x.title; }).join(", ") + ") are listed separately" + (xv ? " (+" + eur(xv) + ")" : " and not included: no matching sale found") + "." : "");
+    $("st-upd").textContent = src==="pub" ? (upd ? "updated " + upd : "") : "this device";
+    $("ribbon").innerHTML = src==="pub" ? "<b>My collection</b>"+(upd?" · updated "+upd:"") : "<b>Ticks from this device</b> (not the saved collection)";
+    $("srcnote").textContent = (src==="pub" ? "Showing the saved collection (" : "Showing this device's checklist ticks (") + o + " games). "
+      + "Game value = PriceCharting PAL value for each owned game in its condition (CIB or loose)."
+      + (EX.length ? " Graded extras (" + EX.map(function(x){ return x.short||x.title; }).join(", ") + ") are not counted as games; their value comes from graded sales"
+         + (xnv ? " and " + xnv + " has no matching sale, so it is not valued" : "") + ". Total = games + graded." : "");
     var differs = hasLocal && JSON.stringify(sortObj(local)) !== JSON.stringify(sortObj(pub||{}));
     $("src-local").hidden = !(src==="pub" && differs); $("src-pub").hidden = src!=="local";
   }
