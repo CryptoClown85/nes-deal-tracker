@@ -1,10 +1,10 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf",
-  "updated": "2026-10-09T20:28:00+02:00",
-  "count": 49,
-  "cib": 49,
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania",
+  "updated": "2026-10-09T21:00:00+02:00",
+  "count": 48,
+  "cib": 48,
   "loose": 0,
   "black_box": 13,
   "list": "games_master.json (PAL, 347)"
@@ -283,12 +283,6 @@
   {
    "id": "terminator-2-judgment-day",
    "title": "Terminator 2: Judgment Day",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "wwf-wrestlemania",
-   "title": "WWF WrestleMania",
    "condition": "CIB",
    "added": "2026-10-09"
   },
