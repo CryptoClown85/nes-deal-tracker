@@ -7,15 +7,17 @@
   var local = loadLocal(), hasLocal = Object.keys(local).length > 0;
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
-  var AZDEF = {own:"own", cond:"all"}, AZKEY = "nes-azlist-v2";   // A–Z list default: Owned (remembered per device)
-  var f = {own:AZDEF.own, cond:AZDEF.cond};
-  try { localStorage.removeItem("nes-azlist-v1"); var sa = JSON.parse(localStorage.getItem(AZKEY)||"null");
-    if (sa) { if (/^(all|own|miss)$/.test(sa.own)) f.own = sa.own; if (/^(all|C|L)$/.test(sa.cond)) f.cond = sa.cond; } } catch(e){}
-  function syncAZ(){ document.querySelectorAll("[data-f]").forEach(function(x){ x.setAttribute("aria-pressed", f[x.dataset.f]===x.dataset.v ? "true":"false"); }); }
-  var BBDEF = {show:"own", sort:"az"};   // default: Owned (v2 key so older saved "All" choices reset once)
-  var BBKEY = "nes-bbshelf-v2", bbf = {show:BBDEF.show, sort:BBDEF.sort};
-  try { localStorage.removeItem("nes-bbshelf-v1"); } catch(e){}
-  try { var sv = JSON.parse(localStorage.getItem(BBKEY)||"null"); if (sv) { if (/^(all|own|miss|sale)$/.test(sv.show)) bbf.show=sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) bbf.sort=sv.sort; } } catch(e){}
+  /* shelf state: Show / Sort per shelf, remembered per device (default Owned, A–Z) */
+  var SH = {
+    bb: {key:"nes-bbshelf-v2", el:"shelf", pre:"bb-", def:{show:"own", sort:"az"}, games:function(g){ return g.bb; }, alt:"NES black box (NTSC art)",
+         empty:{own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!", sale:"No black box games for sale (complete in box) right now.", all:"No black box games."}},
+    cs: {key:"nes-classicshelf-v1", el:"cshelf", pre:"cs-", def:{show:"own", sort:"az"}, games:function(g){ return !g.bb; }, alt:"PAL box", search:true,
+         empty:{own:"No other games owned yet.", miss:"Every other game owned – nothing missing!", sale:"No other games for sale (complete in box) right now.", all:"No games."}}
+  };
+  try { localStorage.removeItem("nes-bbshelf-v1"); localStorage.removeItem("nes-azlist-v1"); localStorage.removeItem("nes-azlist-v2"); } catch(e){}
+  Object.keys(SH).forEach(function(k){ var c = SH[k]; c.st = {show:c.def.show, sort:c.def.sort}; c.q = "";
+    try { var sv = JSON.parse(localStorage.getItem(c.key)||"null");
+      if (sv) { if (/^(all|own|miss|sale)$/.test(sv.show)) c.st.show = sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) c.st.sort = sv.sort; } } catch(e){} });
   var live = {};                      // key -> {n, best, bestCib}
   var liveLoaded = false, wtype = "all";
   var $ = function(id){ return document.getElementById(id); };
@@ -45,49 +47,27 @@
     var by = function(p,q){ return p.eur.total-q.eur.total; };
     return {n:all.length, nCib:cib.length, cib:cib, all:all, best:all.slice().sort(by)[0], bestCib:cib.slice().sort(by)[0]||null};
   }
-  function keep(g, q){
-    var s = own[g.id];
-    if (f.own==="own" && !s) return false;
-    if (f.own==="miss" && s) return false;
-    if (f.cond!=="all" && s && s!==f.cond) return false;
-    if (f.cond!=="all" && !s && f.own==="own") return false;
-    if (q && (g.t+" "+(g.a||[]).join(" ")+" "+(g.p||"")).toLowerCase().indexOf(q) < 0) return false;
-    return true;
-  }
   function saleTag(g, cls){
     var L = liveFor(g);
     if (!L || own[g.id]==="C") return "";
-    if (g.bb && !L.bestCib) return "";   // black box shelf: complete-in-box listings only
-    var x = L.bestCib || L.best;
-    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+(g.bb ? L.nCib : L.n)+' · '+
-      (L.bestCib ? 'CIB from ' : 'from ')+eur(x.eur.total)+' ›</a>';
+    if (!L.bestCib) return "";   // shelves: complete-in-box listings only
+    var x = L.bestCib;
+    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.nCib+' · CIB from '+eur(x.eur.total)+' ›</a>';
   }
-  function art(g){ return g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/"+g.id+".jpg"; }  // black box = NTSC original scan
+  function art(g){ return g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/hi/"+g.id+".jpg"; }  // black box = NTSC original scan; others = PAL (360px)
   function thumb(g, cls){   // small box-art thumbnail (lazy) or retro placeholder
     if (g.bb) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360">';
     if (g.im) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">';
     return '<span class="'+cls+' ph" style="--hue:'+HUES[hash(g.id)%HUES.length]+'" aria-hidden="true">'+esc(g.t.replace(/^(the|a) /i,"").charAt(0))+'</span>';
   }
-  function tile(g){
-    var s = own[g.id] || "M";
+  function tile(g, k){
+    var s = own[g.id] || "M", c = SH[k];
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
     var tag = s!=="C" ? saleTag(g, "sale") : "";
-    if (g.bb) return '<div class="slot '+s+'" id="bb-'+g.id+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
-      '<img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box" loading="lazy" decoding="async" width="252" height="360">'+
+    return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
+      '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       (s!=="M" ? '<span class="st">'+lab+'</span>' : '')+'</div></div>'+
       '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span>'+esc(g.t)+'</span></span>'+tag+'</div>';
-    var h = HUES[hash(g.id) % HUES.length];
-    return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
-      '<span class="art"><i style="--hue:'+h+';--pix:'+sprite(g.id)+'"></i></span><span class="bt">'+esc(g.t)+'</span></div>'+tag+'</div>';
-  }
-  function crow(g){
-    var s = own[g.id] || "M";
-    var lab = s==="C" ? "CIB" : s==="L" ? "Loose" : "Missing";
-    var sub = [g.p, g.y].filter(Boolean).join(" · ") + (g.r ? " · "+g.r : "");
-    var v = s==="M" ? '<span title="PriceCharting loose / CIB">'+eur(g.l)+' / '+eur(g.b)+'</span>' : eur(value(g));
-    var tag = s!=="C" ? saleTag(g, "forsale") : "";
-    return '<div class="crow '+s+'">'+thumb(g,"th")+'<div class="nm"><span class="chip '+s+'">'+lab+'</span><b>'+esc(g.t)+'</b><small>'+esc(sub)+'</small>'+
-      (tag ? '<small class="s">'+tag+'</small>' : '')+'</div><span class="val">'+v+'</span></div>';
   }
   function vclass(v){ return v==="Good buy"?"good":v==="Fair"?"fair":v==="Overpriced"?"over":"unclear"; }
   function pct(x){ return x==null ? "" : (x>0?"+":x<0?"−":"±")+Math.abs(Math.round(x*100))+"%"; }
@@ -118,32 +98,38 @@
   function cheapest(g){ var L = forSale(g); return L ? L.bestCib : null; }
   function bbIs(g, show){ var s = own[g.id];
     return show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
-  var BBEMPTY = {own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!",
-    sale:"No black box games for sale right now.", all:"No black box games."};
-  function renderShelf(){
-    var all = G.filter(function(g){ return g.bb; });
-    ["all","own","miss","sale"].forEach(function(k){
-      $("bn-"+k).textContent = (k==="sale" && !liveLoaded) ? "…" : all.filter(function(g){ return bbIs(g,k); }).length; });
-    document.querySelectorAll("[data-bs]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.bs===bbf.show ? "true":"false"); });
-    $("bb-sort").value = bbf.sort;
-    $("bb-reset").hidden = !(bbf.show!==BBDEF.show && bbf.sort!==BBDEF.sort);
-    var list = all.filter(function(g){ return bbIs(g, bbf.show); });
-    var az = function(a,b){ return sortKey(a.t) < sortKey(b.t) ? -1 : sortKey(a.t) > sortKey(b.t) ? 1 : 0; };
+  function matchQ(g, q){ return !q || (g.t+" "+(g.a||[]).join(" ")+" "+(g.p||"")).toLowerCase().indexOf(q) >= 0; }
+  function renderShelf(k){
+    var c = SH[k], st = c.st, all = G.filter(c.games);
+    ["all","own","miss","sale"].forEach(function(v){
+      $(k+"-n-"+v).textContent = (v==="sale" && !liveLoaded) ? "…" : all.filter(function(g){ return bbIs(g,v); }).length; });
+    document.querySelectorAll('[data-sh="'+k+'"][data-show]').forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.show===st.show ? "true":"false"); });
+    $(k+"-sort").value = st.sort;
+    var changed = (st.show!==c.def.show) + (st.sort!==c.def.sort) + (c.q ? 1 : 0);
+    $(k+"-reset").hidden = changed < 2;     // Reset only once more than one control is changed
+    var list = all.filter(function(g){ return bbIs(g, st.show) && matchQ(g, c.q); });
+    var az = function(a,b){ var x=sortKey(a.t), y=sortKey(b.t); return x<y ? -1 : x>y ? 1 : 0; };
     var hint = "";
-    if (bbf.sort==="val") list.sort(function(a,b){ return (b.b||0)-(a.b||0) || az(a,b); });
-    else if (bbf.sort==="rel") list.sort(function(a,b){ return (a.y||9999)-(b.y||9999) || az(a,b); });
-    else if (bbf.sort==="cheap") {
+    if (st.sort==="val") list.sort(function(a,b){ return (b.b||0)-(a.b||0) || az(a,b); });
+    else if (st.sort==="rel") list.sort(function(a,b){ return (a.y||9999)-(b.y||9999) || az(a,b); });
+    else if (st.sort==="cheap") {
       list.sort(function(a,b){ var x=cheapest(a), y=cheapest(b);
         if (x && y) return x.eur.total - y.eur.total; if (x) return -1; if (y) return 1; return az(a,b); });
       if (!liveLoaded) hint = "Loading live listings…";
-      else if (bbf.show==="own") hint = "Owned games have no CIB listings to compare – showing A–Z.";
-      else if (bbf.show!=="sale") hint = "Games with a complete-in-box listing first (cheapest total incl. shipping), then the rest A–Z.";
+      else if (st.show==="own") hint = "Owned games have no CIB listings to compare – showing A–Z.";
+      else if (st.show!=="sale") hint = "Games with a complete-in-box listing first (cheapest total incl. shipping), then the rest A–Z.";
     } else list.sort(az);
-    $("bb-hint").textContent = hint; $("bb-hint").hidden = !hint;
-    $("shelf").innerHTML = list.map(tile).join("") ||
-      '<p class="empty bbempty">'+(bbf.show==="sale" && !liveLoaded ? "Loading live listings…" : BBEMPTY[bbf.show])+'</p>';
+    $(k+"-hint").textContent = hint; $(k+"-hint").hidden = !hint;
+    $(c.el).innerHTML = list.map(function(g){ return tile(g, k); }).join("") ||
+      '<p class="empty bbempty">'+(c.q ? 'No games match “'+esc(c.q)+'”.' : st.show==="sale" && !liveLoaded ? "Loading live listings…" : c.empty[st.show])+'</p>';
+    if (c.search) {   // letter jump (A–Z sort only)
+      var have = {}; list.forEach(function(g){ have[letter(g.t)] = 1; });
+      $(k+"-jump").hidden = st.sort!=="az" || list.length < 12;
+      $(k+"-jump").innerHTML = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(L){
+        return '<button type="button" data-jump="'+k+'" data-l="'+L+'"'+(have[L]?'':' disabled')+'>'+L+'</button>'; }).join("");
+    }
   }
-  function saveBB(){ try { localStorage.setItem(BBKEY, JSON.stringify(bbf)); } catch(e){} }
+  function saveSh(k){ try { localStorage.setItem(SH[k].key, JSON.stringify(SH[k].st)); } catch(e){} }
   function s5For(g){   // last-5 CIB sales average, if the tracker fetched it for a listing of this game
     var L = liveFor(g); if (!L) return null; var r = null;
     L.all.forEach(function(x){ var s = x.sales5;   // same PAL product only (a US listing's sales would be compared with the PAL value)
@@ -154,7 +140,7 @@
     var g = BYID[id]; if (!g) return;
     var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="L" ? "Owned · loose" : "Missing";
     var s5 = s5For(g), L = liveFor(g);
-    var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box (NTSC art)" width="252" height="360"></div>'+
+    var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+
       '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
@@ -174,7 +160,7 @@
     }
     $("bbd-body").innerHTML = h;
     var d = $("bbdlg"); bbOpener = document.activeElement && document.activeElement.closest && document.activeElement.closest("[data-bb]") ||
-      document.querySelector('#shelf .pbox[data-bb="'+g.id+'"]');
+      document.querySelector('.shelf .pbox[data-bb="'+g.id+'"]');
     document.documentElement.classList.add("noscroll");
     if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute("open","");
     d.scrollTop = 0; $("bbd-x").focus();
@@ -183,7 +169,7 @@
   function closeBB(){ var d = $("bbdlg"); if (d.close) d.close(); else { d.removeAttribute("open"); afterClose(); } }
   function afterClose(){   // restore page scroll + return focus to the box that opened the popup
     document.documentElement.classList.remove("noscroll");
-    var o = bbOpener && bbOpener.dataset && document.querySelector('#shelf .pbox[data-bb="'+bbOpener.dataset.bb+'"]');
+    var o = bbOpener && bbOpener.dataset && document.querySelector('.shelf .pbox[data-bb="'+bbOpener.dataset.bb+'"]');
     if (o) o.focus({preventScroll:true}); bbOpener = null;
   }
   $("bbdlg").addEventListener("close", afterClose);   // X, Esc (native) and tap outside all end here
@@ -198,25 +184,19 @@
   $("bbdlg").addEventListener("click", function(e){   // tap outside (backdrop) - not on the sheet's own padding
     if (e.target!==this) return; var r = this.getBoundingClientRect();
     if (e.clientX<r.left || e.clientX>r.right || e.clientY<r.top || e.clientY>r.bottom) closeBB(); });
-  $("bb-sort").addEventListener("change", function(){ bbf.sort = this.value; saveBB(); renderShelf(); });
-  $("bb-reset").addEventListener("click", function(){ bbf = {show:BBDEF.show, sort:BBDEF.sort}; saveBB(); renderShelf(); });
-  $("shelf").addEventListener("keydown", function(e){ var b = e.target.closest("[data-bb]");
-    if (b && (e.key==="Enter" || e.key===" ")) { e.preventDefault(); openBB(b.dataset.bb); } });
+  Object.keys(SH).forEach(function(k){
+    $(k+"-sort").addEventListener("change", function(){ SH[k].st.sort = this.value; saveSh(k); renderShelf(k); });
+    $(k+"-reset").addEventListener("click", function(){ var c = SH[k]; c.st = {show:c.def.show, sort:c.def.sort}; c.q = ""; if ($(k+"-q")) $(k+"-q").value = ""; saveSh(k); renderShelf(k); });
+    $(SH[k].el).addEventListener("keydown", function(e){ var b = e.target.closest("[data-bb]");
+      if (b && (e.key==="Enter" || e.key===" ")) { e.preventDefault(); openBB(b.dataset.bb); } });
+    var qi = $(k+"-q"), qt;
+    if (qi) qi.addEventListener("input", function(){ clearTimeout(qt); qt = setTimeout(function(){ SH[k].q = qi.value.trim().toLowerCase(); renderShelf(k); }, 150); });
+  });
 
   function render(){
-    var q = $("q").value.trim().toLowerCase();
-    renderShelf();
-    var rest = G.filter(function(g){ return !g.bb && keep(g,q); });
-    var groups = {}, order = [];
-    rest.forEach(function(g){ var L = letter(g.t); if (!groups[L]) { groups[L]=[]; order.push(L); } groups[L].push(g); });
-    $("list-all").innerHTML = order.map(function(L){
-      return '<h3 class="letter" id="L-'+(L==="#"?"0":L)+'">'+L+'</h3><div class="list">'+groups[L].map(crow).join("")+'</div>'; }).join("");
-    $("jump").innerHTML = '<a href="#wanted">★</a><a href="#bb">BB</a>' + "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(L){
-      return '<a href="#L-'+(L==="#"?"0":L)+'" class="'+(groups[L]?"":"off")+'">'+L+'</a>'; }).join("");
-    $("none").hidden = !!rest.length;
-    var allBB = G.filter(function(g){return g.bb;});
-    $("bb-cnt").textContent = allBB.filter(function(g){return own[g.id];}).length + "/" + allBB.length + " owned";
-    $("all-cnt").textContent = G.filter(function(g){return !g.bb && own[g.id];}).length + "/" + (G.length-allBB.length) + " owned";
+    renderShelf("bb"); renderShelf("cs");
+    ["bb","cs"].forEach(function(k){ var all = G.filter(SH[k].games);
+      $(k+"-cnt").textContent = all.filter(function(g){ return own[g.id]; }).length + "/" + all.length + " owned"; });
     wanted();
   }
   function stats(){
@@ -234,23 +214,20 @@
   }
   function sortObj(o){ var r={}; Object.keys(o).sort().forEach(function(k){ r[k]=o[k]; }); return r; }
   document.addEventListener("click", function(e){
-    var bs = e.target.closest("[data-bs]");
-    if (bs) { bbf.show = bs.dataset.bs; saveBB(); renderShelf(); return; }
-    var bx = e.target.closest("#shelf [data-bb]");
+    var bs = e.target.closest("[data-show]");
+    if (bs) { var k = bs.dataset.sh; SH[k].st.show = bs.dataset.show; saveSh(k); renderShelf(k); return; }
+    var j = e.target.closest("[data-jump]");
+    if (j) { var t = document.querySelector("#"+SH[j.dataset.jump].el+' .slot[data-l="'+j.dataset.l+'"]');
+      if (t) t.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); return; }
+    var bx = e.target.closest(".shelf [data-bb]");
     if (bx) { openBB(bx.dataset.bb); return; }
     var jl = e.target.closest('a[href^="#bb-"]');   // Wanted chip -> shelf box hidden by a filter? show all first
-    if (jl && !document.getElementById(jl.getAttribute("href").slice(1))) { bbf.show = "all"; saveBB(); renderShelf(); }
+    if (jl && !document.getElementById(jl.getAttribute("href").slice(1))) { SH.bb.st.show = "all"; saveSh("bb"); renderShelf("bb"); }
     var w = e.target.closest("[data-w]");
     if (w) { wtype = w.dataset.w; document.querySelectorAll("[data-w]").forEach(function(x){ x.setAttribute("aria-pressed", x===w?"true":"false"); }); wanted(); return; }
-    var b = e.target.closest("[data-f]");
-    if (!b) return;
-    f[b.dataset.f] = b.dataset.v; try { localStorage.setItem(AZKEY, JSON.stringify(f)); } catch(e){}
-    document.querySelectorAll('[data-f="'+b.dataset.f+'"]').forEach(function(x){ x.setAttribute("aria-pressed", x===b?"true":"false"); });
-    render();
   });
   $("src-local").addEventListener("click", function(){ src="local"; own=local; stats(); render(); });
   $("src-pub").addEventListener("click", function(){ src="pub"; own=pub||{}; stats(); render(); });
-  var t; $("q").addEventListener("input", function(){ clearTimeout(t); t=setTimeout(render,120); });
 
   fetch("my_collection.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
     pub = {}; pubMeta = (d && d.meta) || {};
@@ -275,5 +252,5 @@
     });
     liveLoaded = true; render();
   }).catch(function(){});
-  syncAZ(); stats(); render();
+  stats(); render();
 })();

@@ -305,3 +305,21 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .bbd-info h3{padding-right:48px}
 .bbd dd.wide{grid-column:1/-1;margin-top:-4px}
 @media (max-width:699px){ .bbd-art{flex-basis:32%} .bbx{top:16px;right:12px} }
+
+/* ---------- classic shelf: search + letter jump ---------- */
+.csfind{margin-top:10px}
+.csfind .search{width:100%;max-width:420px;min-height:44px;box-sizing:border-box;font:400 16px/1.2 var(--sans)}
+.csjump{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}
+.csjump[hidden]{display:none}
+.csjump button{min-width:34px;height:38px;flex:1 0 34px;max-width:44px;border:2px solid #000;background:var(--grey-l);color:var(--ink);
+  font:400 .5rem/1 var(--px);cursor:pointer;box-shadow:2px 2px 0 #000;padding:0}
+.csjump button:disabled{opacity:.3;cursor:default;box-shadow:none}
+#cshelf .slot{scroll-margin-top:12px}
+@media(min-width:700px){.csfind{margin-top:0;flex:1 1 220px}.csjump{flex-basis:100%}}
+.csjump{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:2px 3px 5px 0;gap:4px}
+.csjump::-webkit-scrollbar{display:none}
+.csjump button{flex:0 0 36px;max-width:none;height:40px}
+@media(min-width:700px){.csjump{overflow:visible}.csjump button{flex:1 1 0;min-width:22px;height:34px}}
+.cswrap{position:relative}
+.csjump{position:sticky;top:0;z-index:8;background:var(--bg);margin:0 0 8px;padding:6px 3px 6px 0;box-shadow:0 4px 6px -4px rgba(0,0,0,.7)}
+#cshelf .slot{scroll-margin-top:62px}
