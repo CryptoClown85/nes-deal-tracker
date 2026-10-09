@@ -53,16 +53,19 @@
     return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.n+' · '+
       (L.bestCib ? 'CIB from ' : 'from ')+eur(x.eur.total)+' ›</a>';
   }
+  function art(g){ return g.bb ? "boxart/blackbox/"+g.id+".jpg" : "boxart/"+g.id+".jpg"; }  // black box = NTSC original scan
   function thumb(g, cls){   // small box-art thumbnail (lazy) or retro placeholder
-    if (g.im) return '<img class="'+cls+'" src="boxart/'+g.id+'.jpg" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">';
+    if (g.bb) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360">';
+    if (g.im) return '<img class="'+cls+'" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">';
     return '<span class="'+cls+' ph" style="--hue:'+HUES[hash(g.id)%HUES.length]+'" aria-hidden="true">'+esc(g.t.replace(/^(the|a) /i,"").charAt(0))+'</span>';
   }
   function tile(g){
     var s = own[g.id] || "M";
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
     var tag = s!=="C" ? saleTag(g, "sale") : "";
-    if (g.im) return '<div id="bb-'+g.id+'"><div class="box img '+s+'" title="'+esc(g.t)+' – '+lab+'">'+
-      '<img src="boxart/'+g.id+'.jpg" alt="'+esc(g.t)+' box art" loading="lazy" decoding="async"><span class="st">'+lab+'</span></div>'+
+    if (g.bb) return '<div class="slot '+s+'" id="bb-'+g.id+'"><div class="stand"><div class="pbox '+s+'" title="'+esc(g.t)+' – '+lab+'">'+
+      '<img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box" loading="lazy" decoding="async" width="252" height="360">'+
+      (s!=="M" ? '<span class="st">'+lab+'</span>' : '')+'</div></div>'+
       '<span class="cap">'+esc(g.t)+'</span>'+tag+'</div>';
     var h = HUES[hash(g.id) % HUES.length];
     return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
