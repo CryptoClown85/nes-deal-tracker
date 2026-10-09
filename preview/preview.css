@@ -265,3 +265,43 @@ dialog.bbdlg::backdrop{background:rgba(0,0,0,.7)}
   hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
 .slot.M .cap{color:#d2d2d2;background:rgba(0,0,0,.5)}
 @media(min-width:900px){.slot .cap{font-size:14px}}
+
+/* ---------- box detail popup v2: clear sans-serif, bottom sheet on phone, modal on desktop ---------- */
+html.noscroll,html.noscroll body{overflow:hidden}
+dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;padding:22px 18px 18px;overscroll-behavior:contain}
+.bbd-info{padding-top:2px}
+.bbd-info h3{font:700 20px/1.25 var(--sans);text-transform:none;letter-spacing:0;margin:0 0 8px;color:#111}
+.bbd .chip{font-size:.42rem}
+.bbd-sub{font-size:14px;color:#444;margin:8px 0 10px}
+.bbd dl{font-size:15px;line-height:1.35;gap:6px 10px;border-top:1px solid #d6d4cc;padding-top:10px}
+.bbd dt{color:#444} .bbd dd{color:#111;font-weight:600} .bbd dd b{font-weight:700}
+.bbd dd small{font-weight:400;color:#555;font-size:12.5px;margin-top:2px}
+.bbd-h{font:700 15px/1.35 var(--sans);text-transform:none;margin:18px 0 8px;color:#111}
+.bbd-h small{font:400 13px/1.35 var(--sans);color:#555}
+.bbd-l{padding:10px 10px 10px 12px;gap:12px;border-radius:2px}
+.bbd-l b{font:700 17px/1.2 var(--sans);color:#111}
+.bbd-l small{font:400 13px/1.4 var(--sans);color:#444;margin-top:4px}
+.bbd-l .btn{font:700 13px/1 var(--sans);letter-spacing:.02em;min-height:44px;padding:0 14px;white-space:nowrap}
+.bbd-none{font-size:14px;color:#444}
+.bbdlg .note{font-size:14px;color:#444}
+.bbx{position:sticky;float:right;top:0;margin:-8px -6px 0 8px;right:auto;width:44px;height:44px;font:700 20px/1 var(--sans)}
+/* phone: bottom sheet */
+@media (max-width:699px){
+  dialog.bbdlg{width:100%;max-width:100%;max-height:85vh;margin:auto 0 0;inset:auto 0 0 0;border:0;border-top:3px solid #000;
+    border-radius:14px 14px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.6);padding:26px 16px calc(18px + env(safe-area-inset-bottom))}
+  dialog.bbdlg::before{content:"";position:absolute;left:50%;top:9px;width:44px;height:5px;margin-left:-22px;border-radius:3px;background:#bbb}
+  dialog.bbdlg[open]{animation:bbsheet .2s ease-out}
+  .bbd-art{flex-basis:36%}
+  .bbd-l{flex-wrap:wrap} .bbd-l>div{flex:1 1 180px;min-width:0} .bbd-l .btn{flex:1 1 100%}
+}
+/* desktop: centred modal, art left / info right */
+@media (min-width:700px){
+  dialog.bbdlg{width:520px;max-width:94vw;max-height:88vh;border-radius:4px}
+  .bbd-art{flex:0 0 190px}
+}
+@keyframes bbsheet{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion: reduce){dialog.bbdlg[open]{animation:none}}
+.bbx{position:absolute;float:none;top:10px;right:10px;margin:0}
+.bbd-info h3{padding-right:48px}
+.bbd dd.wide{grid-column:1/-1;margin-top:-4px}
+@media (max-width:699px){ .bbd-art{flex-basis:32%} .bbx{top:16px;right:12px} }

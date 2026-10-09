@@ -152,7 +152,7 @@
       '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
       '<dl><dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
-      '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+'</small>' : '<small>not available</small>')+'</dd></dl></div></div>';
+      '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd></dl></div></div>';
     if (s!=="C") {
       if (!liveLoaded) h += '<p class="note">Loading live listings…</p>';
       else if (!L) h += '<p class="bbd-none">No listings for sale right now.</p>';
@@ -165,11 +165,31 @@
       }
     }
     $("bbd-body").innerHTML = h;
-    var d = $("bbdlg"); if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute("open","");
+    var d = $("bbdlg"); bbOpener = document.activeElement && document.activeElement.closest && document.activeElement.closest("[data-bb]") ||
+      document.querySelector('#shelf .pbox[data-bb="'+g.id+'"]');
+    document.documentElement.classList.add("noscroll");
+    if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute("open","");
+    d.scrollTop = 0; $("bbd-x").focus();
   }
-  function closeBB(){ var d = $("bbdlg"); if (d.close) d.close(); else d.removeAttribute("open"); }
+  var bbOpener = null;
+  function closeBB(){ var d = $("bbdlg"); if (d.close) d.close(); else { d.removeAttribute("open"); afterClose(); } }
+  function afterClose(){   // restore page scroll + return focus to the box that opened the popup
+    document.documentElement.classList.remove("noscroll");
+    var o = bbOpener && bbOpener.dataset && document.querySelector('#shelf .pbox[data-bb="'+bbOpener.dataset.bb+'"]');
+    if (o) o.focus({preventScroll:true}); bbOpener = null;
+  }
+  $("bbdlg").addEventListener("close", afterClose);   // X, Esc (native) and tap outside all end here
+  $("bbdlg").addEventListener("keydown", function(e){   // keep Tab inside the popup
+    if (e.key!=="Tab") return;
+    var f = [].slice.call(this.querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])')).filter(function(x){ return x.offsetParent!==null; });
+    if (!f.length) return; var first=f[0], last=f[f.length-1];
+    if (e.shiftKey && document.activeElement===first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement===last) { e.preventDefault(); first.focus(); }
+  });
   $("bbd-x").addEventListener("click", closeBB);
-  $("bbdlg").addEventListener("click", function(e){ if (e.target===this) closeBB(); });   // tap outside (backdrop)
+  $("bbdlg").addEventListener("click", function(e){   // tap outside (backdrop) - not on the sheet's own padding
+    if (e.target!==this) return; var r = this.getBoundingClientRect();
+    if (e.clientX<r.left || e.clientX>r.right || e.clientY<r.top || e.clientY>r.bottom) closeBB(); });
   $("bb-sort").addEventListener("change", function(){ bbf.sort = this.value; saveBB(); renderShelf(); });
   $("bb-reset").addEventListener("click", function(){ bbf = {show:"all", sort:"az"}; saveBB(); renderShelf(); });
   $("shelf").addEventListener("keydown", function(e){ var b = e.target.closest("[data-bb]");
