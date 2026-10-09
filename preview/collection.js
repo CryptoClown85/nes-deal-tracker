@@ -53,11 +53,18 @@
     return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.n+' · '+
       (L.bestCib ? 'CIB from ' : 'from ')+eur(x.eur.total)+' ›</a>';
   }
+  function thumb(g, cls){   // small box-art thumbnail (lazy) or retro placeholder
+    if (g.im) return '<img class="'+cls+'" src="boxart/'+g.id+'.jpg" alt="" loading="lazy" decoding="async" width="'+(g.iw||40)+'" height="'+(g.ih||56)+'">';
+    return '<span class="'+cls+' ph" style="--hue:'+HUES[hash(g.id)%HUES.length]+'" aria-hidden="true">'+esc(g.t.replace(/^(the|a) /i,"").charAt(0))+'</span>';
+  }
   function tile(g){
     var s = own[g.id] || "M";
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
-    var h = HUES[hash(g.id) % HUES.length];
     var tag = s!=="C" ? saleTag(g, "sale") : "";
+    if (g.im) return '<div id="bb-'+g.id+'"><div class="box img '+s+'" title="'+esc(g.t)+' – '+lab+'">'+
+      '<img src="boxart/'+g.id+'.jpg" alt="'+esc(g.t)+' box art" loading="lazy" decoding="async"><span class="st">'+lab+'</span></div>'+
+      '<span class="cap">'+esc(g.t)+'</span>'+tag+'</div>';
+    var h = HUES[hash(g.id) % HUES.length];
     return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
       '<span class="art"><i style="--hue:'+h+';--pix:'+sprite(g.id)+'"></i></span><span class="bt">'+esc(g.t)+'</span></div>'+tag+'</div>';
   }
@@ -67,7 +74,7 @@
     var sub = [g.p, g.y].filter(Boolean).join(" · ") + (g.r ? " · "+g.r : "");
     var v = s==="M" ? '<span title="PriceCharting loose / CIB">'+eur(g.l)+' / '+eur(g.b)+'</span>' : eur(value(g));
     var tag = s!=="C" ? saleTag(g, "forsale") : "";
-    return '<div class="crow '+s+'"><span class="chip '+s+'">'+lab+'</span><div class="nm"><b>'+esc(g.t)+'</b><small>'+esc(sub)+'</small>'+
+    return '<div class="crow '+s+'">'+thumb(g,"th")+'<div class="nm"><span class="chip '+s+'">'+lab+'</span><b>'+esc(g.t)+'</b><small>'+esc(sub)+'</small>'+
       (tag ? '<small class="s">'+tag+'</small>' : '')+'</div><span class="val">'+v+'</span></div>';
   }
   function vclass(v){ return v==="Good buy"?"good":v==="Fair"?"fair":v==="Overpriced"?"over":"unclear"; }
@@ -77,7 +84,7 @@
     $("wbb-cnt").textContent = "("+miss.length+")";
     $("w-bb").innerHTML = miss.map(function(g){
       var L = liveFor(g), x = L && L.bestCib;
-      return '<a href="#bb-'+g.id+'" class="'+(x?"":"none")+'">'+esc(g.t)+'<b>'+(x ? "CIB for sale "+eur(x.eur.total) : liveLoaded ? "value CIB "+eur(g.b) : "…")+'</b></a>';
+      return '<a href="#bb-'+g.id+'" class="'+(x?"":"none")+'">'+thumb(g,"wt")+'<span>'+esc(g.t)+'<b>'+(x ? "CIB for sale "+eur(x.eur.total) : liveLoaded ? "value CIB "+eur(g.b) : "…")+'</b></span></a>';
     }).join("") || '<p class="note">All 30 black box games owned!</p>';
     if (!liveLoaded) return;
     var deals = [];
@@ -89,7 +96,7 @@
     $("w-cnt").textContent = deals.length + " missing games with a CIB copy";
     $("w-deals").innerHTML = deals.slice(0, 8).map(function(d){
       var x = d.x, auc = x.sale_type==="auction";
-      return '<a class="deal" href="'+esc(x.url)+'" target="_blank" rel="noopener"><div class="nm"><b>'+esc(d.g.t)+(d.g.bb?' <span class="tb">BLACK BOX</span>':'')+'</b>'+
+      return '<a class="deal" href="'+esc(x.url)+'" target="_blank" rel="noopener">'+thumb(d.g,"th")+'<div class="nm"><b>'+esc(d.g.t)+(d.g.bb?' <span class="tb">BLACK BOX</span>':'')+'</b>'+
         '<small>'+(MK[x.marketplace]||x.marketplace)+(auc?' · auction (current bid)':'')+' · '+esc(x.title)+'</small></div>'+
         '<div class="pr"><b>'+eur(x.eur.total)+'</b><span class="vb '+vclass(x.verdict)+'">'+esc(x.verdict)+(x.pct!=null?' '+pct(x.pct):'')+'</span></div></a>';
     }).join("") || '<p class="note">No CIB listings for missing games right now.</p>';

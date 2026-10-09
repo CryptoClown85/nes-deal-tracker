@@ -1,12 +1,12 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09",
-  "updated": "2026-10-09T19:01:38+02:00",
-  "count": 43,
-  "cib": 43,
+  "source": "checklist paste in chat 2026-10-09 (+ Pinball added 2026-10-09)",
+  "updated": "2026-10-09T19:18:37+02:00",
+  "count": 44,
+  "cib": 44,
   "loose": 0,
-  "black_box": 13,
+  "black_box": 14,
   "list": "games_master.json (PAL, 347)"
  },
  "games": [
@@ -187,6 +187,12 @@
   {
    "id": "mega-man-2",
    "title": "Mega Man 2",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "pinball",
+   "title": "Pinball",
    "condition": "CIB",
    "added": "2026-10-09"
   },
