@@ -1,12 +1,12 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB)",
-  "updated": "2026-10-09T19:23:19+02:00",
-  "count": 50,
-  "cib": 50,
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf",
+  "updated": "2026-10-09T20:28:00+02:00",
+  "count": 49,
+  "cib": 49,
   "loose": 0,
-  "black_box": 14,
+  "black_box": 13,
   "list": "games_master.json (PAL, 347)"
  },
  "games": [
@@ -121,12 +121,6 @@
   {
    "id": "excitebike",
    "title": "Excitebike",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "golf",
-   "title": "Golf",
    "condition": "CIB",
    "added": "2026-10-09"
   },
