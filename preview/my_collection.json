@@ -1,10 +1,10 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf (all CIB)",
-  "updated": "2026-10-09T19:22:14+02:00",
-  "count": 49,
-  "cib": 49,
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB)",
+  "updated": "2026-10-09T19:23:19+02:00",
+  "count": 50,
+  "cib": 50,
   "loose": 0,
   "black_box": 14,
   "list": "games_master.json (PAL, 347)"
@@ -235,6 +235,12 @@
   {
    "id": "rush-n-attack",
    "title": "Rush'n Attack",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "section-z",
+   "title": "Section Z",
    "condition": "CIB",
    "added": "2026-10-09"
   },
