@@ -7,7 +7,8 @@
   "outliers_dropped": 38,
   "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026",
   "window": "past 12 months; 24–36 months if fewer than 5 sales",
-  "good": "70th percentile of the sales when there are ≥6, otherwise the median"
+  "good": "70th percentile of the sales when there are ≥6, otherwise the median",
+  "very_good": "85th percentile of the sales (≥6, window extended to 24–36 months if needed), capped at the highest sale"
  },
  "games": {
   "airwolf": {
@@ -85,38 +86,41 @@
   "castlevania": {
    "condition": "CIB",
    "careful": 205,
-   "good": 261,
+   "good": 267,
    "pc": 178,
    "n": 10,
    "window": "12m",
    "from": "2025-10-21",
    "to": "2026-07-20",
    "few": false,
-   "basis": "median & P70 of 10 sales (12m)"
+   "basis": "median & P70 of 10 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
+   "grade": "very good"
   },
   "castlevania-ii-simon-s-quest": {
    "condition": "CIB",
    "careful": 98,
-   "good": 126,
+   "good": 173,
    "pc": 77,
    "n": 22,
    "window": "12m",
    "from": "2025-10-21",
    "to": "2026-07-05",
    "few": false,
-   "basis": "median & P70 of 22 sales (12m)"
+   "basis": "median & P70 of 22 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
+   "grade": "very good"
   },
   "castlevania-iii-dracula-s-curse": {
    "condition": "CIB",
    "careful": 347,
-   "good": 440,
+   "good": 708,
    "pc": 447,
    "n": 8,
    "window": "12m",
    "from": "2025-11-09",
    "to": "2026-08-16",
    "few": false,
-   "basis": "median & P70 of 8 sales (12m)"
+   "basis": "median & P70 of 8 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
+   "grade": "very good"
   },
   "chip-n-dale-rescue-rangers": {
    "condition": "CIB",

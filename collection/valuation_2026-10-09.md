@@ -7,9 +7,9 @@ Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL,
 
 | | Conservative (median) | Good condition (P70) | PriceCharting |
 |---|---:|---:|---:|
-| Games (50) | €4.509 | €5.504 | €4.779 |
+| Games (50) | €4.509 | €5.825 | €4.779 |
 | Graded extras (2) | €487 | €647 | €461 (gold cart not priced by PC) |
-| **Overall** | **€4.996** | **€6.151** | **€5.240** |
+| **Overall** | **€4.996** | **€6.472** | **€5.240** |
 
 ## Method
 
@@ -17,22 +17,23 @@ Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL,
 - Window: last 12 months; if fewer than 5 clean sales, extended to 24, then 36 months. Fewer than 3 → PriceCharting value used and flagged.
 - Excluded: graded/slabbed, sealed (in CIB tables), consoles/bundles/lots, repros/prototypes, incomplete copies, NTSC/Famicom/GBA Classics, Game & Watch handhelds, other titles in the series, then anything outside ⅓×–3× the window median.
 - Conservative = median. Good condition = 70th percentile when there are ≥6 sales, otherwise the median (no invented uplift).
+- Very good condition (owner's grade; Castlevania, Castlevania II, Castlevania III): 85th percentile of the same sales (≥6 sales, window extended to 24–36 months if needed), capped at the highest sale.
 - Tracker asking prices are listed as an upper reference only. eBay sold search needs a login and Catawiki hides closed prices, so neither added data beyond PriceCharting's eBay record.
 
 ## Top 10 by good-condition value
 
 | Game | Conservative | Good | PriceCharting | Sales (window) | Range | Confidence |
 |---|---:|---:|---:|---|---|---|
+| Castlevania III: Dracula's Curse | €347 | €708 | €447 | 8 (12m, 2025-11-09 → 2026-08-16) | €156–€839 | ok |
 | Mega Man | €414 | €573 | €324 | 6 (12m, 2026-03-10 → 2026-04-29) | €152–€853 | ok |
-| Castlevania III: Dracula's Curse | €347 | €440 | €447 | 8 (12m, 2025-11-09 → 2026-08-16) | €156–€839 | ok |
 | Kung Fu (sealed) | €357 | €357 | €295 | 5 (36m, 2024-07-16 → 2026-05-02) | €168–€487 | thin |
-| Castlevania | €205 | €261 | €178 | 10 (12m, 2025-10-21 → 2026-07-20) | €85–€270 | good |
+| Castlevania | €205 | €267 | €178 | 10 (12m, 2025-10-21 → 2026-07-20) | €85–€270 | good |
 | Batman: Return of the Joker | €174 | €216 | €204 | 6 (12m, 2026-01-23 → 2026-07-14) | €133–€357 | ok |
 | Chip 'n Dale: Rescue Rangers 2 | €159 | €183 | €194 | 10 (24m, 2024-10-31 → 2026-01-14) | €61–€312 | ok |
 | Mike Tyson's Punch-Out!! | €182 | €182 | €116 | 5 (12m, 2026-02-14 → 2026-05-26) | €94–€208 | thin |
+| Castlevania II: Simon's Quest | €98 | €173 | €77 | 22 (12m, 2025-10-21 → 2026-07-05) | €37–€209 | good |
 | Mario Bros. | €87 | €155 | €176 | 6 (12m, 2025-12-06 → 2026-04-16) | €64–€285 | ok |
 | Probotector | €105 | €150 | €116 | 21 (12m, 2025-10-25 → 2026-09-07) | €36–€279 | good |
-| The Legend of Zelda | €133 | €147 | €106 | 25 (12m, 2025-11-23 → 2026-09-30) | €66–€330 | good |
 
 ## Graded extras
 

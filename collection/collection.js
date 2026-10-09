@@ -184,8 +184,9 @@
     if (v.fallback) return '<dt>Value</dt><dd>'+eur(v.pc)+' <small>(PriceCharting; no sales valuation)</small></dd>';
     var few = v.few ? ' <span class="few">few sales</span>' : '';
     var span = v.n ? v.n+' sale'+(v.n>1?'s':'')+(v.from ? ', '+(v.from===v.to ? v.to : v.from+' → '+v.to) : '') : 'no recent sales – PriceCharting value';
-    return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · good condition <b>'+eur(v.good)+'</b>'+
-      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+esc(span)+few+'</small></dd>';
+    var vg = v.grade==="very good";
+    return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · '+(vg ? 'very good condition' : 'good condition')+' <b>'+eur(v.good)+'</b>'+
+      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
   }
   function openBB(id){
     var g = BYID[id];
@@ -195,7 +196,7 @@
     var s5 = s5For(g), L = liveFor(g);
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(g.t)+'</h3>'+
-      '<span class="chip '+(s||"M")+'">'+lab+'</span>'+
+      '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
       '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
       '<dl>'+valRow(g)+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
@@ -285,6 +286,8 @@
       (VAL.valued ? esc("Valued on " + vd + " from " + (M.sales_used||"") + " real PAL sales of complete-in-box copies (PriceCharting's record of eBay sales) from the past 12 months, or 24–36 months when a game sold fewer than 5 times. "
         + "Left out: graded, sealed, bundles and lots, reproductions, incomplete copies, NTSC/other versions and extreme outliers (" + ((M.sales_excluded||0)+(M.outliers_dropped||0)) + " sales). "
         + "Careful = the median sale. Good condition = the 70th percentile (what the nicer copies sold for) when a game has 6 or more sales, otherwise the median. "
+        + (function(){ var vg = G.filter(function(g){ var v = own[g.id] && VAL.games[g.id]; return v && v.grade==="very good"; }).map(function(g){ return g.t; });
+             return vg.length ? "Games you marked as very good condition (" + vg.join(", ") + ") use the 85th percentile instead (needs 6+ sales, never above the highest sale). " : ""; })()
         + (sl ? "Sealed games (Kung Fu) are valued from sealed sales. " : "")
         + (EX.length ? "Graded extras use the nearest WATA/CGC auction and eBay sales. " : "")
         + "PriceCharting = PriceCharting's own current values, for comparison. ") + '<a href="valuation_2026-10-09.md" target="_blank" rel="noopener">Full table with every sale ›</a>'

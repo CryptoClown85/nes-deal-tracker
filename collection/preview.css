@@ -502,3 +502,4 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .bbd dt.vt{grid-column:1/-1;margin-bottom:-4px}
 .bbd dd.vr{font-size:15px}
 .bbd dd.vr small{margin-top:3px}
+.chip.vg{background:#1d5c8f;color:#fff}

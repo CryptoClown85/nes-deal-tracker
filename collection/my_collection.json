@@ -1,7 +1,7 @@
 {
   "meta": {
     "owner": "w van der bellen",
-    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed; Punch-Out!! corrected to Mike Tyson's Punch-Out!! (CIB)",
+    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed; Punch-Out!! corrected to Mike Tyson's Punch-Out!! (CIB); Castlevania I–III graded 'very good' by the owner",
     "updated": "2026-10-09T23:50:00+02:00",
     "count": 50,
     "cib": 49,
@@ -52,19 +52,22 @@
       "id": "castlevania",
       "title": "Castlevania",
       "condition": "CIB",
-      "added": "2026-10-09"
+      "added": "2026-10-09",
+      "grade": "very good"
     },
     {
       "id": "castlevania-ii-simon-s-quest",
       "title": "Castlevania II: Simon's Quest",
       "condition": "CIB",
-      "added": "2026-10-09"
+      "added": "2026-10-09",
+      "grade": "very good"
     },
     {
       "id": "castlevania-iii-dracula-s-curse",
       "title": "Castlevania III: Dracula's Curse",
       "condition": "CIB",
-      "added": "2026-10-09"
+      "added": "2026-10-09",
+      "grade": "very good"
     },
     {
       "id": "chip-n-dale-rescue-rangers",
