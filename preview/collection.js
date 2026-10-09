@@ -1,18 +1,15 @@
 (function(){
   "use strict";
   var KEY = "nes-collection-v1";
-  var G = window.NES_GAMES || [];
-  // clearly-labelled EXAMPLE collection used for the preview
-  var DEMO = {"super-mario-bros":"C","duck-hunt":"L","excitebike":"C","ice-climber":"L","tennis":"C","kung-fu":"C","balloon-fight":"C",
-    "golf":"L","donkey-kong":"L","wrecking-crew":"C","the-legend-of-zelda":"C","zelda-ii-the-adventure-of-link":"L","mega-man-2":"C",
-    "kirby-s-adventure":"L","super-mario-bros-3":"C","tetris":"L","dr-mario":"C","metroid":"L","castlevania":"C","ducktales":"C",
-    "punch-out":"L","probotector":"C","2-in-1-super-mario-bros-duck-hunt":"L"};
-  function loadMine(){ try { var o = JSON.parse(localStorage.getItem(KEY) || "{}"); return (o && o.games) || {}; } catch(e){ return {}; } }
-  var mine = loadMine(), hasMine = Object.keys(mine).length > 0;
-  var src = /[?&]mine\b/.test(location.search) && hasMine ? "mine" : "demo";
-  var own = src === "mine" ? mine : DEMO;
+  var G = window.NES_GAMES || [], BYID = {};
+  G.forEach(function(g){ BYID[g.id] = g; });
+  function loadLocal(){ try { var o = JSON.parse(localStorage.getItem(KEY) || "{}"); return (o && o.games) || {}; } catch(e){ return {}; } }
+  var local = loadLocal(), hasLocal = Object.keys(local).length > 0;
+  var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
+  var src = "pub", own = {};
   var f = {own:"all", cond:"all"};
-  var live = {};  // pc key -> {n, best}
+  var live = {};                      // key -> {n, best, bestCib}
+  var liveLoaded = false, wtype = "all";
   var $ = function(id){ return document.getElementById(id); };
   function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
   function eur(v){ return v==null ? "–" : "€" + Math.round(v).toLocaleString("nl-NL"); }
@@ -20,8 +17,8 @@
   function letter(t){ var c = sortKey(t).charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; }
   function norm(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/\b(the|a|an|of|in)\b/g," ").replace(/[^a-z0-9]+/g,""); }
   function value(g){ var s = own[g.id]; return s==="C" ? g.b : s==="L" ? g.l : 0; }
+  var MK = {marktplaats:"Marktplaats", tradera:"Tradera", ebay:"eBay.com", ebay_de:"eBay.de", ebay_it:"eBay.it", ebay_uk:"eBay.co.uk", "2dehands":"2dehands"};
 
-  // deterministic 8x8 symmetric pixel sprite + hue per game, used as "box art"
   function hash(s){ var h=2166136261; for (var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; }
   function sprite(id){
     var h = hash(id), r = "", y, x;
@@ -31,6 +28,7 @@
   }
   var HUES = ["#d42020","#ffd23f","#2f8cff","#38b85a","#ff8a1c","#c04bff","#25c7c7","#ff5aa5"];
 
+  function liveFor(g){ return live[g.u] || live["t:"+norm(g.pt)] || null; }
   function keep(g, q){
     var s = own[g.id];
     if (f.own==="own" && !s) return false;
@@ -41,17 +39,18 @@
     return true;
   }
   function saleTag(g, cls){
-    var L = live[g.u] || live["t:"+norm(g.pt)];
+    var L = liveFor(g);
     if (!L || own[g.id]==="C") return "";
-    return '<a class="'+cls+'" href="'+esc(L.best.url)+'" target="_blank" rel="noopener" title="'+esc(L.best.title)+'">FOR SALE: '+L.n+' · from '+eur(L.best.eur.total)+
-      (L.best.condition==="CIB"?" CIB":"")+' ›</a>';
+    var x = L.bestCib || L.best;
+    return '<a class="'+cls+'" href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title)+'">FOR SALE: '+L.n+' · '+
+      (L.bestCib ? 'CIB from ' : 'from ')+eur(x.eur.total)+' ›</a>';
   }
   function tile(g){
     var s = own[g.id] || "M";
     var lab = s==="C" ? "CIB" : s==="L" ? "LOOSE" : "MISSING";
     var h = HUES[hash(g.id) % HUES.length];
-    var tag = s==="M" || s==="L" ? saleTag(g, "sale") : "";
-    return '<div><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
+    var tag = s!=="C" ? saleTag(g, "sale") : "";
+    return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
       '<span class="art"><i style="--hue:'+h+';--pix:'+sprite(g.id)+'"></i></span><span class="bt">'+esc(g.t)+'</span></div>'+tag+'</div>';
   }
   function crow(g){
@@ -63,6 +62,30 @@
     return '<div class="crow '+s+'"><span class="chip '+s+'">'+lab+'</span><div class="nm"><b>'+esc(g.t)+'</b><small>'+esc(sub)+'</small>'+
       (tag ? '<small class="s">'+tag+'</small>' : '')+'</div><span class="val">'+v+'</span></div>';
   }
+  function vclass(v){ return v==="Good buy"?"good":v==="Fair"?"fair":v==="Overpriced"?"over":"unclear"; }
+  function pct(x){ return x==null ? "" : (x>0?"+":x<0?"−":"±")+Math.abs(Math.round(x*100))+"%"; }
+  function wanted(){
+    var miss = G.filter(function(g){ return g.bb && !own[g.id]; });
+    $("wbb-cnt").textContent = "("+miss.length+")";
+    $("w-bb").innerHTML = miss.map(function(g){
+      var L = liveFor(g), x = L && L.bestCib;
+      return '<a href="#bb-'+g.id+'" class="'+(x?"":"none")+'">'+esc(g.t)+'<b>'+(x ? "CIB for sale "+eur(x.eur.total) : liveLoaded ? "value CIB "+eur(g.b) : "…")+'</b></a>';
+    }).join("") || '<p class="note">All 30 black box games owned!</p>';
+    if (!liveLoaded) return;
+    var deals = [];
+    G.forEach(function(g){ if (own[g.id]==="C") return; var L = liveFor(g); if (!L) return;
+      var c = L.cib.filter(function(x){ return wtype==="all" || (wtype==="auction" ? x.sale_type==="auction" : x.sale_type!=="auction"); })
+        .sort(function(a,b){ return a.eur.total-b.eur.total; })[0];
+      if (c) deals.push({g:g, x:c}); });
+    deals.sort(function(a,b){ return a.x.eur.total - b.x.eur.total; });
+    $("w-cnt").textContent = deals.length + " missing games with a CIB copy";
+    $("w-deals").innerHTML = deals.slice(0, 8).map(function(d){
+      var x = d.x, auc = x.sale_type==="auction";
+      return '<a class="deal" href="'+esc(x.url)+'" target="_blank" rel="noopener"><div class="nm"><b>'+esc(d.g.t)+(d.g.bb?' <span class="tb">BLACK BOX</span>':'')+'</b>'+
+        '<small>'+(MK[x.marketplace]||x.marketplace)+(auc?' · auction (current bid)':'')+' · '+esc(x.title)+'</small></div>'+
+        '<div class="pr"><b>'+eur(x.eur.total)+'</b><span class="vb '+vclass(x.verdict)+'">'+esc(x.verdict)+(x.pct!=null?' '+pct(x.pct):'')+'</span></div></a>';
+    }).join("") || '<p class="note">No CIB listings for missing games right now.</p>';
+  }
   function render(){
     var q = $("q").value.trim().toLowerCase();
     var bb = G.filter(function(g){ return g.bb && keep(g,q); });
@@ -72,12 +95,13 @@
     rest.forEach(function(g){ var L = letter(g.t); if (!groups[L]) { groups[L]=[]; order.push(L); } groups[L].push(g); });
     $("list-all").innerHTML = order.map(function(L){
       return '<h3 class="letter" id="L-'+(L==="#"?"0":L)+'">'+L+'</h3><div class="list">'+groups[L].map(crow).join("")+'</div>'; }).join("");
-    $("jump").innerHTML = '<a href="#bb">BB</a>' + "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(L){
+    $("jump").innerHTML = '<a href="#wanted">★</a><a href="#bb">BB</a>' + "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function(L){
       return '<a href="#L-'+(L==="#"?"0":L)+'" class="'+(groups[L]?"":"off")+'">'+L+'</a>'; }).join("");
     $("none").hidden = !!(bb.length || rest.length);
     var allBB = G.filter(function(g){return g.bb;});
     $("bb-cnt").textContent = allBB.filter(function(g){return own[g.id];}).length + "/" + allBB.length + " owned";
     $("all-cnt").textContent = G.filter(function(g){return !g.bb && own[g.id];}).length + "/" + (G.length-allBB.length) + " owned";
+    wanted();
   }
   function stats(){
     var c=0,l=0,b=0,val=0;
@@ -86,39 +110,48 @@
     $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").textContent=c; $("s-loose").textContent=l;
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
     $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
-    $("ribbon").innerHTML = src==="demo" ? "<b>PREVIEW</b> · EXAMPLE DATA – not your real collection" : "<b>PREVIEW</b> · your checklist from this phone";
-    $("srcnote").textContent = src==="demo" ? "Showing "+o+" example games so you can see how it looks. Tick your own games on the checklist page."
-      : "Showing the games you ticked on the checklist (saved on this device).";
-    $("src-mine").hidden = !(src==="demo" && hasMine); $("src-demo").hidden = src!=="mine";
+    var upd = (pubMeta.updated||"").slice(0,10);
+    $("ribbon").innerHTML = src==="pub" ? "<b>PREVIEW</b> · my collection"+(upd?" · updated "+upd:"") : "<b>PREVIEW</b> · ticks saved on this phone (not the saved collection)";
+    $("srcnote").textContent = (src==="pub" ? "Saved collection: " : "This phone's checklist ticks: ") + o + " games. Value = PriceCharting PAL value for each game in its condition.";
+    var differs = hasLocal && JSON.stringify(sortObj(local)) !== JSON.stringify(sortObj(pub||{}));
+    $("src-local").hidden = !(src==="pub" && differs); $("src-pub").hidden = src!=="local";
   }
+  function sortObj(o){ var r={}; Object.keys(o).sort().forEach(function(k){ r[k]=o[k]; }); return r; }
   document.addEventListener("click", function(e){
+    var w = e.target.closest("[data-w]");
+    if (w) { wtype = w.dataset.w; document.querySelectorAll("[data-w]").forEach(function(x){ x.setAttribute("aria-pressed", x===w?"true":"false"); }); wanted(); return; }
     var b = e.target.closest("[data-f]");
     if (!b) return;
     f[b.dataset.f] = b.dataset.v;
     document.querySelectorAll('[data-f="'+b.dataset.f+'"]').forEach(function(x){ x.setAttribute("aria-pressed", x===b?"true":"false"); });
     render();
   });
-  $("src-mine").addEventListener("click", function(){ src="mine"; own=mine; history.replaceState(null,"","?mine"); stats(); render(); });
-  $("src-demo").addEventListener("click", function(){ src="demo"; own=DEMO; history.replaceState(null,"",location.pathname); stats(); render(); });
+  $("src-local").addEventListener("click", function(){ src="local"; own=local; stats(); render(); });
+  $("src-pub").addEventListener("click", function(){ src="pub"; own=pub||{}; stats(); render(); });
   var t; $("q").addEventListener("input", function(){ clearTimeout(t); t=setTimeout(render,120); });
 
-  // live listings from the tracker (same site): active, priced, newest data
+  fetch("my_collection.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+    pub = {}; pubMeta = (d && d.meta) || {};
+    ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) pub[x.id] = x.condition==="CIB" ? "C" : x.condition==="loose" ? "L" : "C"; });
+  }).catch(function(){ pub = {}; }).then(function(){
+    if (src==="pub") own = pub;
+    stats(); render();
+  });
+  // live listings from the tracker (same site)
   fetch("../data.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
     if (!d) return;
     (d.listings||[]).forEach(function(x){
       if (x.status!=="active" || !x.pc_title || !x.eur || x.eur.total==null) return;
       if (["lot","graded","box only"].indexOf(x.condition) >= 0) return;
-      var keys = [x.pc_url, "t:"+norm(x.pc_title)];
-      keys.forEach(function(k){
+      [x.pc_url, "t:"+norm(x.pc_title)].forEach(function(k){
         if (!k) return;
-        var L = live[k] || (live[k] = {n:0, best:null});
+        var L = live[k] || (live[k] = {n:0, nCib:0, best:null, bestCib:null, cib:[]});
         L.n++;
-        var better = !L.best || (x.condition==="CIB") > (L.best.condition==="CIB") ||
-          ((x.condition==="CIB") === (L.best.condition==="CIB") && x.eur.total < L.best.eur.total);
-        if (better) L.best = x;
+        if (!L.best || x.eur.total < L.best.eur.total) L.best = x;
+        if (x.condition==="CIB") { L.nCib++; L.cib.push(x); if (!L.bestCib || x.eur.total < L.bestCib.eur.total) L.bestCib = x; }
       });
     });
-    render();
+    liveLoaded = true; render();
   }).catch(function(){});
   stats(); render();
 })();

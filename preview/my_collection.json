@@ -1,0 +1,272 @@
+{
+ "meta": {
+  "owner": "w van der bellen",
+  "source": "checklist paste in chat 2026-10-09",
+  "updated": "2026-10-09T19:01:38+02:00",
+  "count": 43,
+  "cib": 43,
+  "loose": 0,
+  "black_box": 13,
+  "list": "games_master.json (PAL, 347)"
+ },
+ "games": [
+  {
+   "id": "balloon-fight",
+   "title": "Balloon Fight",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "batman-return-of-the-joker",
+   "title": "Batman: Return of the Joker",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "batman-the-video-game",
+   "title": "Batman: The Video Game",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "battletoads",
+   "title": "Battletoads",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "castlevania",
+   "title": "Castlevania",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "castlevania-ii-simon-s-quest",
+   "title": "Castlevania II: Simon's Quest",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "castlevania-iii-dracula-s-curse",
+   "title": "Castlevania III: Dracula's Curse",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "chip-n-dale-rescue-rangers",
+   "title": "Chip 'n Dale: Rescue Rangers",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "chip-n-dale-rescue-rangers-2",
+   "title": "Chip 'n Dale: Rescue Rangers 2",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "defender-of-the-crown",
+   "title": "Defender of the Crown",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "donkey-kong",
+   "title": "Donkey Kong",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "double-dragon",
+   "title": "Double Dragon",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "double-dragon-ii-the-revenge",
+   "title": "Double Dragon II: The Revenge",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "double-dragon-iii-the-sacred-stones",
+   "title": "Double Dragon III: The Sacred Stones",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "duck-hunt",
+   "title": "Duck Hunt",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "ducktales",
+   "title": "DuckTales",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "ducktales-2",
+   "title": "DuckTales 2",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "excitebike",
+   "title": "Excitebike",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "golf",
+   "title": "Golf",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "gyromite",
+   "title": "Gyromite",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "ice-climber",
+   "title": "Ice Climber",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "joe-mac-caveman-ninja",
+   "title": "Joe & Mac: Caveman Ninja",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "kid-icarus",
+   "title": "Kid Icarus",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "knight-rider",
+   "title": "Knight Rider",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "kung-fu",
+   "title": "Kung Fu",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "the-legend-of-zelda",
+   "title": "The Legend of Zelda",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "the-lion-king",
+   "title": "The Lion King",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "mario-bros",
+   "title": "Mario Bros.",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "mega-man",
+   "title": "Mega Man",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "mega-man-2",
+   "title": "Mega Man 2",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "popeye",
+   "title": "Popeye",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "probotector",
+   "title": "Probotector",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "punch-out",
+   "title": "Punch-Out!!",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "rad-racer",
+   "title": "Rad Racer",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "rush-n-attack",
+   "title": "Rush'n Attack",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "shadow-warriors",
+   "title": "Shadow Warriors",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "soccer",
+   "title": "Soccer",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "super-mario-bros",
+   "title": "Super Mario Bros.",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "super-mario-bros-2",
+   "title": "Super Mario Bros. 2",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "super-mario-bros-3",
+   "title": "Super Mario Bros. 3",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "tennis",
+   "title": "Tennis",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "wwf-wrestlemania",
+   "title": "WWF WrestleMania",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "zelda-ii-the-adventure-of-link",
+   "title": "Zelda II: The Adventure of Link",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  }
+ ]
+}

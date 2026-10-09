@@ -92,6 +92,16 @@
   $("clear").addEventListener("click", function(){
     if (Object.keys(own).length && confirm("Clear all your ticks on this phone?")) { own = {}; save(); render(); }
   });
+  // No ticks saved on this phone yet: pre-fill from the published collection (saved to this phone on the first tap).
+  if (localStorage.getItem(KEY) === null) {
+    fetch("my_collection.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+      if (!d || !d.games || localStorage.getItem(KEY) !== null) return;
+      d.games.forEach(function(x){ own[x.id] = x.condition==="loose" ? "L" : "C"; });
+      var rb = document.querySelector(".ribbon");
+      if (rb) rb.innerHTML = "<b>PREVIEW</b> · pre-filled with your saved collection ("+d.games.length+" games) · change any tick to update";
+      render();
+    }).catch(function(){});
+  }
   window.addEventListener("storage", function(e){ if (e.key===KEY) { own = load(); render(); } });
   render();
 })();

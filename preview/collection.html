@@ -15,7 +15,7 @@
     <h1 class="ttl">My Collection<small>PAL NES · progress &amp; value</small></h1>
   </div>
   <div class="pixsep"></div>
-  <div class="ribbon" id="ribbon"><b>PREVIEW</b> · EXAMPLE DATA – not your real collection</div>
+  <div class="ribbon" id="ribbon"><b>PREVIEW</b> · loading collection…</div>
 </header>
 
 <main class="wrap">
@@ -31,10 +31,21 @@
     </div>
     <p class="note" id="srcnote" style="margin-bottom:0"></p>
     <p style="margin:8px 0 0;display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn sm" id="src-mine" type="button" hidden>Show my checklist</button>
-      <button class="btn alt sm" id="src-demo" type="button" hidden>Show example data</button>
+      <button class="btn alt sm" id="src-local" type="button" hidden>Show this phone's ticks</button>
+      <button class="btn alt sm" id="src-pub" type="button" hidden>Show saved collection</button>
       <a class="btn alt sm" href="checklist.html">Edit checklist</a>
     </p>
+  </section>
+
+  <section class="panel wanted" id="wanted" aria-label="Wanted">
+    <h2 class="sec" style="margin-top:0">Wanted <span class="cnt" id="w-cnt"></span></h2>
+    <h3 class="wh">Missing black box games <span id="wbb-cnt"></span></h3>
+    <div class="wbb" id="w-bb"></div>
+    <h3 class="wh">Cheapest CIB for sale now <small>(missing games, total incl. shipping)</small></h3>
+    <div class="seg" role="group" aria-label="Listing type" style="margin-bottom:10px">
+      <button data-w="all" aria-pressed="true">All</button><button data-w="buy_now" aria-pressed="false">Buy now</button><button data-w="auction" aria-pressed="false">Auctions</button>
+    </div>
+    <div class="list" id="w-deals"><p class="note">Loading live listings…</p></div>
   </section>
 
   <div class="controls">
