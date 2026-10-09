@@ -127,6 +127,7 @@
     var n=G.length, o=c+l;
     $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").textContent=c; $("s-loose").textContent=l;
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
+    $("sumline").innerHTML = '<b>'+o+'</b>/'+n+' owned · <b>'+c+'</b> CIB · <b>'+l+'</b> loose · black box <b>'+b+'</b>/'+G.filter(function(g){return g.bb;}).length+' · ≈ <b>'+eur(val)+'</b>';
     $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
     var upd = (pubMeta.updated||"").slice(0,10);
     $("ribbon").innerHTML = src==="pub" ? "<b>PREVIEW</b> · my collection"+(upd?" · updated "+upd:"") : "<b>PREVIEW</b> · ticks saved on this phone (not the saved collection)";
