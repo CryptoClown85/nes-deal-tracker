@@ -139,7 +139,8 @@
   function saveBB(){ try { localStorage.setItem(BBKEY, JSON.stringify(bbf)); } catch(e){} }
   function s5For(g){   // last-5 CIB sales average, if the tracker fetched it for a listing of this game
     var L = liveFor(g); if (!L) return null; var r = null;
-    L.all.forEach(function(x){ var s = x.sales5; if (s && s.bucket==="cib" && s.n && (!r || s.n > r.n)) r = s; });
+    L.all.forEach(function(x){ var s = x.sales5;   // same PAL product only (a US listing's sales would be compared with the PAL value)
+      if (s && s.bucket==="cib" && s.n && s.pc_url===g.u && (!r || s.n > r.n)) r = s; });
     return r;
   }
   function openBB(id){
