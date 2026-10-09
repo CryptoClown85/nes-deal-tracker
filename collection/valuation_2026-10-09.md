@@ -1,25 +1,23 @@
 # NES collection valuation – 9 Oct 2026
 
 Owner: w van der bellen · 50 games (49 PAL CIB + Kung Fu factory sealed) + 2 graded extras. Prices in EUR at the tracker's FX rate for 9 Oct 2026 (1 EUR = 1.1206 USD).
+Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL, CIB).
 
 ## Totals
 
 | | Conservative (median) | Good condition (P70) | PriceCharting |
 |---|---:|---:|---:|
-| Games (50) | €4.381 | €5.388 | €4.717 |
+| Games (50) | €4.509 | €5.504 | €4.779 |
 | Graded extras (2) | €487 | €647 | €461 (gold cart not priced by PC) |
-| **Overall** | **€4.868** | **€6.035** | **€5.178** |
-
-The site currently shows ≈ €4.812 (PriceCharting PAL CIB values incl. Kung Fu as CIB €48, + €343 for the CIB WATA 7.5, gold cart not valued).
+| **Overall** | **€4.996** | **€6.151** | **€5.240** |
 
 ## Method
 
-- Source: PriceCharting PAL NES product pages, fetched 9 Oct 2026 (the sold-listings tables, up to 30 most recent sales per condition; these are eBay sales from ebay.nl/.de/.co.uk/.fr/.it/.es/.com, prices in USD, converted). Kung Fu uses the 'New' (sealed) table.
-- Window: last 12 months; if fewer than 5 clean sales, extended to 24, then 36 months. Fewer than 3 → no sales value (PriceCharting value used and flagged).
-- Excluded: graded/slabbed, sealed (in CIB tables), consoles/bundles/lots, repros/prototypes, incomplete (no manual/box, cart only, box only), NTSC/Famicom/GBA Classics, Game & Watch handhelds, other titles in the series (e.g. Mega Man 6 on Mega Man, Simon's Quest on Castlevania), then anything outside ⅓×–3× the window median.
-- Conservative = median of the clean sales. Good condition = 70th percentile (P70) of the same sales, only when there are ≥6; otherwise it equals the median (no uplift is invented). Rationale: CIB sales mix worn/split boxes and missing inserts with nice copies; well-kept copies sell in the upper part of the range, and P70 is that upper-half level taken from the actual sales.
-- Tracker asking prices (active CIB listings matched to the same PriceCharting product) are listed as an upper reference only.
-- eBay sold search itself now requires a login (ebay.de redirected to sign-in), and Catawiki hides closed prices, so neither could be added beyond what PriceCharting already records from eBay.
+- Source: PriceCharting PAL NES product pages, fetched 9 Oct 2026 (sold-listings tables, up to 30 most recent sales per condition; eBay sales from ebay.nl/.de/.co.uk/.fr/.it/.es/.com, USD converted). Kung Fu uses the 'New' (sealed) table.
+- Window: last 12 months; if fewer than 5 clean sales, extended to 24, then 36 months. Fewer than 3 → PriceCharting value used and flagged.
+- Excluded: graded/slabbed, sealed (in CIB tables), consoles/bundles/lots, repros/prototypes, incomplete copies, NTSC/Famicom/GBA Classics, Game & Watch handhelds, other titles in the series, then anything outside ⅓×–3× the window median.
+- Conservative = median. Good condition = 70th percentile when there are ≥6 sales, otherwise the median (no invented uplift).
+- Tracker asking prices are listed as an upper reference only. eBay sold search needs a login and Catawiki hides closed prices, so neither added data beyond PriceCharting's eBay record.
 
 ## Top 10 by good-condition value
 
@@ -31,10 +29,10 @@ The site currently shows ≈ €4.812 (PriceCharting PAL CIB values incl. Kung F
 | Castlevania | €205 | €261 | €178 | 10 (12m, 2025-10-21 → 2026-07-20) | €85–€270 | good |
 | Batman: Return of the Joker | €174 | €216 | €204 | 6 (12m, 2026-01-23 → 2026-07-14) | €133–€357 | ok |
 | Chip 'n Dale: Rescue Rangers 2 | €159 | €183 | €194 | 10 (24m, 2024-10-31 → 2026-01-14) | €61–€312 | ok |
+| Mike Tyson's Punch-Out!! | €182 | €182 | €116 | 5 (12m, 2026-02-14 → 2026-05-26) | €94–€208 | thin |
 | Mario Bros. | €87 | €155 | €176 | 6 (12m, 2025-12-06 → 2026-04-16) | €64–€285 | ok |
 | Probotector | €105 | €150 | €116 | 21 (12m, 2025-10-25 → 2026-09-07) | €36–€279 | good |
 | The Legend of Zelda | €133 | €147 | €106 | 25 (12m, 2025-11-23 → 2026-09-30) | €66–€330 | good |
-| Metal Gear | €134 | €146 | €149 | 7 (12m, 2025-10-17 → 2026-09-22) | €55–€239 | ok |
 
 ## Graded extras
 
@@ -46,16 +44,17 @@ No WATA 7.0 sale of a 5-screw gold cart found. Nearest graded-cart sales of the 
 
 ## Kung Fu (factory sealed)
 
-PAL sealed sales are few: 5 clean sales in 36 months (€168 'new in foil' May 2026, €426 Aug 2025, €357 Feb 2025, €179 PAL B Oct 2024, €487 Jul 2024). Excluded: a 'CIB … NEW' listing (€674, not clearly sealed), Kung Fu Heroes, and graded/UKG/RGS copies. Median €357 (no P70, too few). PriceCharting PAL 'New' €295. Resealed copies are common and the recent PAL-B / foil sales were the low ones (€168–€179), so treat €170–€360 as the honest range unless the seal is verified as a proper Nintendo factory seal.
+5 clean PAL sealed sales in 36 months (€168 'new in foil' May 2026, €426 Aug 2025, €357 Feb 2025, €179 PAL B Oct 2024, €487 Jul 2024). Median €357 (no P70). PriceCharting PAL 'New' €295. Resealed copies are common and the most recent PAL-B/foil sales were the low ones, so €170–€360 is the honest range unless the Nintendo seal is verified.
 
 ## Thin or odd data
 
-- **Double Dragon**: PriceCharting's PAL CIB table has no sale after 2019 (one 2023 row); no recent evidence, so the PriceCharting value (€63) is used for all three.
-- **Kung Fu (sealed)**, **Gyromite**, **Ice Climber**: only 5 sales; no uplift applied.
-- **Mega Man** (6 sales, €152–€853), **Mario Bros.** (6, €64–€285), **Castlevania III** (8, €156–€839), **Batman: Return of the Joker** (6): wide spreads, so the P70 rests on 1–2 sales; treat the good-condition figure as indicative.
-- **Donkey Kong**, **Mario Bros.**, **Popeye**: the PriceCharting PAL CIB tables are polluted by Game & Watch handheld sales (15 on Donkey Kong alone); these were excluded.
-- PAL-A vs PAL-B: most sold titles don't state the region (442 unstated vs 123 PAL-B and 86 PAL-A); PriceCharting does not separate them. Where both have ≥3 sales the medians are in the CSV (pal_a_median / pal_b_median); the differences are game-specific (e.g. Probotector PAL-A higher, Rad Racer/Snake's Revenge PAL-B higher) and too thin to apply a blanket PAL-B adjustment.
+- Few sales (no uplift applied): Double Dragon (0, none), Gyromite (5, 12m), Ice Climber (5, 12m), Kung Fu (5, 36m), Mike Tyson's Punch-Out!! (5, 12m).
+- **Double Dragon**: no PAL CIB sale after 2019 on PriceCharting; its PriceCharting value is used.
+- **Mike Tyson's Punch-Out!!**: 5 sales in 12 months (€94–€208, median €182); the older 2025 sales were mostly €114–€119, so the 12-month median may run high.
+- Wide spreads (P70 rests on 1–2 sales): Mega Man, Mario Bros., Castlevania III, Batman: Return of the Joker.
+- Donkey Kong, Mario Bros., Popeye: PriceCharting's PAL CIB tables include Game & Watch handheld sales; excluded here.
+- PAL-A vs PAL-B: most sales don't state the region (439 unstated, 126 PAL-B, 85 PAL-A); differences are game-specific and too thin for a blanket adjustment (per-game medians in the CSV).
 
 ## Full table
 
-All 52 rows with sales counts, date ranges, median, trimmed mean, P25/P70, min/max, PAL-A/B split, tracker asking prices and every sale used (date, € price, eBay link): `valuation_2026-10-09.csv`.
+All rows with sales counts, date ranges, median, trimmed mean, P25/P70, min/max, PAL-A/B split, tracker asks and every sale used: `valuation_2026-10-09.csv`.

@@ -5,9 +5,5 @@ window.NES_ART_OVERRIDES = {
  "kid-icarus": {
   "src": "boxart/override/kid-icarus.jpg",
   "note": "NTSC (USA) box – libretro-thumbnails 'Kid Icarus (USA, Europe) (Rev 1)'"
- },
- "punch-out": {
-  "src": "boxart/override/punch-out.jpg",
-  "note": "Mike Tyson's Punch-Out!! NTSC (USA) box – libretro-thumbnails \"Mike Tyson's Punch-Out!! (Japan, USA)\""
  }
 };

@@ -1,8 +1,8 @@
 {
   "meta": {
     "owner": "w van der bellen",
-    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed",
-    "updated": "2026-10-09T22:35:00+02:00",
+    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed; Punch-Out!! corrected to Mike Tyson's Punch-Out!! (CIB)",
+    "updated": "2026-10-09T23:50:00+02:00",
     "count": 50,
     "cib": 49,
     "loose": 0,
@@ -188,6 +188,12 @@
       "added": "2026-10-09"
     },
     {
+      "id": "mike-tyson-s-punch-out",
+      "title": "Mike Tyson's Punch-Out!!",
+      "condition": "CIB",
+      "added": "2026-10-09"
+    },
+    {
       "id": "nintendo-world-cup",
       "title": "Nintendo World Cup",
       "condition": "CIB",
@@ -208,12 +214,6 @@
     {
       "id": "probotector",
       "title": "Probotector",
-      "condition": "CIB",
-      "added": "2026-10-09"
-    },
-    {
-      "id": "punch-out",
-      "title": "Punch-Out!!",
       "condition": "CIB",
       "added": "2026-10-09"
     },

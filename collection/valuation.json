@@ -2,9 +2,9 @@
  "valued": "2026-10-09",
  "fx_usd_per_eur": 1.1206,
  "method": {
-  "sales_used": 651,
-  "sales_excluded": 81,
-  "outliers_dropped": 37,
+  "sales_used": 650,
+  "sales_excluded": 82,
+  "outliers_dropped": 38,
   "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026",
   "window": "past 12 months; 24–36 months if fewer than 5 sales",
   "good": "70th percentile of the sales when there are ≥6, otherwise the median"
@@ -358,6 +358,18 @@
    "few": false,
    "basis": "median & P70 of 7 sales (12m)"
   },
+  "mike-tyson-s-punch-out": {
+   "condition": "CIB",
+   "careful": 182,
+   "good": 182,
+   "pc": 116,
+   "n": 5,
+   "window": "12m",
+   "from": "2026-02-14",
+   "to": "2026-05-26",
+   "few": true,
+   "basis": "median of 5 sales (12m); too few for a P70 uplift"
+  },
   "nintendo-world-cup": {
    "condition": "CIB",
    "careful": 28,
@@ -405,18 +417,6 @@
    "to": "2026-09-07",
    "few": false,
    "basis": "median & P70 of 21 sales (12m)"
-  },
-  "punch-out": {
-   "condition": "CIB",
-   "careful": 54,
-   "good": 66,
-   "pc": 54,
-   "n": 6,
-   "window": "12m",
-   "from": "2025-11-16",
-   "to": "2026-08-12",
-   "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
   },
   "rad-racer": {
    "condition": "CIB",
