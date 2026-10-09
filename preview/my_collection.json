@@ -1,10 +1,10 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow (all CIB)",
-  "updated": "2026-10-09T19:21:12+02:00",
-  "count": 47,
-  "cib": 47,
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge (all CIB)",
+  "updated": "2026-10-09T19:21:51+02:00",
+  "count": 48,
+  "cib": 48,
   "loose": 0,
   "black_box": 14,
   "list": "games_master.json (PAL, 347)"
@@ -283,6 +283,12 @@
   {
    "id": "wwf-wrestlemania",
    "title": "WWF WrestleMania",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "wwf-wrestlemania-challenge",
+   "title": "WWF WrestleMania Challenge",
    "condition": "CIB",
    "added": "2026-10-09"
   },
