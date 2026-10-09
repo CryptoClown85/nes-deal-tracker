@@ -1,13 +1,14 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania",
-  "updated": "2026-10-09T21:00:00+02:00",
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game)",
+  "updated": "2026-10-09T21:40:00+02:00",
   "count": 48,
   "cib": 48,
   "loose": 0,
   "black_box": 13,
-  "list": "games_master.json (PAL, 347)"
+  "list": "games_master.json (PAL, 347)",
+  "extras": 1
  },
  "games": [
   {
@@ -296,6 +297,30 @@
    "id": "zelda-ii-the-adventure-of-link",
    "title": "Zelda II: The Adventure of Link",
    "condition": "CIB",
+   "added": "2026-10-09"
+  }
+ ],
+ "extras": [
+  {
+   "id": "the-legend-of-zelda--wata-7-0-gold-5screw",
+   "base": "the-legend-of-zelda",
+   "title": "The Legend of Zelda (Gold cartridge) – WATA 7.0",
+   "short": "Zelda – Gold WATA 7.0",
+   "kind": "graded",
+   "grader": "WATA",
+   "grade": "7.0",
+   "item": "Cartridge only",
+   "variant": "5-screw, no Made in Japan",
+   "condition": "Graded (WATA 7.0, cart)",
+   "region": "NTSC (USA)",
+   "image": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw.jpg",
+   "image_large": "boxart/extra/the-legend-of-zelda--wata-7-0-gold-5screw@2x.jpg",
+   "image_note": "Stand-in photo, not this copy: a WATA 7.5 cart of the same 5-screw, no Made in Japan variant (label: \"Gold, 5 Screw, Round SOQ, NES R, No Made in Japan, No Code (Cart)\"). No photo of a WATA 7.0 cart of this variant was found.",
+   "image_source": "https://www.ebay.com/itm/377329264737",
+   "image_source_label": "eBay listing 377329264737 \"The Legend of Zelda (Early Production) NES Wata 7.5 CART\"",
+   "value_eur": null,
+   "value_note": "No sale of a WATA 7.0 cart of this variant found, so no value is counted. Nearest results: WATA 7.5 cart (Round SoQ, 5 Screw) $168, eBay 29 Apr 2024; CGC 7.5 cart (5-screw, NES TM) $252, Heritage 21 Dec 2023 – both via PriceCharting 'Legend of Zelda [5 Screw]'.",
+   "value_source": "https://www.pricecharting.com/game/nes/legend-of-zelda-5-screw",
    "added": "2026-10-09"
   }
  ]

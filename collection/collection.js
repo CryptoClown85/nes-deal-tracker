@@ -7,6 +7,7 @@
   var local = loadLocal(), hasLocal = Object.keys(local).length > 0;
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
+  var EX = [], EXID = {};             // extra owned items (e.g. graded carts) from my_collection.json "extras": shown next to their game, not counted as games
   /* shelf state: Show / Sort per shelf, remembered per device (default Owned, A–Z) */
   var SH = {
     bb: {key:"nes-bbshelf-v2", el:"shelf", pre:"bb-", def:{show:"own", sort:"az"}, games:function(g){ return g.bb; }, alt:"NES black box (NTSC art)",
@@ -72,6 +73,18 @@
       '</div></div>'+
       '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span class="ctw"><span class="ct">'+esc(g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
   }
+  function tileX(x, k){   // graded slab etc.: same shelf slot, slab-shaped art, no box
+    var c = SH[k], g = BYID[x.base] || {t:x.title};
+    return '<div class="slot C xslot" id="'+c.pre+x.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox C slab" data-bb="'+x.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(x.title)+' – owned extra – details" title="'+esc(x.title)+'">'+
+      '<img src="'+esc(x.image)+'" alt="'+esc(x.title)+' – graded slab photo" loading="lazy" decoding="async" width="360" height="360">'+
+      '</div></div><span class="cap" data-bb="'+x.id+'" title="'+esc(x.title)+'"><span class="ctw"><span class="ct">'+esc(x.short||x.title)+'</span></span><span class="pills"><span class="pill gr">Graded</span></span></span></div>';
+  }
+  function withExtras(list){   // put each extra right after its game, whatever the filter/sort (only where that game is shown)
+    if (!EX.length) return list.map(function(g){ return {g:g}; });
+    var out = [];
+    list.forEach(function(g){ out.push({g:g}); EX.forEach(function(x){ if (x.base===g.id) out.push({x:x}); }); });
+    return out;
+  }
   function vclass(v){ return v==="Good buy"?"good":v==="Fair"?"fair":v==="Overpriced"?"over":"unclear"; }
   function pct(x){ return x==null ? "" : (x>0?"+":x<0?"−":"±")+Math.abs(Math.round(x*100))+"%"; }
   function wanted(){
@@ -123,7 +136,7 @@
       else if (st.show!=="sale") hint = "Games with a complete-in-box listing first (cheapest total incl. shipping), then the rest A–Z.";
     } else list.sort(az);
     $(k+"-hint").textContent = hint; $(k+"-hint").hidden = !hint;
-    $(c.el).innerHTML = list.map(function(g){ return tile(g, k); }).join("") ||
+    $(c.el).innerHTML = withExtras(list).map(function(e){ return e.x ? tileX(e.x, k) : tile(e.g, k); }).join("") ||
       '<p class="empty bbempty">'+(c.q ? 'No games match “'+esc(c.q)+'”.' : st.show==="sale" && !liveLoaded ? "Loading live listings…" : c.empty[st.show])+'</p>';
     if (c.search) {   // letter jump (A–Z sort only)
       var have = {}; list.forEach(function(g){ have[letter(g.t)] = 1; });
@@ -139,8 +152,24 @@
       if (s && s.bucket==="cib" && s.n && s.pc_url===g.u && (!r || s.n > r.n)) r = s; });
     return r;
   }
+  function popupX(x){
+    var g = BYID[x.base] || {};
+    return '<div class="bbd"><div class="bbd-art slab"><img src="'+esc(x.image_large||x.image)+'" alt="'+esc(x.title)+' – graded slab photo" width="720" height="720"></div>'+
+      '<div class="bbd-info"><h3 id="bbd-t">'+esc(x.title)+'</h3>'+
+      '<span class="chip C">Owned · graded extra</span>'+
+      '<p class="bbd-sub">'+esc([g.p||"Nintendo", x.region].filter(Boolean).join(" · "))+'</p>'+
+      '<dl><dt>Grade</dt><dd><b>'+esc(x.grader+' '+x.grade)+'</b> · '+esc(x.item)+'</dd>'+
+      '<dt>Variant</dt><dd>'+esc(x.variant)+'</dd>'+
+      '<dt>Region</dt><dd>'+esc(x.region)+'</dd>'+
+      '<dt>Value</dt><dd>'+(x.value_eur!=null ? '<b>'+eur(x.value_eur)+'</b>' : 'not valued')+'</dd>'+
+      '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd></dl></div></div>'+
+      '<p class="note bbd-src"><b>Photo:</b> '+esc(x.image_note||"")+' Source: <a href="'+esc(x.image_source)+'" target="_blank" rel="noopener">'+esc(x.image_source_label||x.image_source)+'</a>.</p>'+
+      '<p class="note">Not counted as a separate game (the CIB Legend of Zelda is), and not part of the checklist.</p>';
+  }
   function openBB(id){
-    var g = BYID[id]; if (!g) return;
+    var g = BYID[id];
+    if (!g && EXID[id]) { $("bbd-body").innerHTML = popupX(EXID[id]); return showBB(id); }
+    if (!g) return;
     var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="L" ? "Owned · loose" : "Missing";
     var s5 = s5For(g), L = liveFor(g);
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
@@ -162,8 +191,11 @@
       }
     }
     $("bbd-body").innerHTML = h;
+    showBB(g.id);
+  }
+  function showBB(id){
     var d = $("bbdlg"); bbOpener = document.activeElement && document.activeElement.closest && document.activeElement.closest("[data-bb]") ||
-      document.querySelector('.shelf .pbox[data-bb="'+g.id+'"]');
+      document.querySelector('.shelf .pbox[data-bb="'+id+'"]');
     document.documentElement.classList.add("noscroll");
     if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute("open","");
     d.scrollTop = 0; $("bbd-x").focus();
@@ -208,10 +240,14 @@
     var n=G.length, o=c+l;
     $("s-own").innerHTML = o+'<small> / '+n+'</small>'; $("s-cib").textContent=c; $("s-loose").textContent=l;
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
+    var xv = EX.reduce(function(a,x){ return a + (x.value_eur||0); }, 0);
+    $("s-xtra").hidden = !EX.length;
+    $("s-xtra").innerHTML = EX.length ? '+ <b>'+EX.length+'</b> graded extra'+(EX.length>1?'s':'')+(xv ? ' · '+eur(xv) : ' · not valued') : "";
     $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
     var upd = (pubMeta.updated||"").slice(0,10);
     $("ribbon").innerHTML = src==="pub" ? "<b>My collection</b>"+(upd?" · updated "+upd:"") : "<b>This phone's ticks</b> (not the saved collection)";
-    $("srcnote").textContent = (src==="pub" ? "Saved collection: " : "This phone's checklist ticks: ") + o + " games. Value = PriceCharting PAL value for each game in its condition.";
+    $("srcnote").textContent = (src==="pub" ? "Saved collection: " : "This phone's checklist ticks: ") + o + " games. Value = PriceCharting PAL value for each game in its condition."
+      + (EX.length ? " Graded extras (" + EX.map(function(x){ return x.short||x.title; }).join(", ") + ") are listed separately" + (xv ? " (+" + eur(xv) + ")" : " and not included: no matching sale found") + "." : "");
     var differs = hasLocal && JSON.stringify(sortObj(local)) !== JSON.stringify(sortObj(pub||{}));
     $("src-local").hidden = !(src==="pub" && differs); $("src-pub").hidden = src!=="local";
   }
@@ -234,6 +270,8 @@
 
   fetch("my_collection.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
     pub = {}; pubMeta = (d && d.meta) || {};
+    EX = ((d && d.extras) || []).filter(function(x){ return x && x.id && x.base && BYID[x.base] && !BYID[x.id]; });
+    EX.forEach(function(x){ EXID[x.id] = x; });
     ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) pub[x.id] = x.condition==="CIB" ? "C" : x.condition==="loose" ? "L" : "C"; });
   }).catch(function(){ pub = {}; }).then(function(){
     if (src==="pub") own = pub;

@@ -371,3 +371,18 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .slot .cap>.pills{flex:0 0 auto;display:flex;justify-content:center;height:18px}
 .slot .cap>.pills:empty{display:none}
 @media(min-width:900px){.slot .cap{padding:8px 6px;gap:7px}.slot .cap>.pills{height:20px}}
+
+/* ---------- extras (graded slab) on the shelf + popup ---------- */
+.stat .xtra{font-size:.8rem;color:#ffd23f;margin-top:3px}
+.stat .xtra b{color:#fff}
+.pbox.slab{background:transparent;box-shadow:none}
+.pbox.slab::before{display:none}
+.pbox.slab::after{display:none}
+.pbox.slab img{object-fit:contain;object-position:50% 100%;filter:drop-shadow(5px 5px 6px rgba(0,0,0,.75))}
+.pbox.slab:hover,.pbox.slab:focus-visible,.pbox.slab:active{box-shadow:none}
+.pbox.slab:hover img,.pbox.slab:focus-visible img,.pbox.slab:active img{filter:drop-shadow(8px 14px 14px rgba(0,0,0,.8))}
+.pill.gr{background:#e9e6dc;color:#111}
+.bbd-art.slab{border:0;box-shadow:none;background:transparent}
+.bbd-art.slab img{filter:drop-shadow(4px 4px 0 #000)}
+.bbd-src a{word-break:break-word}
+.bbd dd.xnote{text-align:left}
