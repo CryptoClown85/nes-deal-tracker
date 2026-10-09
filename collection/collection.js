@@ -163,6 +163,7 @@
       '<dt>Region</dt><dd>'+esc(x.region)+'</dd>'+
       '<dt>Value</dt><dd>'+(x.value_eur!=null ? '<b>'+eur(x.value_eur)+'</b>' : 'not valued')+'</dd>'+
       '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd></dl></div></div>'+
+      (x.image_label ? '<div class="bbd-lbl"><img src="'+esc(x.image_label)+'" alt="Close-up of the WATA label of the photographed copy" width="720" height="191" loading="lazy"></div>' : '')+
       '<p class="note bbd-src"><b>Photo:</b> '+esc(x.image_note||"")+' Source: <a href="'+esc(x.image_source)+'" target="_blank" rel="noopener">'+esc(x.image_source_label||x.image_source)+'</a>.</p>'+
       '<p class="note">Not counted as a separate game (the CIB Legend of Zelda is), and not part of the checklist.</p>';
   }
@@ -242,6 +243,7 @@
     $("s-bb").innerHTML = b+'<small> / '+G.filter(function(g){return g.bb;}).length+'</small>'; $("s-val").textContent = eur(val);
     var xv = EX.reduce(function(a,x){ return a + (x.value_eur||0); }, 0);
     $("s-xtra").hidden = !EX.length;
+    $("s-xval").hidden = !xv; $("s-xval").textContent = xv ? "+ " + eur(xv) + " graded extras" : "";
     $("s-xtra").innerHTML = EX.length ? '+ <b>'+EX.length+'</b> graded extra'+(EX.length>1?'s':'')+(xv ? ' · '+eur(xv) : ' · not valued') : "";
     $("pb-all").style.width=(100*o/n)+"%"; $("pb-cib").style.width=(100*c/n)+"%";
     var upd = (pubMeta.updated||"").slice(0,10);

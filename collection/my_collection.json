@@ -1,14 +1,14 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game)",
-  "updated": "2026-10-09T21:40:00+02:00",
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game)",
+  "updated": "2026-10-09T22:00:00+02:00",
   "count": 48,
   "cib": 48,
   "loose": 0,
   "black_box": 13,
   "list": "games_master.json (PAL, 347)",
-  "extras": 1
+  "extras": 2
  },
  "games": [
   {
@@ -301,6 +301,30 @@
   }
  ],
  "extras": [
+  {
+   "id": "the-legend-of-zelda--wata-7-5-cib-rev-a",
+   "base": "the-legend-of-zelda",
+   "title": "The Legend of Zelda – CIB WATA 7.5 (Rev-A)",
+   "short": "Zelda – CIB WATA 7.5",
+   "kind": "graded",
+   "grader": "WATA",
+   "grade": "7.5",
+   "item": "Complete in box (CIB)",
+   "variant": "Rev-A",
+   "condition": "Graded (WATA 7.5, CIB)",
+   "region": "NTSC (USA)",
+   "image": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a.jpg",
+   "image_large": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a@2x.jpg",
+   "image_note": "Photo of another copy, not yours, but the same grade: a WATA 7.5 CIB Rev-A. Its label reads \"Promotional Copy; Rev-A, Oval SOQ TM, Large Warranty No Mexico, 9-Digit ZIP, Promotional Copy (USA* Code)\", with a gold 3-screw Oval SOQ TM cart and an Oval SOQ TM manual. So it is a Rev-A promotional-copy variant, which may differ from yours. Front photo plus a close-up of the label from the same listing.",
+   "image_source": "https://www.ebay.com/itm/235336303501",
+   "image_source_label": "eBay listing 235336303501 \"The Legend of Zelda Promotional Ver WATA Certified Rev A Oval SOQ Grade 7.5 Rare\" (active, asking $2,400 – not a sale)",
+   "value_eur": 343,
+   "value_usd": 384,
+   "value_note": "Estimate: $384 ≈ €343 (tracker FX rate, 9 Oct 2026) = median of the three Heritage sales of a WATA 7.5 CIB Rev-A Zelda: $384 (13 Dec 2022, Rev-A Round SOQ mid production), $690 (20 Sep 2022, same), $372 (10 Aug 2020, Rev-A Round SOQ early production). Recent WATA 7.5 CIB sales with the variant not stated (eBay, Apr–Sep 2026, via PriceCharting) were $380–$600. The photo listing (eBay 235336303501, promotional copy) is an active ask of $2,400, not a sale, and is not used for the value.",
+   "value_source": "https://whattheslab.com/nes/the-legend-of-zelda/",
+   "added": "2026-10-09",
+   "image_label": "boxart/extra/the-legend-of-zelda--wata-7-5-cib-rev-a-label.jpg"
+  },
   {
    "id": "the-legend-of-zelda--wata-7-0-gold-5screw",
    "base": "the-legend-of-zelda",

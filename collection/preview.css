@@ -386,3 +386,5 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .bbd-art.slab img{filter:drop-shadow(4px 4px 0 #000)}
 .bbd-src a{word-break:break-word}
 .bbd dd.xnote{text-align:left}
+.bbd-lbl{margin:12px 0 0;border:2px solid #000;box-shadow:3px 3px 0 #000;background:#000}
+.bbd-lbl img{display:block;width:100%;height:auto}
