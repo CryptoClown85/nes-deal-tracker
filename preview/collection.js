@@ -7,7 +7,11 @@
   var local = loadLocal(), hasLocal = Object.keys(local).length > 0;
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
-  var f = {own:"all", cond:"all"};
+  var AZDEF = {own:"own", cond:"all"}, AZKEY = "nes-azlist-v2";   // A–Z list default: Owned (remembered per device)
+  var f = {own:AZDEF.own, cond:AZDEF.cond};
+  try { localStorage.removeItem("nes-azlist-v1"); var sa = JSON.parse(localStorage.getItem(AZKEY)||"null");
+    if (sa) { if (/^(all|own|miss)$/.test(sa.own)) f.own = sa.own; if (/^(all|C|L)$/.test(sa.cond)) f.cond = sa.cond; } } catch(e){}
+  function syncAZ(){ document.querySelectorAll("[data-f]").forEach(function(x){ x.setAttribute("aria-pressed", f[x.dataset.f]===x.dataset.v ? "true":"false"); }); }
   var BBDEF = {show:"own", sort:"az"};   // default: Owned (v2 key so older saved "All" choices reset once)
   var BBKEY = "nes-bbshelf-v2", bbf = {show:BBDEF.show, sort:BBDEF.sort};
   try { localStorage.removeItem("nes-bbshelf-v1"); } catch(e){}
@@ -240,7 +244,7 @@
     if (w) { wtype = w.dataset.w; document.querySelectorAll("[data-w]").forEach(function(x){ x.setAttribute("aria-pressed", x===w?"true":"false"); }); wanted(); return; }
     var b = e.target.closest("[data-f]");
     if (!b) return;
-    f[b.dataset.f] = b.dataset.v;
+    f[b.dataset.f] = b.dataset.v; try { localStorage.setItem(AZKEY, JSON.stringify(f)); } catch(e){}
     document.querySelectorAll('[data-f="'+b.dataset.f+'"]').forEach(function(x){ x.setAttribute("aria-pressed", x===b?"true":"false"); });
     render();
   });
@@ -271,5 +275,5 @@
     });
     liveLoaded = true; render();
   }).catch(function(){});
-  stats(); render();
+  syncAZ(); stats(); render();
 })();
