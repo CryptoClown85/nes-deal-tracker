@@ -1,8 +1,8 @@
 {
  "meta": {
   "owner": "w van der bellen",
-  "source": "checklist paste in chat 2026-10-09 (+ Pinball added 2026-10-09)",
-  "updated": "2026-10-09T19:18:37+02:00",
+  "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball (CIB), - DuckTales 2, + TaleSpin (CIB)",
+  "updated": "2026-10-09T19:20:09+02:00",
   "count": 44,
   "cib": 44,
   "loose": 0,
@@ -103,12 +103,6 @@
   {
    "id": "ducktales",
    "title": "DuckTales",
-   "condition": "CIB",
-   "added": "2026-10-09"
-  },
-  {
-   "id": "ducktales-2",
-   "title": "DuckTales 2",
    "condition": "CIB",
    "added": "2026-10-09"
   },
@@ -253,6 +247,12 @@
   {
    "id": "super-mario-bros-3",
    "title": "Super Mario Bros. 3",
+   "condition": "CIB",
+   "added": "2026-10-09"
+  },
+  {
+   "id": "talespin",
+   "title": "TaleSpin",
    "condition": "CIB",
    "added": "2026-10-09"
   },
