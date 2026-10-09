@@ -253,3 +253,15 @@ dialog.bbdlg::backdrop{background:rgba(0,0,0,.7)}
   .pbox{transition:none}
   .pbox:hover,.pbox:focus-visible,.pbox:active{transform:perspective(600px) rotateY(0deg)}
 }
+
+/* ---------- shelf titles: clear sans-serif label plates ---------- */
+.slot .cap{display:flex;align-items:center;justify-content:center;box-sizing:border-box;
+  margin:8px 2px 0;padding:5px 6px;min-height:calc(2.6em + 12px);
+  font:600 13px/1.3 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;letter-spacing:.01em;
+  color:#fff;text-align:center;background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.12);border-radius:3px;
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 2px 4px rgba(0,0,0,.4);text-shadow:0 1px 1px rgba(0,0,0,.6);
+  -webkit-line-clamp:unset;overflow:hidden}
+.slot .cap>span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+  hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+.slot.M .cap{color:#d2d2d2;background:rgba(0,0,0,.5)}
+@media(min-width:900px){.slot .cap{font-size:14px}}

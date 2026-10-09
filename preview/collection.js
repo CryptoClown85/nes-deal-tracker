@@ -68,7 +68,7 @@
     if (g.bb) return '<div class="slot '+s+'" id="bb-'+g.id+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – NES black box" loading="lazy" decoding="async" width="252" height="360">'+
       (s!=="M" ? '<span class="st">'+lab+'</span>' : '')+'</div></div>'+
-      '<span class="cap" data-bb="'+g.id+'">'+esc(g.t)+'</span>'+tag+'</div>';
+      '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span>'+esc(g.t)+'</span></span>'+tag+'</div>';
     var h = HUES[hash(g.id) % HUES.length];
     return '<div id="bb-'+g.id+'"><div class="box '+s+'" title="'+esc(g.t)+' – '+lab+'"><span class="seal">NES</span><span class="st">'+lab+'</span>'+
       '<span class="art"><i style="--hue:'+h+';--pix:'+sprite(g.id)+'"></i></span><span class="bt">'+esc(g.t)+'</span></div>'+tag+'</div>';
