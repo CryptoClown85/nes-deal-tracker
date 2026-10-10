@@ -2,9 +2,9 @@
  "valued": "2026-10-09",
  "fx_usd_per_eur": 1.1206,
  "method": {
-  "sales_used": 653,
-  "sales_excluded": 113,
-  "outliers_dropped": 41,
+  "sales_used": 725,
+  "sales_excluded": 98,
+  "outliers_dropped": 43,
   "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026",
   "window": "past 12 months; 24–36 months if fewer than 5 sales",
   "good": "70th percentile of the sales when there are ≥6, otherwise the median",
@@ -25,15 +25,24 @@
   },
   "balloon-fight": {
    "condition": "CIB",
-   "careful": 129,
-   "good": 135,
-   "pc": 190,
-   "n": 7,
-   "window": "24m",
-   "from": "2024-10-27",
-   "to": "2026-07-29",
+   "careful": 170,
+   "good": 240,
+   "pc": 201,
+   "n": 26,
+   "window": "12m",
+   "from": "2025-11-05",
+   "to": "2026-09-11",
    "few": false,
-   "basis": "median & P70 of 7 sales (24m)"
+   "basis": "median & P70 of 26 sales (12m)",
+   "source_url": "https://www.pricecharting.com/game/nes/balloon-fight",
+   "source_region": "NTSC",
+   "source_note": "priced from US/NTSC sales (PriceCharting NES Balloon Fight), converted USD→EUR at the ECB rate",
+   "l5": {
+    "n": 5,
+    "avg_eur": 193.91,
+    "from": "2026-08-07",
+    "to": "2026-09-11"
+   }
   },
   "batman-return-of-the-joker": {
    "condition": "CIB",
@@ -160,15 +169,24 @@
   },
   "donkey-kong": {
    "condition": "CIB",
-   "careful": 77,
-   "good": 91,
-   "pc": 123,
-   "n": 6,
+   "careful": 200,
+   "good": 225,
+   "pc": 187,
+   "n": 13,
    "window": "12m",
-   "from": "2025-10-25",
-   "to": "2026-09-30",
+   "from": "2025-12-29",
+   "to": "2026-09-27",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 13 sales (12m)",
+   "source_url": "https://www.pricecharting.com/game/nes/donkey-kong",
+   "source_region": "NTSC",
+   "source_note": "priced from US/NTSC sales (PriceCharting NES Donkey Kong), converted USD→EUR at the ECB rate",
+   "l5": {
+    "n": 5,
+    "avg_eur": 194.26,
+    "from": "2026-06-24",
+    "to": "2026-09-27"
+   }
   },
   "double-dragon": {
    "condition": "CIB",
@@ -232,15 +250,24 @@
   },
   "excitebike": {
    "condition": "CIB",
-   "careful": 37,
-   "good": 43,
-   "pc": 45,
-   "n": 7,
+   "careful": 66,
+   "good": 89,
+   "pc": 69,
+   "n": 30,
    "window": "12m",
-   "from": "2025-11-06",
-   "to": "2026-09-14",
+   "from": "2026-07-06",
+   "to": "2026-10-06",
    "few": false,
-   "basis": "median & P70 of 7 sales (12m)"
+   "basis": "median & P70 of 30 sales (12m)",
+   "source_url": "https://www.pricecharting.com/game/nes/excitebike",
+   "source_region": "NTSC",
+   "source_note": "priced from US/NTSC sales (PriceCharting NES Excitebike), converted USD→EUR at the ECB rate",
+   "l5": {
+    "n": 5,
+    "avg_eur": 80.21,
+    "from": "2026-09-27",
+    "to": "2026-10-06"
+   }
   },
   "gyromite": {
    "condition": "CIB",
@@ -397,15 +424,24 @@
   },
   "pinball": {
    "condition": "CIB",
-   "careful": 27,
-   "good": 53,
-   "pc": 31,
-   "n": 6,
+   "careful": 36,
+   "good": 52,
+   "pc": 37,
+   "n": 29,
    "window": "12m",
-   "from": "2025-10-28",
-   "to": "2026-06-21",
+   "from": "2026-05-11",
+   "to": "2026-09-29",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 29 sales (12m)",
+   "source_url": "https://www.pricecharting.com/game/nes/pinball",
+   "source_region": "NTSC",
+   "source_note": "priced from US/NTSC sales (PriceCharting NES Pinball), converted USD→EUR at the ECB rate",
+   "l5": {
+    "n": 5,
+    "avg_eur": 40.86,
+    "from": "2026-08-19",
+    "to": "2026-09-29"
+   }
   },
   "popeye": {
    "condition": "CIB",
