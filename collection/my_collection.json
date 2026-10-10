@@ -17,7 +17,7 @@
       "title": "Airwolf",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 50.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -173,7 +173,7 @@
       "title": "DuckTales",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 40.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -227,7 +227,7 @@
       "title": "Knight Rider",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 104.0,
       "purchase_date": "",
       "purchase_note": ""
     },
