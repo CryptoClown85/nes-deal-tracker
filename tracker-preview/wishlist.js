@@ -1,0 +1,1 @@
+window.NES_WISHLIST = {"_note": "Wishlist (unowned games the user wants). Managed by the assistant on the user's request. PREVIEW: these are EXAMPLE entries, not the user's real wishlist.", "example": true, "wishlist": ["metroid", "kirby-s-adventure", "ghosts-n-goblins", "little-nemo-the-dream-master", "golf"]};

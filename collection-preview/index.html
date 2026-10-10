@@ -9,6 +9,7 @@
 <title>My NES Collection – PREVIEW</title>
 <link rel="stylesheet" href="preview.css">
 <link rel="stylesheet" href="../collection-preview/sales.css?v=d63b5b7f92">
+<link rel="stylesheet" href="../collection-preview/wishlist.css?v=5a6ca01fe3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23111'/%3E%3Crect x='1' y='3' width='6' height='2' fill='%23d42020'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -57,13 +58,23 @@
   <div class="cab-base" aria-hidden="true"></div>
 </section>
 
+  <section class="cab cab-wl" aria-labelledby="wl-hd" id="wishlist">
+  <div class="cab-top" aria-hidden="true"></div>
+  <div class="cab-band"><span class="cab-led" aria-hidden="true"></span><h2 class="cab-sign" id="wl-hd"><span class="pxh" aria-hidden="true"></span> Wishlist <span class="cnt" id="wl-cnt"></span></h2><span class="cab-btns" aria-hidden="true"><i>Power</i><i>Reset</i></span></div>
+  <div class="cab-in wl-in">
+    <ul class="wl-list" id="wl-list"></ul>
+    <p class="wl-note" id="wl-note"></p>
+  </div>
+  <div class="cab-base" aria-hidden="true"></div>
+</section>
+
   <section class="cab cab-bb" aria-labelledby="bb">
   <div class="cab-top" aria-hidden="true"></div>
   <div class="cab-band"><span class="cab-led" aria-hidden="true"></span><h2 class="cab-sign" id="bb">Black box series <span class="cnt" id="bb-cnt"></span></h2><span class="cab-btns" aria-hidden="true"><i>Power</i><i>Reset</i></span></div>
   <div class="cab-in">
   <div class="bbbar" id="bbbar">
     <div class="bbshow" role="group" aria-label="Show black box games">
-      <button type="button" data-sh="bb" data-show="all" aria-pressed="false">All<span class="n" id="bb-n-all">–</span></button><button type="button" data-sh="bb" data-show="own" aria-pressed="true">Owned<span class="n" id="bb-n-own">–</span></button><button type="button" data-sh="bb" data-show="miss" aria-pressed="false">Missing<span class="n" id="bb-n-miss">–</span></button><button type="button" data-sh="bb" data-show="sale" aria-pressed="false">For sale<span class="n" id="bb-n-sale">–</span></button>
+      <button type="button" data-sh="bb" data-show="all" aria-pressed="false">All<span class="n" id="bb-n-all">–</span></button><button type="button" data-sh="bb" data-show="own" aria-pressed="true">Owned<span class="n" id="bb-n-own">–</span></button><button type="button" data-sh="bb" data-show="miss" aria-pressed="false">Missing<span class="n" id="bb-n-miss">–</span></button><button type="button" data-sh="bb" data-show="sale" aria-pressed="false">For sale<span class="n" id="bb-n-sale">–</span></button><button type="button" data-sh="bb" data-show="wish" aria-pressed="false" aria-label="Wishlist"><span class="pxh sm" aria-hidden="true"></span>Wish<span class="n" id="bb-n-wish">–</span></button>
     </div>
     <div class="bbsort">
       <label class="lbl" for="bb-sort">Sort</label>
@@ -88,7 +99,7 @@
   <div class="cab-in">
   <div class="bbbar" id="csbar">
     <div class="bbshow" role="group" aria-label="Show other games">
-      <button type="button" data-sh="cs" data-show="all" aria-pressed="false">All<span class="n" id="cs-n-all">–</span></button><button type="button" data-sh="cs" data-show="own" aria-pressed="true">Owned<span class="n" id="cs-n-own">–</span></button><button type="button" data-sh="cs" data-show="miss" aria-pressed="false">Missing<span class="n" id="cs-n-miss">–</span></button><button type="button" data-sh="cs" data-show="sale" aria-pressed="false">For sale<span class="n" id="cs-n-sale">–</span></button>
+      <button type="button" data-sh="cs" data-show="all" aria-pressed="false">All<span class="n" id="cs-n-all">–</span></button><button type="button" data-sh="cs" data-show="own" aria-pressed="true">Owned<span class="n" id="cs-n-own">–</span></button><button type="button" data-sh="cs" data-show="miss" aria-pressed="false">Missing<span class="n" id="cs-n-miss">–</span></button><button type="button" data-sh="cs" data-show="sale" aria-pressed="false">For sale<span class="n" id="cs-n-sale">–</span></button><button type="button" data-sh="cs" data-show="wish" aria-pressed="false" aria-label="Wishlist"><span class="pxh sm" aria-hidden="true"></span>Wish<span class="n" id="cs-n-wish">–</span></button>
     </div>
     <div class="bbsort">
       <label class="lbl" for="cs-sort">Sort</label>
@@ -137,6 +148,6 @@
 </dialog>
 <script src="games.js"></script>
 <script src="art_overrides.js"></script>
-<script src="../collection-preview/collection.js?v=126c4f90ad"></script>
+<script src="../collection-preview/collection.js?v=441a285c41"></script>
 </body>
 </html>

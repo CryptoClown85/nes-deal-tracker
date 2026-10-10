@@ -13,14 +13,14 @@
   /* shelf state: Show / Sort per shelf, remembered per device (default Owned, A–Z) */
   var SH = {
     bb: {key:"nes-bbshelf-v2", el:"shelf", pre:"bb-", def:{show:"own", sort:"az"}, games:function(g){ return g.bb; }, alt:"NES black box (NTSC art)",
-         empty:{own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!", sale:"No black box games for sale (complete in box) right now.", all:"No black box games."}},
+         empty:{own:"No black box games owned yet.", miss:"All 30 black box games owned – nothing missing!", sale:"No black box games for sale (complete in box) right now.", all:"No black box games.", wish:"No black box games on your wishlist."}},
     cs: {key:"nes-classicshelf-v1", el:"cshelf", pre:"cs-", def:{show:"own", sort:"az"}, games:function(g){ return !g.bb; }, alt:"PAL box", search:true,
-         empty:{own:"No other games owned yet.", miss:"Every other game owned – nothing missing!", sale:"No other games for sale (complete in box) right now.", all:"No games."}}
+         empty:{own:"No other games owned yet.", miss:"Every other game owned – nothing missing!", sale:"No other games for sale (complete in box) right now.", all:"No games.", wish:"No other games on your wishlist."}}
   };
   try { localStorage.removeItem("nes-bbshelf-v1"); localStorage.removeItem("nes-azlist-v1"); localStorage.removeItem("nes-azlist-v2"); } catch(e){}
   Object.keys(SH).forEach(function(k){ var c = SH[k]; c.st = {show:c.def.show, sort:c.def.sort}; c.q = "";
     try { var sv = JSON.parse(localStorage.getItem(c.key)||"null");
-      if (sv) { if (/^(all|own|miss|sale)$/.test(sv.show)) c.st.show = sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) c.st.sort = sv.sort; } } catch(e){} });
+      if (sv) { if (/^(all|own|miss|sale|wish)$/.test(sv.show)) c.st.show = sv.show; if (/^(az|val|cheap|rel)$/.test(sv.sort)) c.st.sort = sv.sort; } } catch(e){} });
   var live = {};                      // key -> {n, best, bestCib}
   var liveLoaded = false, wtype = "all";
   var $ = function(id){ return document.getElementById(id); };
@@ -29,6 +29,9 @@
   function sortKey(t){ return t.toLowerCase().replace(/^(the|a) /,""); }
   function letter(t){ var c = sortKey(t).charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; }
   function norm(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/\b(the|a|an|of|in)\b/g," ").replace(/[^a-z0-9]+/g,""); }
+  var WL = {}, WLMETA = {};   // wishlist (preview): unowned game ids the user wants
+  function wl(g){ return !!WL[g.id] && !own[g.id]; }
+  var HEART = '<span class="pxh" aria-hidden="true"></span>';
   var VAL = {games:{}, graded:{}, method:{}};   // valuation.json: per owned game careful (median) / good (P70) / PriceCharting, from real sold prices
   function full(s){ return s==="C" || s==="S"; }   // complete copy owned (CIB or factory sealed): no upgrade listings
   var CONDN = {C:"CIB", S:"Sealed", L:"loose"};
@@ -80,6 +83,7 @@
     var s = own[g.id] || "M", c = SH[k];
     var lab = s==="C" ? "CIB" : s==="S" ? "SEALED" : s==="L" ? "LOOSE" : "MISSING";
     var tag = s==="C" ? "" : s==="S" ? '<span class="pill sl">SEALED</span>' : s==="L" ? '<span class="pill loose">LOOSE</span>' : saleTag(g, "pill fs");   // no CIB badge on the shelves
+    if (wl(g)) tag = '<span class="pill wl" title="On your wishlist">'+HEART.replace('aria-hidden="true"','role="img" aria-label="On your wishlist"')+'</span>' + tag;
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       '</div></div>'+
@@ -125,11 +129,11 @@
   function forSale(g){ var L = !full(own[g.id]) && liveFor(g); return L && L.bestCib ? L : null; }   // CIB listings only
   function cheapest(g){ var L = forSale(g); return L ? L.bestCib : null; }
   function bbIs(g, show){ var s = own[g.id];
-    return show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
+    return show==="wish" ? wl(g) : show==="own" ? !!s : show==="miss" ? !s : show==="sale" ? !!forSale(g) : true; }
   function matchQ(g, q){ return !q || (g.t+" "+(g.a||[]).join(" ")+" "+(g.p||"")).toLowerCase().indexOf(q) >= 0; }
   function renderShelf(k){
     var c = SH[k], st = c.st, all = G.filter(c.games);
-    ["all","own","miss","sale"].forEach(function(v){
+    ["all","own","miss","sale","wish"].forEach(function(v){
       $(k+"-n-"+v).textContent = (v==="sale" && !liveLoaded) ? "…" : all.filter(function(g){ return bbIs(g,v); }).length; });
     document.querySelectorAll('[data-sh="'+k+'"][data-show]').forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.show===st.show ? "true":"false"); });
     $(k+"-sort").value = st.sort;
@@ -223,7 +227,7 @@
     var s5 = s5For(g), L = liveFor(g);
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
-      '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
+      '<span class="chip '+(s||"M")+'">'+lab+'</span>'+(wl(g) ? ' <span class="chip wlc">'+HEART+' On your wishlist</span>' : '')+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
       '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, (PUBE[g.id] && PUBE[g.id].region==="NTSC") ? "NTSC "+(PUBE[g.id].us_year||"") : g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
       '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+((vals(g)||{}).source_region ? '<dt>PriceCharting CIB <small>(NTSC)</small></dt><dd>'+eur(vals(g).pc)+'</dd>' : '<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>')+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
@@ -278,7 +282,28 @@
     if (qi) qi.addEventListener("input", function(){ clearTimeout(qt); qt = setTimeout(function(){ SH[k].q = qi.value.trim().toLowerCase(); renderShelf(k); }, 150); });
   });
 
+  function wlBest(g){   // cheapest current CIB listing with known shipping to NL (total incl. shipping)
+    var L = liveFor(g); if (!L) return null;
+    return L.cib.filter(function(x){ return !x.ask_shipping && x.eur && x.eur.total!=null; }).sort(function(a,b){ return a.eur.total-b.eur.total; })[0] || null;
+  }
+  function wlValue(g){ var v = VAL.games[g.id]; return v && v.condition==="CIB" ? v.good : g.b; }
+  function renderWL(){
+    var list = G.filter(wl).sort(function(a,b){ return sortKey(a.t)<sortKey(b.t) ? -1 : 1; });
+    $("wl-cnt").textContent = list.length ? list.length+" game"+(list.length>1?"s":"") : "";
+    $("wl-list").innerHTML = list.map(function(g){
+      var x = liveLoaded ? wlBest(g) : null;
+      return '<li class="wl-row"><img class="wl-art" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360" data-bb="'+g.id+'">'+
+        '<div><h3><button type="button" data-bb="'+g.id+'" aria-haspopup="dialog">'+esc(g.t)+'</button></h3><span class="wl-h">'+HEART+'</span>'+
+        '<p class="wl-v">CIB value <b>'+eur(wlValue(g))+'</b> <small>(PriceCharting PAL)</small></p>'+
+        (!liveLoaded ? '<p class="wl-none">Loading listings…</p>' : x ?
+          '<div class="wl-deal"><span>Cheapest CIB</span><span class="p">'+eur(x.eur.total)+'</span><span>incl. shipping</span>'+
+          '<a href="'+esc(x.url)+'" target="_blank" rel="noopener">View listing ›</a><small>'+esc((MK[x.marketplace]||x.marketplace)+(x.sale_type==="auction"?' · auction (current bid)':'')+' · '+x.title)+'</small></div>'
+          : '<p class="wl-none">No complete-in-box copy for sale right now.</p>')+'</div></li>';
+    }).join("") || '<li class="wl-empty">'+HEART+'<br>Your wishlist is empty. Tell me which games you\'re hunting for and they\'ll show up here, with the cheapest complete-in-box copy for sale.</li>';
+    $("wl-note").textContent = WLMETA.example ? "Preview: these are example entries, not your real wishlist." : "";
+  }
   function render(){
+    renderWL();
     renderShelf("bb"); renderShelf("cs");
     ["bb","cs"].forEach(function(k){ var all = G.filter(SH[k].games);
       $(k+"-cnt").textContent = all.filter(function(g){ return own[g.id]; }).length + "/" + all.length + " owned"; });
@@ -330,7 +355,7 @@
     var j = e.target.closest("[data-jump]");
     if (j) { var t = document.querySelector("#"+SH[j.dataset.jump].el+' .slot[data-l="'+j.dataset.l+'"]');
       if (t) t.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); return; }
-    var bx = e.target.closest(".shelf [data-bb]");
+    var bx = e.target.closest(".shelf [data-bb], .wl-list [data-bb]");
     if (bx) { openBB(bx.dataset.bb); return; }
     var jl = e.target.closest('a[href^="#bb-"]');   // Wanted chip -> shelf box hidden by a filter? show all first
     if (jl && !document.getElementById(jl.getAttribute("href").slice(1))) { SH.bb.st.show = "all"; saveSh("bb"); renderShelf("bb"); }
@@ -346,6 +371,8 @@
     EX.forEach(function(x){ EXID[x.id] = x; });
     ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) PUBE[x.id] = x; if (BYID[x.id]) pub[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
   }).catch(function(){ pub = {}; }).then(function(){
+    fetch("../collection-preview/wishlist.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(w){
+      if (w) { WLMETA = w; (w.wishlist||[]).forEach(function(id){ if (BYID[id]) WL[id] = 1; }); render(); } }).catch(function(){});
     fetch("../collection-preview/sales.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) SALES = v.games; }).catch(function(){});
     return fetch("valuation.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) VAL = v; }).catch(function(){});
   }).then(function(){

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<base href="../">
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NES Deal Tracker – PREVIEW</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 fill=%27%23bdbab3%27/%3E%3Crect y=%279%27 width=%2716%27 height=%277%27 fill=%27%23111%27/%3E%3Crect x=%272%27 y=%2711%27 width=%275%27 height=%273%27 fill=%27%23d42020%27/%3E%3Crect x=%279%27 y=%2711%27 width=%275%27 height=%273%27 fill=%27%23777%27/%3E%3C/svg%3E">
+<link rel="preload" href="assets/PressStart2P.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css?v=6dc1284e43">
+<link rel="stylesheet" href="tracker-preview/wl.css?v=2e49947d69">
+</head>
+<body>
+<header class="top">
+  <div class="hb">
+    <img class="nes-logo" src="assets/nes-logo.svg" width="139" height="51" alt="Nintendo Entertainment System">
+    <h1 class="title-px"><span>Deal</span> <span>Tracker</span></h1>
+    <p class="sub">Complete-in-box NES deals from Marktplaats, Tradera, eBay (.com .de .it .co.uk) &amp; 2dehands, checked against PriceCharting.</p>
+    <a class="navbtn" href="collection/">My collection <span aria-hidden="true">▶</span></a>
+    <p class="meta" id="meta"></p>
+  </div>
+  <div class="pixsep" aria-hidden="true"></div>
+</header>
+
+<div class="scope" id="scope" role="group" aria-label="Which listings">
+  <button type="button" class="seg" data-scope="cib" aria-pressed="true">Complete in box</button>
+  <button type="button" class="seg" data-scope="all" aria-pressed="false">All listings</button>
+</div>
+
+<nav class="tabs" id="tabs" role="tablist"></nav>
+
+<section class="controls">
+  <label>Verdict
+    <select id="f-verdict">
+      <option value="">All</option><option>Good buy</option><option>Fair</option><option>Overpriced</option><option>Unclear</option>
+    </select>
+  </label>
+  <label>Type
+    <select id="f-type">
+      <option value="">All</option><option value="auction">Auction</option><option value="buy_now">Buy now</option>
+    </select>
+  </label>
+  <label class="sortl">Sort
+    <select id="f-sort">
+      <option value="new">Newest first</option>
+      <option value="deal">Best deal (verdict %)</option>
+      <option value="price-asc">Price low → high</option>
+      <option value="price-desc">Price high → low</option>
+    </select>
+  </label>
+  <div class="viewsw" role="group" aria-label="Layout">
+    <span class="vlab">View</span>
+    <div class="vbtns">
+      <button type="button" class="vbtn" data-view="list" aria-pressed="true" title="One card per row">&#9636; List</button><button type="button" class="vbtn" data-view="grid" aria-pressed="false" title="Two cards per row">&#9638; Grid</button>
+    </div>
+  </div>
+  <label class="grow">Search
+    <input id="f-q" type="search" placeholder="title, e.g. zelda">
+  </label>
+  <label class="chk wlt"><input type="checkbox" id="f-wl" checked> <span class="pxh" aria-hidden="true"></span> Wishlist first</label>
+  <label class="chk"><input type="checkbox" id="f-new"> New today only</label>
+  <label class="chk"><input type="checkbox" id="f-archive"> Show archive (older / gone)</label>
+</section>
+
+<p class="summary" id="summary"></p>
+<main id="grid" class="grid"></main>
+
+<div class="pixsep" aria-hidden="true"></div>
+<footer class="foot">
+  <p><b>What this is.</b> New complete-in-box (cart + box + manual) NES listings on Marktplaats, Tradera, eBay (.com, .de, .it, .co.uk) and 2dehands, checked against PriceCharting. Tap “All listings” to see loose and partial games too.</p>
+  <p><b>About the values.</b> PriceCharting prices are a guide, not a quote. European (PAL) values come from thin sales data
+  (often ~1 sale/month); US (NTSC) values are used for eBay and for US carts. Verdicts: <span class="badge good">Good buy</span>
+  ≥20% below the matching value (the average of the last 5 sales in the same condition when there are at least 3, otherwise PriceCharting’s value; each card says which), <span class="badge fair">Fair</span> within ±20%, <span class="badge over">Overpriced</span>
+  &gt;20% above, <span class="badge unclear">Unclear</span> when condition, game or price is unknown. Totals include shipping
+  when known (Tradera shipping is the cheapest Swedish domestic rate; delivery to NL may differ). eBay.de / eBay.it / eBay.co.uk
+  only show listings that ship to the Netherlands, with eBay's shipping quote to NL. For sellers outside the EU (e.g. UK sellers on
+  eBay.co.uk) the total also includes 21% Dutch VAT, the EU's €3 flat duty per item (parcels up to €150, since 1 July 2026) and,
+  from 1 November 2026, the €2 EU handling fee; above €150 a carrier clearance fee may come on top. 2dehands (Belgium) has no
+  shipping to NL through the site, so those cards say “ask seller” and the verdict is on the asking price only. US/Canada imports
+  on eBay.com may add ~21% VAT plus handling fees (not included).</p>
+  <p id="fx"></p>
+</footer>
+<script src="data.js?v=6ff43cc12e"></script>
+<script src="collection/games.js?v=b55839e876"></script>
+<script src="tracker-preview/wishlist.js?v=399853ab76"></script>
+<script src="tracker-preview/app.js?v=6dd064a647"></script>
+</body>
+</html>
