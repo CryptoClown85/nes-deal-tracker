@@ -13,5 +13,13 @@ window.NES_ART_OVERRIDES = {
  "castlevania-iii-dracula-s-curse": {
   "src": "boxart/override/castlevania-iii-dracula-s-curse.jpg",
   "note": "NTSC (USA) box – libretro-thumbnails \"Castlevania III - Dracula's Curse (USA)\""
+ },
+ "rad-racer": {
+  "src": "boxart/override/rad-racer.jpg",
+  "note": "original 1987 cover (pixel-art race screen, grey Sports Series box) – libretro-thumbnails 'Rad Racer (USA)'; replaces the later painted-car PAL reprint cover"
+ },
+ "shadow-warriors": {
+  "src": "boxart/override/shadow-warriors.jpg",
+  "note": "original PAL cover with the masked ninja (same art as US Ninja Gaiden, 'Ninja Gaiden' subtitle) – libretro-thumbnails 'Shadow Warriors (1991-08-15)(Tecmo)(EU)'; replaces the later unmasked-Ryu cover"
  }
 };
