@@ -62,7 +62,7 @@
       "title": "Blue Shadow",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 50.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -282,7 +282,7 @@
       "title": "Mike Tyson's Punch-Out!!",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 150.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -327,7 +327,7 @@
       "title": "Rad Racer",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 0.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -336,7 +336,7 @@
       "title": "Rush'n Attack",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 47.5,
       "purchase_date": "",
       "purchase_note": ""
     },

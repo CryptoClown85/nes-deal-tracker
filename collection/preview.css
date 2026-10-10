@@ -509,3 +509,4 @@ dialog.bbdlg{font:400 15px/1.45 var(--sans);color:#1b1b1b;background:#f4f3ee;pad
 .bbd dd.pp-gl{font-weight:700;margin-top:-4px}
 .bbd dd.pp-gl.up{color:#1e7a37}.bbd dd.pp-gl.down{color:#b3261e}
 .bbd dd.pp-gl small{display:inline;font-weight:400;color:#555}
+.bbd dd small.pp-free{display:inline;color:#1e7a37;font-weight:600}

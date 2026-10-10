@@ -196,7 +196,8 @@
     if (p==null || p==="" || isNaN(+p)) return '<dt class="pp-k">Purchase price</dt><dd class="pp-none">not set</dd>';
     p = +p;
     var extra = [e.purchase_date, e.purchase_note].filter(Boolean).join(" · ");
-    var h = '<dt>Purchase price</dt><dd>'+eur(p)+'</dd>';
+    var ps = p % 1 ? "€" + p.toLocaleString("nl-NL", {minimumFractionDigits:2, maximumFractionDigits:2}) : eur(p);   // keep cents (e.g. €47,50)
+    var h = '<dt>Purchase price</dt><dd>'+ps+(p===0 ? ' <small class="pp-free">(free)</small>' : '')+'</dd>';
     if (extra) h += '<dd class="wide xnote"><small>'+esc(extra)+'</small></dd>';
     return h;
   }
