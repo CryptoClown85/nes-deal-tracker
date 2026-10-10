@@ -26,17 +26,21 @@
 .wl-deal a:hover,.wl-deal a:focus-visible{text-decoration:underline}
 .wl-none{font-size:.82rem;color:#666;margin:0}
 .wl-empty{text-align:center;color:#ddd;font-size:.9rem;padding:14px 8px;font-family:system-ui,sans-serif}
-.wl-note{color:#bbb;font-size:.72rem;margin:10px 2px 0;font-family:system-ui,sans-serif}
+.wl-note{color:#333;font-size:.72rem;margin:10px 2px 0;font-family:system-ui,sans-serif}
 @media(min-width:700px){
  .wl-list{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
  .wl-row{grid-template-columns:1fr;text-align:center;padding:12px}
  .wl-row .wl-art{width:120px;height:171px;margin:0 auto}
  .wl-row h3{margin:4px 0}
  .wl-deal{justify-content:center}
+ .wl-deal a{flex-basis:100%;justify-content:center;min-height:36px}
  .wl-deal small{text-align:center}
 }
 .sl5-wl{display:none}
 .wl-row>div{min-width:0}
 .wl-deal small{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.pills:has(.pill.wl){flex-wrap:wrap;justify-content:center;gap:3px}
-.pills .pill.wl{margin:0!important;padding:2px 3px}
+.cap{position:relative}
+.pills .pill.wl{position:absolute;top:4px;right:4px;margin:0!important;padding:2px}
+.pills .pill.wl .pxh{width:13.5px;height:12px}
+.cap:has(.pill.wl) .ctw{padding:0 18px}
+.wl-deal .p+span{margin-left:-4px}
