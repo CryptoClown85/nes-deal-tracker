@@ -224,7 +224,7 @@
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
-      '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
+      '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, (PUBE[g.id] && PUBE[g.id].region==="NTSC") ? "NTSC "+(PUBE[g.id].us_year||"") : g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
       '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+((vals(g)||{}).source_region ? '<dt>PriceCharting CIB <small>(NTSC)</small></dt><dd>'+eur(vals(g).pc)+'</dd>' : '<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>')+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
       '</dl></div></div>' + salesBlock(g.id, s==="S" ? "sealed" : "CIB");
