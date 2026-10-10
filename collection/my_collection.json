@@ -119,7 +119,7 @@
       "title": "Defender of the Crown",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 20.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -456,7 +456,7 @@
       "title": "WWF WrestleMania Challenge",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 15.0,
       "purchase_date": "",
       "purchase_note": ""
     },
