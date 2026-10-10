@@ -198,10 +198,6 @@
     var extra = [e.purchase_date, e.purchase_note].filter(Boolean).join(" · ");
     var h = '<dt>Purchase price</dt><dd>'+eur(p)+'</dd>';
     if (extra) h += '<dd class="wide xnote"><small>'+esc(extra)+'</small></dd>';
-    if (good!=null && good>0) {
-      var d = good - p, pc = p>0 ? Math.round(100*d/p) : null, sg = d>=0 ? "+" : "−";
-      h += '<dd class="wide xnote pp-gl '+(d>=0?"up":"down")+'">'+sg+eur(Math.abs(d))+(pc!=null ? ' ('+sg+Math.abs(pc)+'%)' : '')+' <small>vs '+(vg ? 'very-good-condition' : 'good-condition')+' value '+eur(good)+'</small></dd>';
-    }
     return h;
   }
   function openBB(id){
