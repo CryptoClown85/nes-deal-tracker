@@ -83,7 +83,7 @@
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       '</div></div>'+
-      '<span class="cap" data-bb="'+g.id+'" title="'+esc(ve(g) ? ve(g).title : g.t)+'"><span class="ctw"><span class="ct">'+esc(ve(g) ? (ve(g).short||ve(g).variant) : g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
+      '<span class="cap" data-bb="'+g.id+'" title="'+esc(ve(g) ? ve(g).title : g.t)+'"><span class="ctw"><span class="ct">'+esc(g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
   }
   function tileX(x, k){   // graded slab etc.: same shelf slot, slab-shaped art, no box
     var c = SH[k], g = BYID[x.base] || {t:x.title};
