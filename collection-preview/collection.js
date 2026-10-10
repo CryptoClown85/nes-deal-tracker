@@ -169,7 +169,7 @@
         return '<li><span class="sl5-d">'+esc(x.date)+'</span><b class="sl5-p">'+eur(x.eur)+'</b>'+
           '<span class="sl5-t">'+esc(srcName(x.url))+(x.title ? ' · '+esc(x.title) : '')+'</span>'+
           (x.url ? '<a class="sl5-a" href="'+esc(x.url)+'" target="_blank" rel="noopener" aria-label="Open sold listing ('+esc(x.date)+')">Sold listing ›</a>' : '')+'</li>'; }).join("")+'</ol>'+
-      '<p class="note sl5-n">Sold prices via PriceCharting, converted to EUR'+(f.note ? ' · '+esc(f.note) : '')+'. Graded, sealed'+(kind==="sealed"?' (other than sealed)':'')+', bundles, repros, incomplete copies and outliers are left out.'+(f.n<5 ? ' Only '+f.n+' recent sale'+(f.n>1?'s':'')+' found.' : '')+'</p>';
+      '<p class="note sl5-n">Sold prices via PriceCharting, converted to EUR'+(f.note ? ' · '+esc(f.note) : '')+'. '+(kind==="sealed" ? 'Graded' : kind==="graded" ? 'Ungraded' : 'Graded, sealed')+', bundles, repros, incomplete copies and outliers are left out.'+(f.n<5 ? ' Only '+f.n+' recent sale'+(f.n>1?'s':'')+' found.' : '')+'</p>';
   }
   function s5For(g){   // last-5 CIB sales average, if the tracker fetched it for a listing of this game
     var L = liveFor(g); if (!L) return null; var r = null;
