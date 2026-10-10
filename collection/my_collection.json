@@ -435,7 +435,7 @@
       "title": "The Legend of Zelda",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 200.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -465,7 +465,7 @@
       "title": "Zelda II: The Adventure of Link",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 100.0,
       "purchase_date": "",
       "purchase_note": ""
     }
