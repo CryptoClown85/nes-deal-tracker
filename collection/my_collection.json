@@ -273,7 +273,7 @@
       "title": "Metal Gear",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 42.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -345,7 +345,7 @@
       "title": "Section Z",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 30.0,
       "purchase_date": "",
       "purchase_note": ""
     },
