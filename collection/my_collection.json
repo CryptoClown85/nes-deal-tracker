@@ -291,7 +291,7 @@
       "title": "Nintendo World Cup",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 20.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -426,7 +426,7 @@
       "title": "Terminator 2: Judgment Day",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 50.0,
       "purchase_date": "",
       "purchase_note": ""
     },
