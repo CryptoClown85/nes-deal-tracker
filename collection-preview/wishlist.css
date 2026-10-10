@@ -36,3 +36,7 @@
  .wl-deal small{text-align:center}
 }
 .sl5-wl{display:none}
+.wl-row>div{min-width:0}
+.wl-deal small{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.pills:has(.pill.wl){flex-wrap:wrap;justify-content:center;gap:3px}
+.pills .pill.wl{margin:0!important;padding:2px 3px}
