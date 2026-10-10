@@ -176,7 +176,7 @@
       (VAL.graded[x.id] ? (function(v){ return '<dt>Value</dt><dd>careful <b>'+eur(v.careful)+'</b> · good condition <b>'+eur(v.good)+'</b>'+(v.few?' <span class="few">few sales</span>':'')+'</dd>'+
         '<dd class="wide xnote"><small>'+esc(v.basis)+' '+(v.sources||[]).map(function(s){ return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.label)+' ›</a>'; }).join(" · ")+'</small></dd>'; })(VAL.graded[x.id])
       : '<dt>Value</dt><dd>'+(x.value_eur!=null ? '<b>'+eur(x.value_eur)+'</b>' : 'not valued')+'</dd>'+
-      '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd>')+'</dl></div></div>'+
+      '<dd class="wide xnote"><small>'+esc(x.value_note||"")+(x.value_source?' <a href="'+esc(x.value_source)+'" target="_blank" rel="noopener">Source ›</a>':'')+'</small></dd>')+purchRow(x, VAL.graded[x.id] ? VAL.graded[x.id].good : x.value_eur)+'</dl></div></div>'+
       (x.image_label ? '<div class="bbd-lbl"><img src="'+esc(x.image_label)+'" alt="Close-up of the WATA label of the photographed copy" width="720" height="191" loading="lazy"></div>' : '')+
       '<p class="note bbd-src"><b>Photo:</b> '+esc(x.image_note||"")+' Source: <a href="'+esc(x.image_source)+'" target="_blank" rel="noopener">'+esc(x.image_source_label||x.image_source)+'</a>.</p>'+
       '<p class="note">Not counted as a separate game (the CIB Legend of Zelda is), and not part of the checklist.</p>';
@@ -190,6 +190,20 @@
     return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · '+(vg ? 'very good condition' : 'good condition')+' <b>'+eur(v.good)+'</b>'+
       '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+(v.variant ? esc(v.variant)+' sales only · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
   }
+  function purchRow(e, good, vg){   // popup only: what was paid, and gain/loss vs the good-condition value
+    if (!e) return "";
+    var p = e.purchase_price;
+    if (p==null || p==="" || isNaN(+p)) return '<dt class="pp-k">Purchase price</dt><dd class="pp-none">not set</dd>';
+    p = +p;
+    var extra = [e.purchase_date, e.purchase_note].filter(Boolean).join(" · ");
+    var h = '<dt>Purchase price</dt><dd>'+eur(p)+'</dd>';
+    if (extra) h += '<dd class="wide xnote"><small>'+esc(extra)+'</small></dd>';
+    if (good!=null && good>0) {
+      var d = good - p, pc = p>0 ? Math.round(100*d/p) : null, sg = d>=0 ? "+" : "−";
+      h += '<dd class="wide xnote pp-gl '+(d>=0?"up":"down")+'">'+sg+eur(Math.abs(d))+(pc!=null ? ' ('+sg+Math.abs(pc)+'%)' : '')+' <small>vs '+(vg ? 'very-good-condition' : 'good-condition')+' value '+eur(good)+'</small></dd>';
+    }
+    return h;
+  }
   function openBB(id){
     var g = BYID[id];
     if (!g && EXID[id]) { $("bbd-body").innerHTML = popupX(EXID[id]); return showBB(id); }
@@ -200,7 +214,7 @@
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
       '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
-      '<dl>'+valRow(g)+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>'+
+      '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>'+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
       (s==="S" || ve(g) ? '' : '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd>')+'</dl></div></div>';
     if (!full(s)) {
