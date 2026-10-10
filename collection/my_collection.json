@@ -44,7 +44,7 @@
       "title": "Batman: The Video Game",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 85.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -53,7 +53,7 @@
       "title": "Battletoads",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 55.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -146,7 +146,7 @@
       "title": "Double Dragon II: The Revenge",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 120.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -209,7 +209,7 @@
       "title": "Joe & Mac: Caveman Ninja",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 35.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -255,7 +255,7 @@
       "title": "Mega Man",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 125.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -318,7 +318,7 @@
       "title": "Probotector",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 70.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -354,7 +354,7 @@
       "title": "Shadow Warriors",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 80.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -363,7 +363,7 @@
       "title": "Snake's Revenge",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 53.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -408,7 +408,7 @@
       "title": "TaleSpin",
       "condition": "CIB",
       "added": "2026-10-09",
-      "purchase_price": null,
+      "purchase_price": 60.0,
       "purchase_date": "",
       "purchase_note": ""
     },
@@ -447,7 +447,7 @@
       "variant": "Der König der Löwen",
       "variant_note": "German version, PAL-B, NES-KL-NOE",
       "short": "Der König der Löwen",
-      "purchase_price": null,
+      "purchase_price": 25.0,
       "purchase_date": "",
       "purchase_note": ""
     },
