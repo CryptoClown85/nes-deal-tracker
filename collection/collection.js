@@ -188,7 +188,7 @@
     var span = v.n ? v.n+' sale'+(v.n>1?'s':'')+(v.from ? ', '+(v.from===v.to ? v.to : v.from+' → '+v.to) : '') : 'no recent sales – PriceCharting value';
     var vg = v.grade==="very good";
     return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · '+(vg ? 'very good condition' : 'good condition')+' <b>'+eur(v.good)+'</b>'+
-      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+(v.variant ? esc(v.variant)+' sales only · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
+      '<small>'+(v.source_region ? '<b>US/NTSC sales</b> (<a href="'+esc(v.source_url)+'" target="_blank" rel="noopener">PriceCharting NES ›</a>), USD→EUR at ECB rate · ' : '')+(v.condition==="Sealed" ? 'sealed sales · ' : '')+(v.variant ? esc(v.variant)+' sales only · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
   }
   function purchRow(e, good, vg){   // popup only: what was paid, and gain/loss vs the good-condition value
     if (!e) return "";
@@ -207,13 +207,14 @@
     if (!g) return;
     var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="S" ? "Owned · Sealed" : s==="L" ? "Owned · loose" : "Missing";
     var s5 = s5For(g), L = liveFor(g);
+    if ((vals(g)||{}).l5 && vals(g).l5.n) s5 = vals(g).l5;   // per-game pricing source override (e.g. Ice Climber: NTSC sales)
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
       '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
-      '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>'+
+      '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+((vals(g)||{}).source_region ? '<dt>PriceCharting CIB <small>(NTSC)</small></dt><dd>'+eur(vals(g).pc)+'</dd>' : '<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>')+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
-      (s==="S" || ve(g) ? '' : '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd>')+'</dl></div></div>';
+      (s==="S" || ve(g) ? '' : '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales'+((vals(g)||{}).source_region ? ' <small>(NTSC)</small>' : '')+'</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd>')+'</dl></div></div>';
     if (!full(s)) {
       if (!liveLoaded) h += '<p class="note">Loading live listings…</p>';
       else if (!L || !L.cib.length) h += '<p class="bbd-none">No complete-in-box copy for sale right now.</p>';
