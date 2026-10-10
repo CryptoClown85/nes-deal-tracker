@@ -21,7 +21,8 @@
    "from": "2025-11-03",
    "to": "2026-07-04",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 6 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/airwolf"
   },
   "balloon-fight": {
    "condition": "CIB",
@@ -34,6 +35,7 @@
    "to": "2026-09-11",
    "few": false,
    "basis": "median & P70 of 26 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/nes/balloon-fight",
    "source_url": "https://www.pricecharting.com/game/nes/balloon-fight",
    "source_region": "NTSC",
    "source_note": "priced from US/NTSC sales (PriceCharting NES Balloon Fight), converted USD→EUR at the ECB rate",
@@ -54,7 +56,8 @@
    "from": "2026-01-23",
    "to": "2026-07-14",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 6 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/batman-return-of-the-joker"
   },
   "batman-the-video-game": {
    "condition": "CIB",
@@ -66,7 +69,8 @@
    "from": "2025-11-10",
    "to": "2026-09-11",
    "few": false,
-   "basis": "median & P70 of 9 sales (12m)"
+   "basis": "median & P70 of 9 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/batman"
   },
   "battletoads": {
    "condition": "CIB",
@@ -78,7 +82,8 @@
    "from": "2025-10-21",
    "to": "2026-09-25",
    "few": false,
-   "basis": "median & P70 of 12 sales (12m)"
+   "basis": "median & P70 of 12 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/battletoads"
   },
   "blue-shadow": {
    "condition": "CIB",
@@ -90,7 +95,8 @@
    "from": "2026-01-04",
    "to": "2026-10-04",
    "few": false,
-   "basis": "median & P70 of 9 sales (12m)"
+   "basis": "median & P70 of 9 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/blue-shadow"
   },
   "castlevania": {
    "condition": "CIB",
@@ -103,7 +109,8 @@
    "to": "2026-07-20",
    "few": false,
    "basis": "median & P70 of 10 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
-   "grade": "very good"
+   "grade": "very good",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/castlevania"
   },
   "castlevania-ii-simon-s-quest": {
    "condition": "CIB",
@@ -116,7 +123,8 @@
    "to": "2026-07-05",
    "few": false,
    "basis": "median & P70 of 22 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
-   "grade": "very good"
+   "grade": "very good",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/castlevania-ii-simon%27s-quest"
   },
   "castlevania-iii-dracula-s-curse": {
    "condition": "CIB",
@@ -129,7 +137,8 @@
    "to": "2026-08-16",
    "few": false,
    "basis": "median & P70 of 8 sales (12m); very good condition: P85 of the same sales (capped at the highest sale)",
-   "grade": "very good"
+   "grade": "very good",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/castlevania-iii-dracula%27s-curse"
   },
   "chip-n-dale-rescue-rangers": {
    "condition": "CIB",
@@ -141,7 +150,8 @@
    "from": "2025-10-25",
    "to": "2026-09-25",
    "few": false,
-   "basis": "median & P70 of 22 sales (12m)"
+   "basis": "median & P70 of 22 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/chip-and-dale-rescue-rangers"
   },
   "chip-n-dale-rescue-rangers-2": {
    "condition": "CIB",
@@ -153,7 +163,8 @@
    "from": "2024-10-31",
    "to": "2026-01-14",
    "few": false,
-   "basis": "median & P70 of 10 sales (24m)"
+   "basis": "median & P70 of 10 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/chip-and-dale-rescue-rangers-2"
   },
   "defender-of-the-crown": {
    "condition": "CIB",
@@ -165,7 +176,8 @@
    "from": "2025-10-11",
    "to": "2026-09-06",
    "few": false,
-   "basis": "median & P70 of 18 sales (12m)"
+   "basis": "median & P70 of 18 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/defender-of-the-crown"
   },
   "donkey-kong": {
    "condition": "CIB",
@@ -178,6 +190,7 @@
    "to": "2026-09-27",
    "few": false,
    "basis": "median & P70 of 13 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/nes/donkey-kong",
    "source_url": "https://www.pricecharting.com/game/nes/donkey-kong",
    "source_region": "NTSC",
    "source_note": "priced from US/NTSC sales (PriceCharting NES Donkey Kong), converted USD→EUR at the ECB rate",
@@ -198,7 +211,8 @@
    "from": "",
    "to": "",
    "few": true,
-   "basis": "no PAL sales in 36 months: PriceCharting value used for all three"
+   "basis": "no PAL sales in 36 months: PriceCharting value used for all three",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/double-dragon"
   },
   "double-dragon-ii-the-revenge": {
    "condition": "CIB",
@@ -210,7 +224,8 @@
    "from": "2026-02-05",
    "to": "2026-09-19",
    "few": false,
-   "basis": "median & P70 of 10 sales (12m)"
+   "basis": "median & P70 of 10 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/double-dragon-ii"
   },
   "double-dragon-iii-the-sacred-stones": {
    "condition": "CIB",
@@ -222,7 +237,8 @@
    "from": "2025-10-15",
    "to": "2026-10-07",
    "few": false,
-   "basis": "median & P70 of 14 sales (12m)"
+   "basis": "median & P70 of 14 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/double-dragon-iii"
   },
   "duck-hunt": {
    "condition": "CIB",
@@ -234,7 +250,8 @@
    "from": "2025-10-25",
    "to": "2026-09-20",
    "few": false,
-   "basis": "median & P70 of 9 sales (12m)"
+   "basis": "median & P70 of 9 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/duck-hunt"
   },
   "ducktales": {
    "condition": "CIB",
@@ -246,7 +263,8 @@
    "from": "2025-10-12",
    "to": "2026-09-19",
    "few": false,
-   "basis": "median & P70 of 29 sales (12m)"
+   "basis": "median & P70 of 29 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/duck-tales"
   },
   "excitebike": {
    "condition": "CIB",
@@ -259,6 +277,7 @@
    "to": "2026-10-06",
    "few": false,
    "basis": "median & P70 of 30 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/nes/excitebike",
    "source_url": "https://www.pricecharting.com/game/nes/excitebike",
    "source_region": "NTSC",
    "source_note": "priced from US/NTSC sales (PriceCharting NES Excitebike), converted USD→EUR at the ECB rate",
@@ -279,7 +298,8 @@
    "from": "2025-11-02",
    "to": "2026-05-31",
    "few": true,
-   "basis": "median of 5 sales (12m); too few for a P70 uplift"
+   "basis": "median of 5 sales (12m); too few for a P70 uplift",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/gyromite"
   },
   "ice-climber": {
    "condition": "CIB",
@@ -292,6 +312,7 @@
    "to": "2026-08-15",
    "few": false,
    "basis": "median & P70 of 24 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/nes/ice-climber",
    "source_url": "https://www.pricecharting.com/game/nes/ice-climber",
    "source_region": "NTSC",
    "source_note": "priced from US/NTSC sales (PriceCharting NES Ice Climber), converted USD→EUR at the ECB rate",
@@ -312,7 +333,8 @@
    "from": "2024-10-24",
    "to": "2026-01-25",
    "few": false,
-   "basis": "median & P70 of 10 sales (24m)"
+   "basis": "median & P70 of 10 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/joe-and-mac-caveman-ninja"
   },
   "kid-icarus": {
    "condition": "CIB",
@@ -324,7 +346,8 @@
    "from": "2025-12-02",
    "to": "2026-09-20",
    "few": false,
-   "basis": "median & P70 of 14 sales (12m)"
+   "basis": "median & P70 of 14 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/kid-icarus"
   },
   "knight-rider": {
    "condition": "CIB",
@@ -336,7 +359,8 @@
    "from": "2026-01-03",
    "to": "2026-05-20",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 6 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/knight-rider"
   },
   "kung-fu": {
    "condition": "Sealed",
@@ -348,7 +372,8 @@
    "from": "2024-07-16",
    "to": "2026-05-02",
    "few": true,
-   "basis": "median of 5 sales (36m); too few for a P70 uplift"
+   "basis": "median of 5 sales (36m); too few for a P70 uplift",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/kung-fu"
   },
   "mario-bros": {
    "condition": "CIB",
@@ -360,7 +385,8 @@
    "from": "2025-12-06",
    "to": "2026-04-16",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 6 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/mario-bros"
   },
   "mega-man": {
    "condition": "CIB",
@@ -372,7 +398,8 @@
    "from": "2026-03-10",
    "to": "2026-04-29",
    "few": false,
-   "basis": "median & P70 of 6 sales (12m)"
+   "basis": "median & P70 of 6 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/mega-man"
   },
   "mega-man-2": {
    "condition": "CIB",
@@ -384,7 +411,8 @@
    "from": "2025-10-10",
    "to": "2026-09-06",
    "few": false,
-   "basis": "median & P70 of 21 sales (12m)"
+   "basis": "median & P70 of 21 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/mega-man-2"
   },
   "metal-gear": {
    "condition": "CIB",
@@ -396,7 +424,8 @@
    "from": "2025-10-17",
    "to": "2026-09-22",
    "few": false,
-   "basis": "median & P70 of 7 sales (12m)"
+   "basis": "median & P70 of 7 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/metal-gear"
   },
   "mike-tyson-s-punch-out": {
    "condition": "CIB",
@@ -408,7 +437,8 @@
    "from": "2026-02-14",
    "to": "2026-05-26",
    "few": true,
-   "basis": "median of 5 sales (12m); too few for a P70 uplift"
+   "basis": "median of 5 sales (12m); too few for a P70 uplift",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/mike-tyson%27s-punch-out"
   },
   "nintendo-world-cup": {
    "condition": "CIB",
@@ -420,7 +450,8 @@
    "from": "2024-12-13",
    "to": "2026-08-24",
    "few": false,
-   "basis": "median & P70 of 28 sales (24m)"
+   "basis": "median & P70 of 28 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/nintendo-world-cup"
   },
   "pinball": {
    "condition": "CIB",
@@ -433,6 +464,7 @@
    "to": "2026-09-29",
    "few": false,
    "basis": "median & P70 of 29 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/nes/pinball",
    "source_url": "https://www.pricecharting.com/game/nes/pinball",
    "source_region": "NTSC",
    "source_note": "priced from US/NTSC sales (PriceCharting NES Pinball), converted USD→EUR at the ECB rate",
@@ -453,7 +485,8 @@
    "from": "2024-11-13",
    "to": "2026-08-13",
    "few": false,
-   "basis": "median & P70 of 15 sales (24m)"
+   "basis": "median & P70 of 15 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/popeye"
   },
   "probotector": {
    "condition": "CIB",
@@ -465,7 +498,8 @@
    "from": "2025-10-25",
    "to": "2026-09-07",
    "few": false,
-   "basis": "median & P70 of 21 sales (12m)"
+   "basis": "median & P70 of 21 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/probotector"
   },
   "rad-racer": {
    "condition": "CIB",
@@ -477,7 +511,8 @@
    "from": "2025-10-17",
    "to": "2026-08-30",
    "few": false,
-   "basis": "median & P70 of 27 sales (12m)"
+   "basis": "median & P70 of 27 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/rad-racer"
   },
   "rush-n-attack": {
    "condition": "CIB",
@@ -489,7 +524,8 @@
    "from": "2024-10-16",
    "to": "2026-08-28",
    "few": false,
-   "basis": "median & P70 of 7 sales (24m)"
+   "basis": "median & P70 of 7 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/rush%27n-attack"
   },
   "section-z": {
    "condition": "CIB",
@@ -501,7 +537,8 @@
    "from": "2025-01-04",
    "to": "2026-04-26",
    "few": false,
-   "basis": "median & P70 of 8 sales (24m)"
+   "basis": "median & P70 of 8 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/section-z"
   },
   "shadow-warriors": {
    "condition": "CIB",
@@ -513,7 +550,8 @@
    "from": "2025-11-03",
    "to": "2026-09-01",
    "few": false,
-   "basis": "median & P70 of 14 sales (12m)"
+   "basis": "median & P70 of 14 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/shadow-warriors"
   },
   "snake-s-revenge": {
    "condition": "CIB",
@@ -525,7 +563,8 @@
    "from": "2024-10-11",
    "to": "2026-05-05",
    "few": false,
-   "basis": "median & P70 of 18 sales (24m)"
+   "basis": "median & P70 of 18 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/snake%27s-revenge"
   },
   "soccer": {
    "condition": "CIB",
@@ -537,7 +576,8 @@
    "from": "2025-10-13",
    "to": "2026-08-30",
    "few": false,
-   "basis": "median & P70 of 9 sales (12m)"
+   "basis": "median & P70 of 9 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/soccer"
   },
   "super-mario-bros": {
    "condition": "CIB",
@@ -549,7 +589,8 @@
    "from": "2026-06-29",
    "to": "2026-09-14",
    "few": false,
-   "basis": "median & P70 of 19 sales (12m)"
+   "basis": "median & P70 of 19 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/super-mario-bros"
   },
   "super-mario-bros-2": {
    "condition": "CIB",
@@ -561,7 +602,8 @@
    "from": "2026-01-21",
    "to": "2026-10-03",
    "few": false,
-   "basis": "median & P70 of 27 sales (12m)"
+   "basis": "median & P70 of 27 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/super-mario-bros-2"
   },
   "super-mario-bros-3": {
    "condition": "CIB",
@@ -573,7 +615,8 @@
    "from": "2026-05-24",
    "to": "2026-09-22",
    "few": false,
-   "basis": "median & P70 of 27 sales (12m)"
+   "basis": "median & P70 of 27 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/super-mario-bros-3"
   },
   "talespin": {
    "condition": "CIB",
@@ -585,7 +628,8 @@
    "from": "2025-10-10",
    "to": "2026-07-23",
    "few": false,
-   "basis": "median & P70 of 11 sales (12m)"
+   "basis": "median & P70 of 11 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/talespin"
   },
   "tennis": {
    "condition": "CIB",
@@ -597,7 +641,8 @@
    "from": "2025-10-10",
    "to": "2026-09-27",
    "few": false,
-   "basis": "median & P70 of 17 sales (12m)"
+   "basis": "median & P70 of 17 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/tennis"
   },
   "terminator-2-judgment-day": {
    "condition": "CIB",
@@ -609,7 +654,8 @@
    "from": "2025-10-28",
    "to": "2026-05-31",
    "few": false,
-   "basis": "median & P70 of 8 sales (12m)"
+   "basis": "median & P70 of 8 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/terminator-2-judgment-day"
   },
   "the-legend-of-zelda": {
    "condition": "CIB",
@@ -621,7 +667,8 @@
    "from": "2025-11-23",
    "to": "2026-09-30",
    "few": false,
-   "basis": "median & P70 of 24 sales (12m)"
+   "basis": "median & P70 of 24 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/legend-of-zelda"
   },
   "the-lion-king": {
    "condition": "CIB",
@@ -633,7 +680,8 @@
    "from": "2024-05-28",
    "to": "2025-08-31",
    "few": true,
-   "basis": "median of 4 sales (36m); too few for a P70 uplift"
+   "basis": "median of 4 sales (36m); too few for a P70 uplift",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/the-lion-king"
   },
   "wwf-wrestlemania-challenge": {
    "condition": "CIB",
@@ -645,7 +693,8 @@
    "from": "2025-10-15",
    "to": "2026-08-30",
    "few": false,
-   "basis": "median & P70 of 12 sales (12m)"
+   "basis": "median & P70 of 12 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/wwf-wrestlemania-challenge"
   },
   "zelda-ii-the-adventure-of-link": {
    "condition": "CIB",
@@ -657,7 +706,8 @@
    "from": "2025-10-15",
    "to": "2026-10-04",
    "few": false,
-   "basis": "median & P70 of 28 sales (12m)"
+   "basis": "median & P70 of 28 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/zelda-ii-the-adventure-of-link"
   }
  },
  "graded": {
