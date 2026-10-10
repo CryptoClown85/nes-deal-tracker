@@ -7,6 +7,8 @@
   var local = loadLocal(), hasLocal = Object.keys(local).length > 0;
   var pub = null, pubMeta = {};      // published collection (my_collection.json) = default on every device
   var src = "pub", own = {};
+  var PUBE = {};                      // published entries by id (variant titles, e.g. a German-language version)
+  function ve(g){ return src==="pub" && own[g.id] && PUBE[g.id] && PUBE[g.id].variant ? PUBE[g.id] : null; }
   var EX = [], EXID = {};             // extra owned items (e.g. graded carts) from my_collection.json "extras": shown next to their game, not counted as games
   /* shelf state: Show / Sort per shelf, remembered per device (default Owned, A–Z) */
   var SH = {
@@ -81,7 +83,7 @@
     return '<div class="slot '+s+'" id="'+c.pre+g.id+'" data-l="'+letter(g.t)+'"><div class="stand"><div class="pbox '+s+'" data-bb="'+g.id+'" role="button" tabindex="0" aria-haspopup="dialog" aria-label="'+esc(g.t)+' – '+lab+' – details" title="'+esc(g.t)+' – '+lab+'">'+
       '<img src="'+art(g)+'" alt="'+esc(g.t)+' – '+c.alt+'" loading="lazy" decoding="async" width="252" height="360">'+
       '</div></div>'+
-      '<span class="cap" data-bb="'+g.id+'" title="'+esc(g.t)+'"><span class="ctw"><span class="ct">'+esc(g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
+      '<span class="cap" data-bb="'+g.id+'" title="'+esc(ve(g) ? ve(g).title : g.t)+'"><span class="ctw"><span class="ct">'+esc(ve(g) ? (ve(g).short||ve(g).variant) : g.t)+'</span></span><span class="pills">'+tag+'</span></span></div>';
   }
   function tileX(x, k){   // graded slab etc.: same shelf slot, slab-shaped art, no box
     var c = SH[k], g = BYID[x.base] || {t:x.title};
@@ -186,7 +188,7 @@
     var span = v.n ? v.n+' sale'+(v.n>1?'s':'')+(v.from ? ', '+(v.from===v.to ? v.to : v.from+' → '+v.to) : '') : 'no recent sales – PriceCharting value';
     var vg = v.grade==="very good";
     return '<dt class="vt">Value</dt><dd class="wide xnote vr">careful <b>'+eur(v.careful)+'</b> · '+(vg ? 'very good condition' : 'good condition')+' <b>'+eur(v.good)+'</b>'+
-      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
+      '<small>'+(v.condition==="Sealed" ? 'sealed sales · ' : '')+(v.variant ? esc(v.variant)+' sales only · ' : '')+esc(span)+few+(vg ? ' · very good = 85th percentile of these sales' : '')+'</small></dd>';
   }
   function openBB(id){
     var g = BYID[id];
@@ -195,10 +197,10 @@
     var s = own[g.id], lab = s==="C" ? "Owned · CIB" : s==="S" ? "Owned · Sealed" : s==="L" ? "Owned · loose" : "Missing";
     var s5 = s5For(g), L = liveFor(g);
     var h = '<div class="bbd"><div class="bbd-art '+(s?"":"M")+'"><img src="'+art(g)+'" alt="'+esc(g.t)+' – '+(g.bb?SH.bb.alt:SH.cs.alt)+'" width="252" height="360"></div>'+
-      '<div class="bbd-info"><h3 id="bbd-t">'+esc(g.t)+'</h3>'+
+      '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
-      '<p class="bbd-sub">'+esc([g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
-      '<dl>'+valRow(g)+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB</dt><dd>'+eur(g.b)+'</dd>'+
+      '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
+      '<dl>'+valRow(g)+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+'<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>'+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
       (s==="S" ? '' : '<dt>Last '+(s5 ? s5.n : 5)+' CIB sales</dt><dd>'+(s5 ? 'avg <b>'+eur(s5.avg_eur)+'</b></dd><dd class="wide"><small>'+esc(s5.from===s5.to ? s5.to : s5.from+' → '+s5.to)+' · PriceCharting sold</small>' : '<small>not available</small>')+'</dd>')+'</dl></div></div>';
     if (!full(s)) {
@@ -316,7 +318,7 @@
     pub = {}; pubMeta = (d && d.meta) || {};
     EX = ((d && d.extras) || []).filter(function(x){ return x && x.id && x.base && BYID[x.base] && !BYID[x.id]; });
     EX.forEach(function(x){ EXID[x.id] = x; });
-    ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) pub[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
+    ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) PUBE[x.id] = x; if (BYID[x.id]) pub[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
   }).catch(function(){ pub = {}; }).then(function(){
     return fetch("valuation.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) VAL = v; }).catch(function(){});
   }).then(function(){

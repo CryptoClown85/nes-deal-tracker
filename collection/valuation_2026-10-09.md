@@ -1,15 +1,15 @@
 # NES collection valuation – 9 Oct 2026
 
 Owner: w van der bellen · 50 games (49 PAL CIB + Kung Fu factory sealed) + 2 graded extras. Prices in EUR at the tracker's FX rate for 9 Oct 2026 (1 EUR = 1.1206 USD).
-Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL, CIB).
+Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL, CIB). Update 10 Oct 2026: The Lion King is the German version (Der König der Löwen, PAL-B NOE), valued from German-version sales only.
 
 ## Totals
 
 | | Conservative (median) | Good condition (P70) | PriceCharting |
 |---|---:|---:|---:|
-| Games (50) | €4.509 | €5.825 | €4.779 |
+| Games (50) | €4.474 | €5.765 | €4.779 |
 | Graded extras (2) | €487 | €647 | €461 (gold cart not priced by PC) |
-| **Overall** | **€4.996** | **€6.472** | **€5.240** |
+| **Overall** | **€4.961** | **€6.412** | **€5.240** |
 
 ## Method
 
@@ -49,12 +49,13 @@ No WATA 7.0 sale of a 5-screw gold cart found. Nearest graded-cart sales of the 
 
 ## Thin or odd data
 
-- Few sales (no uplift applied): Double Dragon (0, none), Gyromite (5, 12m), Ice Climber (5, 12m), Kung Fu (5, 36m), Mike Tyson's Punch-Out!! (5, 12m).
+- Few sales (no uplift applied): Double Dragon (0, none), Gyromite (5, 12m), Ice Climber (5, 12m), Kung Fu (5, 36m), Mike Tyson's Punch-Out!! (5, 12m), The Lion King (4, 36m).
 - **Double Dragon**: no PAL CIB sale after 2019 on PriceCharting; its PriceCharting value is used.
 - **Mike Tyson's Punch-Out!!**: 5 sales in 12 months (€94–€208, median €182); the older 2025 sales were mostly €114–€119, so the 12-month median may run high.
+- **The Lion King (Der König der Löwen, PAL-B NOE)**: PriceCharting has no separate German product (only Le Roi Lion), so only the German-version sales on its PAL The Lion King page were used (titled König der Löwen / NOE / German): 4 in 36 months (€51 Aug 2025, €48 Mar 2025, €29 and €45 May 2024), median €46. English PAL-A (UKV) and SCN copies sell for far more (€200+), which is why the mixed PriceCharting value (€126) is much higher; that €126 is shown for reference only.
 - Wide spreads (P70 rests on 1–2 sales): Mega Man, Mario Bros., Castlevania III, Batman: Return of the Joker.
 - Donkey Kong, Mario Bros., Popeye: PriceCharting's PAL CIB tables include Game & Watch handheld sales; excluded here.
-- PAL-A vs PAL-B: most sales don't state the region (439 unstated, 126 PAL-B, 85 PAL-A); differences are game-specific and too thin for a blanket adjustment (per-game medians in the CSV).
+- PAL-A vs PAL-B: most sales don't state the region (437 unstated, 121 PAL-B, 80 PAL-A); differences are game-specific and too thin for a blanket adjustment (per-game medians in the CSV).
 
 ## Full table
 

@@ -1,7 +1,7 @@
 {
   "meta": {
     "owner": "w van der bellen",
-    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed; Punch-Out!! corrected to Mike Tyson's Punch-Out!! (CIB); Castlevania I–III graded 'very good' by the owner",
+    "source": "checklist paste in chat 2026-10-09; corrections 2026-10-09: + Pinball, - DuckTales 2, + TaleSpin, + Metal Gear, + Terminator 2, + Blue Shadow, + WWF WrestleMania Challenge, + Airwolf, + Section-Z (all CIB), - Golf, - WWF WrestleMania, + extra: Zelda gold WATA 7.0 cart (graded, not counted as a game), + extra: Zelda CIB WATA 7.5 Rev-A (graded, not counted as a game), + Snake's Revenge, + Nintendo World Cup (standalone) (CIB); Kung Fu = factory sealed; Punch-Out!! corrected to Mike Tyson's Punch-Out!! (CIB); Castlevania I–III graded 'very good' by the owner; The Lion King = German version Der König der Löwen (PAL-B NOE)",
     "updated": "2026-10-09T23:50:00+02:00",
     "count": 50,
     "cib": 49,
@@ -300,9 +300,12 @@
     },
     {
       "id": "the-lion-king",
-      "title": "The Lion King",
+      "title": "The Lion King (Der König der Löwen, PAL-B NOE)",
       "condition": "CIB",
-      "added": "2026-10-09"
+      "added": "2026-10-09",
+      "variant": "Der König der Löwen",
+      "variant_note": "German version, PAL-B, NES-KL-NOE",
+      "short": "Der König der Löwen"
     },
     {
       "id": "wwf-wrestlemania-challenge",

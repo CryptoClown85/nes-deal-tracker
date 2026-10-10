@@ -2,8 +2,8 @@
  "valued": "2026-10-09",
  "fx_usd_per_eur": 1.1206,
  "method": {
-  "sales_used": 650,
-  "sales_excluded": 82,
+  "sales_used": 638,
+  "sales_excluded": 106,
   "outliers_dropped": 38,
   "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026",
   "window": "past 12 months; 24–36 months if fewer than 5 sales",
@@ -580,15 +580,16 @@
   },
   "the-lion-king": {
    "condition": "CIB",
-   "careful": 81,
-   "good": 106,
+   "careful": 46,
+   "good": 46,
    "pc": 126,
-   "n": 16,
-   "window": "24m",
-   "from": "2024-10-25",
-   "to": "2026-02-10",
-   "few": false,
-   "basis": "median & P70 of 16 sales (24m)"
+   "n": 4,
+   "window": "36m",
+   "from": "2024-05-28",
+   "to": "2025-08-31",
+   "few": true,
+   "basis": "median of 4 sales (36m); too few for a P70 uplift; German-version sales only (no separate PriceCharting product); PriceCharting value is the mixed PAL The Lion King value",
+   "variant": "Der König der Löwen (PAL-B NOE)"
   },
   "wwf-wrestlemania-challenge": {
    "condition": "CIB",
