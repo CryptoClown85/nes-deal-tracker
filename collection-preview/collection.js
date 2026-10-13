@@ -31,6 +31,8 @@
   function norm(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/\b(the|a|an|of|in)\b/g," ").replace(/[^a-z0-9]+/g,""); }
   var WLKEY = "nes-wishlist-v1";   // wishlist: unowned game ids, saved on this device only (shared with the tracker preview)
   var WL = {}, WLMETA = {};
+  var WLSEED = ["metroid","donkey-kong-3"];   // default wishlist, applied once when this device has none saved yet
+  try { if (localStorage.getItem(WLKEY) === null) localStorage.setItem(WLKEY, JSON.stringify(WLSEED)); } catch(e){}
   function wlLoad(){ WL = {}; try { (JSON.parse(localStorage.getItem(WLKEY)||"[]")||[]).forEach(function(id){ if (BYID[id]) WL[id] = 1; }); } catch(e){} }
   function wlSave(){ try { localStorage.setItem(WLKEY, JSON.stringify(Object.keys(WL))); } catch(e){} }
   function wlToggle(id){ if (WL[id]) delete WL[id]; else WL[id] = 1; wlSave(); render(); }

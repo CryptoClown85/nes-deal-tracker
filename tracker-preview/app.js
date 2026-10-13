@@ -88,6 +88,7 @@
     var nt = function(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9]+/g,""); };
     var out = {u:{}, t:{}};
     out.load = function(){ var ids = {}; out.u = {}; out.t = {};
+      try { if (localStorage.getItem("nes-wishlist-v1") === null) localStorage.setItem("nes-wishlist-v1", JSON.stringify(["metroid","donkey-kong-3"])); } catch(e){}
       try { (JSON.parse(localStorage.getItem("nes-wishlist-v1")||"[]")||[]).forEach(function(i){ ids[i]=1; }); } catch(e){}
       (window.NES_GAMES||[]).forEach(function(g){ if (ids[g.id]) { out.u[g.u] = 1; out.t[nt(g.pt||g.t)] = 1; } }); };
     out.is = function(r){ return !!(r.pc_title && (out.u[r.pc_url] || out.t[nt(r.pc_title)])); };

@@ -84,11 +84,22 @@
       return x.url ? '<a href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title||"")+'">'+t+'</a>' : t;
     }).join('<br>')+'</dd>';
   }
+  var WLG = (function(){   // wishlist: same per-device localStorage key as the collection preview
+    var nt = function(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9]+/g,""); };
+    var out = {u:{}, t:{}};
+    out.load = function(){ var ids = {}; out.u = {}; out.t = {};
+      try { if (localStorage.getItem("nes-wishlist-v1") === null) localStorage.setItem("nes-wishlist-v1", JSON.stringify(["metroid","donkey-kong-3"])); } catch(e){}
+      try { (JSON.parse(localStorage.getItem("nes-wishlist-v1")||"[]")||[]).forEach(function(i){ ids[i]=1; }); } catch(e){}
+      (window.NES_GAMES||[]).forEach(function(g){ if (ids[g.id]) { out.u[g.u] = 1; out.t[nt(g.pt||g.t)] = 1; } }); };
+    out.is = function(r){ return !!(r.pc_title && (out.u[r.pc_url] || out.t[nt(r.pc_title)])); };
+    out.load(); return out; })();
+  window.addEventListener("storage", function(e){ if (e.key==="nes-wishlist-v1") { WLG.load(); render(); } });
+  var HEART = '<span class="pxh" aria-hidden="true"></span>';
   function card(r){
     var grid = state.view==="grid";
     var p = r.price||{}, e = r.eur||{}, pc = r.pc_usd;
     var img = r.img;  // local copy (img/...) or inlined data URI; never hotlinked
-    var pills = '<span class="pill mk-'+r.marketplace+'">'+esc(MKLABEL[r.marketplace]||r.marketplace)+'</span>' + (isNew(r)?'<span class="pill new">NEW TODAY</span>':'') +
+    var pills = (WLG.is(r) ? '<span class="pill wlh" title="On your wishlist">'+HEART+'WISHLIST</span>' : '') + '<span class="pill mk-'+r.marketplace+'">'+esc(MKLABEL[r.marketplace]||r.marketplace)+'</span>' + (isNew(r)?'<span class="pill new">NEW TODAY</span>':'') +
       (r.ask_shipping ? '<span class="pill ask">ASK SELLER: NL SHIPPING</span>' : '') +
       (r.status!=="active" ? '<span class="pill gone">'+esc(r.status.toUpperCase())+'</span>' : '');
     var priceLine = money(p.amount, p.currency) + (p.currency!=="EUR" && e.price!=null ? ' <small>≈ '+eur(e.price)+'</small>' : '') +
@@ -107,7 +118,7 @@
     var pctHtml = r.pct==null ? "" : '<span class="pct">'+pctTxt(r.pct)+'</span><span class="basis">'+basisTxt+'</span>';
     var lastPrice = r.status!=="active" ? '<dt>Last seen</dt><dd>'+esc(day(r.last_seen))+' at '+money(p.amount,p.currency)+'</dd>' : '';
     var hist = (r.price_history||[]).length>1 ? '<dt>Price hist.</dt><dd>'+r.price_history.map(function(h){return money(h.amount,h.currency)+" ("+day(h.t)+")";}).join(" → ")+'</dd>' : '';
-    return '<article class="card'+(r.status!=="active"?" gone":"")+'">'+
+    return '<article class="'+(WLG.is(r)?"wlc ":"")+'card'+(r.status!=="active"?" gone":"")+'">'+
       '<div class="thumb">'+(img?'<img decoding="async" src="'+esc(img)+'" alt="'+esc(r.title)+'" onerror="this.parentNode.classList.add(\'noimg\');this.remove()">':'')+'<span class="ph">NO PHOTO</span>'+
       '<div class="ribbon">'+pills+'</div></div>'+
       '<div class="body">'+
@@ -164,6 +175,7 @@
       return (b.first_seen||"").localeCompare(a.first_seen||"");
     });
     if (state.tab==="best" && sort==="new") rows.sort(function(a,b){return (a.pct==null?9:a.pct)-(b.pct==null?9:b.pct);});
+    if ($("f-wl") && $("f-wl").checked) rows = rows.filter(WLG.is).concat(rows.filter(function(r){ return !WLG.is(r); }));
     $("summary").textContent = rows.length+(state.scope==="cib"?" complete-in-box":"")+(ty==="auction"?" auction":ty==="buy_now"?" buy-now":"")+" listing"+(rows.length===1?"":"s")+" shown"+(state.tab==="best"?" · Good-buy verdicts across all marketplaces, best discount first":"");
     $("grid").innerHTML = rows.length ? rows.map(card).join("") : '<p class="empty">Nothing matches these filters.</p>';
   }
@@ -182,7 +194,7 @@
     var b = ev.target.closest(".tab"); if (!b) return;
     state.tab = b.getAttribute("data-tab"); history.replaceState(null,"","#"+state.tab); render();
   });
-  ["f-verdict","f-type","f-sort","f-new","f-archive"].forEach(function(id){ $(id).addEventListener("change", render); });
+  ["f-verdict","f-type","f-sort","f-new","f-archive","f-wl"].forEach(function(id){ $(id).addEventListener("change", render); });
   $("f-q").addEventListener("input", render);
   render();
 })();
