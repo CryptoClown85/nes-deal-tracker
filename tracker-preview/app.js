@@ -84,10 +84,15 @@
       return x.url ? '<a href="'+esc(x.url)+'" target="_blank" rel="noopener" title="'+esc(x.title||"")+'">'+t+'</a>' : t;
     }).join('<br>')+'</dd>';
   }
-  var WLG = (function(){ var ids = {}, out = {u:{}, t:{}}; ((window.NES_WISHLIST||{}).wishlist||[]).forEach(function(i){ ids[i]=1; });
+  var WLG = (function(){   // wishlist: same per-device localStorage key as the collection preview
     var nt = function(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9]+/g,""); };
-    (window.NES_GAMES||[]).forEach(function(g){ if (ids[g.id]) { out.u[g.u] = 1; out.t[nt(g.pt||g.t)] = 1; } });
-    out.is = function(r){ return !!(r.pc_title && (out.u[r.pc_url] || out.t[nt(r.pc_title)])); }; return out; })();
+    var out = {u:{}, t:{}};
+    out.load = function(){ var ids = {}; out.u = {}; out.t = {};
+      try { (JSON.parse(localStorage.getItem("nes-wishlist-v1")||"[]")||[]).forEach(function(i){ ids[i]=1; }); } catch(e){}
+      (window.NES_GAMES||[]).forEach(function(g){ if (ids[g.id]) { out.u[g.u] = 1; out.t[nt(g.pt||g.t)] = 1; } }); };
+    out.is = function(r){ return !!(r.pc_title && (out.u[r.pc_url] || out.t[nt(r.pc_title)])); };
+    out.load(); return out; })();
+  window.addEventListener("storage", function(e){ if (e.key==="nes-wishlist-v1") { WLG.load(); render(); } });
   var HEART = '<span class="pxh" aria-hidden="true"></span>';
   function card(r){
     var grid = state.view==="grid";

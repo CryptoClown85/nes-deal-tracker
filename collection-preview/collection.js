@@ -29,7 +29,13 @@
   function sortKey(t){ return t.toLowerCase().replace(/^(the|a) /,""); }
   function letter(t){ var c = sortKey(t).charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; }
   function norm(s){ return String(s||"").toLowerCase().replace(/&/g," and ").replace(/\b(the|a|an|of|in)\b/g," ").replace(/[^a-z0-9]+/g,""); }
-  var WL = {}, WLMETA = {};   // wishlist (preview): unowned game ids the user wants
+  var WLKEY = "nes-wishlist-v1";   // wishlist: unowned game ids, saved on this device only (shared with the tracker preview)
+  var WL = {}, WLMETA = {};
+  function wlLoad(){ WL = {}; try { (JSON.parse(localStorage.getItem(WLKEY)||"[]")||[]).forEach(function(id){ if (BYID[id]) WL[id] = 1; }); } catch(e){} }
+  function wlSave(){ try { localStorage.setItem(WLKEY, JSON.stringify(Object.keys(WL))); } catch(e){} }
+  function wlToggle(id){ if (WL[id]) delete WL[id]; else WL[id] = 1; wlSave(); render(); }
+  wlLoad();
+  window.addEventListener("storage", function(e){ if (e.key===WLKEY) { wlLoad(); render(); } });
   function wl(g){ return !!WL[g.id] && !own[g.id]; }
   var HEART = '<span class="pxh" aria-hidden="true"></span>';
   var VAL = {games:{}, graded:{}, method:{}};   // valuation.json: per owned game careful (median) / good (P70) / PriceCharting, from real sold prices
@@ -229,6 +235,7 @@
       '<div class="bbd-info"><h3 id="bbd-t">'+esc(ve(g) ? ve(g).title : g.t)+'</h3>'+
       '<span class="chip '+(s||"M")+'">'+lab+'</span>'+(wl(g) ? ' <span class="chip wlc">'+HEART+' On your wishlist</span>' : '')+((vals(g)||{}).grade==="very good" ? ' <span class="chip vg">Very good condition</span>' : '')+
       '<p class="bbd-sub">'+esc([ve(g) ? ve(g).variant_note : "", g.p, (PUBE[g.id] && PUBE[g.id].region==="NTSC") ? "NTSC "+(PUBE[g.id].us_year||"") : g.y ? "PAL "+g.y : ""].filter(Boolean).join(" · "))+'</p>'+
+      (!s ? '<button type="button" class="wlbtn" data-wl="'+g.id+'" aria-pressed="'+(WL[g.id]?"true":"false")+'">'+HEART+'<span>'+(WL[g.id] ? 'On wishlist — remove' : 'Add to wishlist')+'</span></button>' : '')+
       '<dl>'+valRow(g)+(s && src==="pub" ? purchRow(PUBE[g.id], (vals(g)||{}).good, (vals(g)||{}).grade==="very good") : '')+(s==="S" && vals(g).pc!=null ? '<dt>PriceCharting sealed</dt><dd>'+eur(vals(g).pc)+'</dd>' : '')+((vals(g)||{}).source_region ? '<dt>PriceCharting CIB <small>(NTSC)</small></dt><dd>'+eur(vals(g).pc)+'</dd>' : '<dt>PriceCharting CIB'+(ve(g) ? ' <small>(all PAL versions)</small>' : '')+'</dt><dd>'+eur(g.b)+'</dd>')+
       '<dt>Loose</dt><dd>'+eur(g.l)+'</dd>'+
       (!vals(g) && g.u ? '<dd class="wide xnote"><small><b>PAL sales</b> (<a href="'+esc(g.u)+'" target="_blank" rel="noopener">PriceCharting PAL ›</a>)</small></dd>' : '')+
@@ -293,14 +300,14 @@
     $("wl-list").innerHTML = list.map(function(g){
       var x = liveLoaded ? wlBest(g) : null;
       return '<li class="wl-row"><img class="wl-art" src="'+art(g)+'" alt="" loading="lazy" decoding="async" width="252" height="360" data-bb="'+g.id+'">'+
-        '<div><h3><button type="button" data-bb="'+g.id+'" aria-haspopup="dialog">'+esc(g.t)+'</button></h3><span class="wl-h">'+HEART+'</span>'+
+        '<div><h3><button type="button" data-bb="'+g.id+'" aria-haspopup="dialog">'+esc(g.t)+'</button></h3><button type="button" class="wl-h" data-wlrm="'+g.id+'" aria-label="Remove '+esc(g.t)+' from wishlist" title="Remove from wishlist">'+HEART+'</button>'+
         '<p class="wl-v">CIB value <b>'+eur(wlValue(g))+'</b> <small>(PriceCharting PAL)</small></p>'+
         (!liveLoaded ? '<p class="wl-none">Loading listings…</p>' : x ?
           '<div class="wl-deal"><span>Cheapest CIB</span><span class="p">'+eur(x.eur.total)+'</span><span>incl. shipping</span>'+
           '<a href="'+esc(x.url)+'" target="_blank" rel="noopener">View listing ›</a><small>'+esc((MK[x.marketplace]||x.marketplace)+(x.sale_type==="auction"?' · auction (current bid)':'')+' · '+x.title)+'</small></div>'
           : '<p class="wl-none">No complete-in-box copy for sale right now.</p>')+'</div></li>';
-    }).join("") || '<li class="wl-empty">'+HEART+'<br>Your wishlist is empty. Tell me which games you\'re hunting for and they\'ll show up here, with the cheapest complete-in-box copy for sale.</li>';
-    $("wl-note").textContent = WLMETA.example ? "Preview: these are example entries, not your real wishlist." : "";
+    }).join("") || '<li class="wl-empty">'+HEART.replace('pxh','pxh lg')+'<br>Tap a game and press the heart to add it to your wishlist. Saved on this device.</li>';
+    $("wl-note").textContent = "Saved on this device only.";
   }
   function render(){
     renderWL();
@@ -350,6 +357,14 @@
   }
   function sortObj(o){ var r={}; Object.keys(o).sort().forEach(function(k){ r[k]=o[k]; }); return r; }
   document.addEventListener("click", function(e){
+    var wb = e.target.closest("[data-wl]");
+    if (wb) { var id = wb.dataset.wl; wlToggle(id); var on = !!WL[id];
+      wb.setAttribute("aria-pressed", on ? "true" : "false"); wb.querySelector("span:last-child").textContent = on ? "On wishlist — remove" : "Add to wishlist";
+      var ch = document.querySelector("#bbd-body .chip.wlc"); if (ch && !on) ch.remove();
+      else if (!ch && on) { var c0 = document.querySelector("#bbd-body .chip"); if (c0) c0.insertAdjacentHTML("afterend", ' <span class="chip wlc">'+HEART+' On your wishlist</span>'); }
+      return; }
+    var wr = e.target.closest("[data-wlrm]");
+    if (wr) { delete WL[wr.dataset.wlrm]; wlSave(); render(); return; }
     var bs = e.target.closest("[data-show]");
     if (bs) { var k = bs.dataset.sh; SH[k].st.show = bs.dataset.show; saveSh(k); renderShelf(k); return; }
     var j = e.target.closest("[data-jump]");
@@ -371,8 +386,6 @@
     EX.forEach(function(x){ EXID[x.id] = x; });
     ((d && d.games) || []).forEach(function(x){ if (BYID[x.id]) PUBE[x.id] = x; if (BYID[x.id]) pub[x.id] = x.condition==="loose" ? "L" : /^sealed$/i.test(x.condition) ? "S" : "C"; });
   }).catch(function(){ pub = {}; }).then(function(){
-    fetch("../collection-preview/wishlist.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(w){
-      if (w) { WLMETA = w; (w.wishlist||[]).forEach(function(id){ if (BYID[id]) WL[id] = 1; }); render(); } }).catch(function(){});
     fetch("../collection-preview/sales.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) SALES = v.games; }).catch(function(){});
     return fetch("valuation.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(v){ if (v && v.games) VAL = v; }).catch(function(){});
   }).then(function(){
