@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T12:41:01+02:00",
+ "generated_at": "2026-10-15T12:44:56+02:00",
  "today": "2026-10-15",
  "fx": {
   "date": "2026-10-14",
@@ -13,7 +13,7 @@
  },
  "counts": {
   "2dehands_dupes_of_marktplaats": 0,
-  "ebay_inbox": 56
+  "ebay_inbox": 29
  },
  "sources_ok": [
   "2dehands",
@@ -62,6 +62,2864 @@
  },
  "sources_checked_at": "2026-10-15T12:19:54+02:00",
  "listings": [
+  {
+   "key": "ebay:960069791903",
+   "marketplace": "ebay",
+   "id": "960069791903",
+   "title": "Nintendo Excitebike Game Used Made In Japan 80s NES Gaming Vintage Rare W/sleeve",
+   "url": "https://www.ebay.com/itm/960069791903",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 8.89,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 21.35,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Excitebike",
+   "pc_url": "https://www.pricecharting.com/game/nes/excitebike",
+   "pc_usd": {
+    "loose": 10.93,
+    "cib": 77.0,
+    "new": 300.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 7.94,
+    "buy_now": null,
+    "shipping": 19.07,
+    "total": 27.01,
+    "pc_loose": 9.76,
+    "pc_cib": 68.78,
+    "import": null,
+    "pc_new": 267.98
+   },
+   "verdict": "Overpriced",
+   "pct": 1.52,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 8.89,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:08:53+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/excitebike",
+    "avg_usd": 12.0,
+    "avg_eur": 10.72,
+    "from": "2026-09-29",
+    "to": "2026-10-05",
+    "sales": [
+     {
+      "date": "2026-10-05",
+      "eur": 12.5,
+      "usd": 13.99,
+      "url": "https://www.ebay.com/itm/298717285364",
+      "title": "Excitebike NES Video Game Cartridge Vintage Nintendo Sports"
+     },
+     {
+      "date": "2026-09-30",
+      "eur": 13.4,
+      "usd": 15.0,
+      "url": "https://www.ebay.com/itm/336816095892",
+      "title": "Excitebike Nintendo NES Cartridge With Manual"
+     },
+     {
+      "date": "2026-09-30",
+      "eur": 13.4,
+      "usd": 15.0,
+      "url": "https://www.ebay.com/itm/227416674253",
+      "title": "Nintendo NES Excitebike Video Game Cartridge And Dust Sleeve"
+     },
+     {
+      "date": "2026-09-29",
+      "eur": 4.47,
+      "usd": 5.0,
+      "url": "https://www.ebay.com/itm/307199967093",
+      "title": "⁠Excitebike (Nintendo Entertainment System NES) Cartridge Only Excite Bike"
+     },
+     {
+      "date": "2026-09-29",
+      "eur": 9.83,
+      "usd": 11.0,
+      "url": "https://www.ebay.com/itm/158335320758",
+      "title": "Nintendo Excitebike Nintendo NES Game Cartridge Racing NTSC-U/C"
+     }
+    ],
+    "pct": 1.52
+   },
+   "basis": "last5",
+   "pc_pct": 1.767
+  },
+  {
+   "key": "ebay:117467304818",
+   "marketplace": "ebay",
+   "id": "117467304818",
+   "title": "1st Print GLOSS STICKER Mach Rider NES PSA 8.5 CIB w/ 9.4 Cart Complete in Box",
+   "url": "https://www.ebay.com/itm/117467304818",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 3499.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "graded",
+   "pc_title": "Mach Rider",
+   "pc_url": "https://www.pricecharting.com/game/nes/mach-rider",
+   "pc_usd": {
+    "loose": 8.92,
+    "cib": 158.37,
+    "new": 326.72,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 3125.5,
+    "buy_now": null,
+    "shipping": null,
+    "total": 3125.5,
+    "pc_loose": 7.97,
+    "pc_cib": 141.46,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "single PSA 8.5 graded CIB copy of Mach Rider, not a lot",
+    "graded: not auto-priced",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 3499.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:117467296596",
+   "marketplace": "ebay",
+   "id": "117467296596",
+   "title": "Zombie Nation Nintendo NES WATA 8.0 A FACTORY SEALED ULTRA RARE",
+   "url": "https://www.ebay.com/itm/117467296596",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 3999.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "graded",
+   "pc_title": "Zombie Nation",
+   "pc_url": "https://www.pricecharting.com/game/nes/zombie-nation",
+   "pc_usd": {
+    "loose": 487.5,
+    "cib": 1100.0,
+    "new": 4400.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 3572.13,
+    "buy_now": null,
+    "shipping": null,
+    "total": 3572.13,
+    "pc_loose": 435.46,
+    "pc_cib": 982.58,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "graded: not auto-priced",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 3999.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:820241153251",
+   "marketplace": "ebay",
+   "id": "820241153251",
+   "title": "SUPER MARIO BROS 3 NINTENDO ENTERTAINMENT SYSTEM NES PAL ITA CARTRIDGE ONLY",
+   "url": "https://www.ebay.com/itm/820241153251",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "IT",
+   "price": {
+    "amount": 44.52,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 27.89,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros 3",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+   "pc_usd": {
+    "loose": 17.48,
+    "cib": 79.43,
+    "new": 850.5,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 39.77,
+    "buy_now": null,
+    "shipping": 24.91,
+    "total": 64.68,
+    "pc_loose": 15.61,
+    "pc_cib": 70.95,
+    "import": null,
+    "pc_new": 759.71
+   },
+   "verdict": "Overpriced",
+   "pct": 3.735,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 44.52,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:34:58+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+    "avg_usd": 15.29,
+    "avg_eur": 13.66,
+    "from": "2026-10-07",
+    "to": "2026-10-08",
+    "sales": [
+     {
+      "date": "2026-10-08",
+      "eur": 12.51,
+      "usd": 14.0,
+      "url": "https://www.ebay.com/itm/407274463012",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-08",
+      "eur": 16.93,
+      "usd": 18.95,
+      "url": "https://www.ebay.com/itm/117453504425",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 11.61,
+      "usd": 13.0,
+      "url": "https://www.ebay.com/itm/237113374159",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 12.95,
+      "usd": 14.5,
+      "url": "https://www.ebay.com/itm/237113372939",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 14.28,
+      "usd": 15.99,
+      "url": "https://www.ebay.com/itm/189025339778",
+      "title": "Super Mario Bros 3 (Nintendo Entertainment System, 1990) NES - Tested and Works"
+     }
+    ],
+    "pct": 3.735
+   },
+   "basis": "last5",
+   "pc_pct": 3.143
+  },
+  {
+   "key": "ebay:820241153257",
+   "marketplace": "ebay",
+   "id": "820241153257",
+   "title": "COSMIC SPACEHEAD NINTENDO NES CODEMASTERS PAL EXCELLENT CARTRIDGE ONLY",
+   "url": "https://www.ebay.com/itm/820241153257",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "IT",
+   "price": {
+    "amount": 100.3,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 27.89,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": null,
+   "pc_url": null,
+   "pc_usd": null,
+   "eur": {
+    "price": 89.59,
+    "buy_now": null,
+    "shipping": 24.91,
+    "total": 114.5,
+    "pc_loose": null,
+    "pc_cib": null,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "game not matched on PriceCharting",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 100.3,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:820241153266",
+   "marketplace": "ebay",
+   "id": "820241153266",
+   "title": "SUPER ADVENTURE QUESTS NINTENDO NES CODEMASTERS PAL EXCELLENT CARTRIDGE ONLY",
+   "url": "https://www.ebay.com/itm/820241153266",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "IT",
+   "price": {
+    "amount": 77.99,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 27.89,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": null,
+   "pc_url": null,
+   "pc_usd": null,
+   "eur": {
+    "price": 69.67,
+    "buy_now": null,
+    "shipping": 24.91,
+    "total": 94.58,
+    "pc_loose": null,
+    "pc_cib": null,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "game not matched on PriceCharting",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 77.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:800797161160",
+   "marketplace": "ebay",
+   "id": "800797161160",
+   "title": "Teenage Mutant Ninja Turtles II: The Arcade Game (Nintendo NES, 1990) Cartridge",
+   "url": "https://www.ebay.com/itm/800797161160",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 19.99,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 17.47,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Teenage Mutant Ninja Turtles II",
+   "pc_url": "https://www.pricecharting.com/game/nes/teenage-mutant-ninja-turtles-ii",
+   "pc_usd": {
+    "loose": 16.0,
+    "cib": 100.0,
+    "new": 679.33,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 17.86,
+    "buy_now": null,
+    "shipping": 15.61,
+    "total": 33.47,
+    "pc_loose": 14.29,
+    "pc_cib": 89.33,
+    "import": null,
+    "pc_new": 606.82
+   },
+   "verdict": "Overpriced",
+   "pct": 1.272,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 19.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-09T18:44:42+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/teenage-mutant-ninja-turtles-ii",
+    "avg_usd": 16.49,
+    "avg_eur": 14.73,
+    "from": "2026-10-06",
+    "to": "2026-10-07",
+    "sales": [
+     {
+      "date": "2026-10-07",
+      "eur": 15.18,
+      "usd": 16.99,
+      "url": "https://www.ebay.com/itm/117433618670",
+      "title": "Nintendo NES Teenage Mutant Ninja Turtles II Arcade Game ULTRA Cartridge"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 15.63,
+      "usd": 17.5,
+      "url": "https://www.ebay.com/itm/377550750934",
+      "title": "Teenage Mutant Ninja Turtles 2 Arcade Game for Nintendo NES Tested Cartridge"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 12.5,
+      "usd": 13.99,
+      "url": "https://www.ebay.com/itm/206586280432",
+      "title": "Teenage Mutant Ninja Turtles 2 The Arcade Game Nintendo NES Cartridge Only"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 15.18,
+      "usd": 16.99,
+      "url": "https://www.ebay.com/itm/318816864990",
+      "title": "Teenage Mutant Ninja Turtles II Nintendo Nes Cleaned & Tested Authentic"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 15.18,
+      "usd": 16.99,
+      "url": "https://www.ebay.com/itm/389916788215",
+      "title": "Teenage Mutant Ninja Turtles II (Nintendo - NES, 1989) Tested, Authentic, Works!"
+     }
+    ],
+    "pct": 1.272
+   },
+   "basis": "last5",
+   "pc_pct": 1.342
+  },
+  {
+   "key": "ebay:800797149234",
+   "marketplace": "ebay",
+   "id": "800797149234",
+   "title": "Tetris (Nintendo Entertainment System, 1989) Cartridge Only Tested FREE SHIPPING",
+   "url": "https://www.ebay.com/itm/800797149234",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 19.99,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 14.09,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Tetris",
+   "pc_url": "https://www.pricecharting.com/game/nes/tetris",
+   "pc_usd": {
+    "loose": 10.0,
+    "cib": 30.6,
+    "new": 400.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 17.86,
+    "buy_now": null,
+    "shipping": 12.59,
+    "total": 30.45,
+    "pc_loose": 8.93,
+    "pc_cib": 27.33,
+    "import": null,
+    "pc_new": 357.3
+   },
+   "verdict": "Overpriced",
+   "pct": 1.666,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 19.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-15T12:32:35+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/tetris",
+    "avg_usd": 12.79,
+    "avg_eur": 11.42,
+    "from": "2026-10-09",
+    "to": "2026-10-12",
+    "sales": [
+     {
+      "date": "2026-10-12",
+      "eur": 11.6,
+      "usd": 12.99,
+      "url": "https://www.ebay.nl/itm/800510089602",
+      "title": "Tetris Authentic NES Game Cartridge Nintendo Tested Cleaned & Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 13.84,
+      "usd": 15.49,
+      "url": "https://www.ebay.nl/itm/227561064491",
+      "title": "Tetris (Nintendo NES, 1989) Authentic Cartridge Only Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 7.14,
+      "usd": 7.99,
+      "url": "https://www.ebay.nl/itm/237116802921",
+      "title": "Nintendo NES Tetris (Cleaned, Tested & Working)"
+     },
+     {
+      "date": "2026-10-10",
+      "eur": 17.41,
+      "usd": 19.49,
+      "url": "https://www.ebay.nl/itm/227543513704",
+      "title": "Tetris (Nintendo NES, 1989) Authentic Cartridge + Manual Tested"
+     },
+     {
+      "date": "2026-10-09",
+      "eur": 7.14,
+      "usd": 7.99,
+      "url": "https://www.ebay.nl/itm/128123510686",
+      "title": "Tetris NES - Authentic and Tested with Sleeve"
+     }
+    ],
+    "pct": 1.666
+   },
+   "basis": "last5",
+   "pc_pct": 2.41
+  },
+  {
+   "key": "ebay:800797143047",
+   "marketplace": "ebay",
+   "id": "800797143047",
+   "title": "Tetris (Nintendo Entertainment System, 1989) Cartridge Only Tested FREE SHIPPING",
+   "url": "https://www.ebay.com/itm/800797143047",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 19.99,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 14.09,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Tetris",
+   "pc_url": "https://www.pricecharting.com/game/nes/tetris",
+   "pc_usd": {
+    "loose": 10.0,
+    "cib": 30.6,
+    "new": 400.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 17.86,
+    "buy_now": null,
+    "shipping": 12.59,
+    "total": 30.45,
+    "pc_loose": 8.93,
+    "pc_cib": 27.33,
+    "import": null,
+    "pc_new": 357.3
+   },
+   "verdict": "Overpriced",
+   "pct": 1.666,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 19.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-15T12:32:35+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/tetris",
+    "avg_usd": 12.79,
+    "avg_eur": 11.42,
+    "from": "2026-10-09",
+    "to": "2026-10-12",
+    "sales": [
+     {
+      "date": "2026-10-12",
+      "eur": 11.6,
+      "usd": 12.99,
+      "url": "https://www.ebay.nl/itm/800510089602",
+      "title": "Tetris Authentic NES Game Cartridge Nintendo Tested Cleaned & Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 13.84,
+      "usd": 15.49,
+      "url": "https://www.ebay.nl/itm/227561064491",
+      "title": "Tetris (Nintendo NES, 1989) Authentic Cartridge Only Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 7.14,
+      "usd": 7.99,
+      "url": "https://www.ebay.nl/itm/237116802921",
+      "title": "Nintendo NES Tetris (Cleaned, Tested & Working)"
+     },
+     {
+      "date": "2026-10-10",
+      "eur": 17.41,
+      "usd": 19.49,
+      "url": "https://www.ebay.nl/itm/227543513704",
+      "title": "Tetris (Nintendo NES, 1989) Authentic Cartridge + Manual Tested"
+     },
+     {
+      "date": "2026-10-09",
+      "eur": 7.14,
+      "usd": 7.99,
+      "url": "https://www.ebay.nl/itm/128123510686",
+      "title": "Tetris NES - Authentic and Tested with Sleeve"
+     }
+    ],
+    "pct": 1.666
+   },
+   "basis": "last5",
+   "pc_pct": 2.41
+  },
+  {
+   "key": "ebay:880018362203",
+   "marketplace": "ebay",
+   "id": "880018362203",
+   "title": "Zelda II: The Adventure of Link * Classic Series * Complete in Box * CIB * NES",
+   "url": "https://www.ebay.com/itm/880018362203",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 99.99,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 35.26,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "CIB",
+   "pc_title": "Zelda II The Adventure of Link",
+   "pc_url": "https://www.pricecharting.com/game/nes/zelda-ii-the-adventure-of-link",
+   "pc_usd": {
+    "loose": 25.47,
+    "cib": 99.5,
+    "new": 400.99,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 89.32,
+    "buy_now": null,
+    "shipping": 31.5,
+    "total": 120.82,
+    "pc_loose": 22.75,
+    "pc_cib": 88.88,
+    "import": null,
+    "pc_new": 358.19
+   },
+   "verdict": "Fair",
+   "pct": -0.031,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 99.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "cib",
+    "label": "CIB",
+    "n": 5,
+    "fetched_at": "2026-10-08T22:09:35+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/zelda-ii-the-adventure-of-link",
+    "avg_usd": 139.59,
+    "avg_eur": 124.69,
+    "from": "2026-09-27",
+    "to": "2026-10-06",
+    "sales": [
+     {
+      "date": "2026-10-06",
+      "eur": 133.98,
+      "usd": 149.99,
+      "url": "https://www.ebay.nl/itm/188925814628",
+      "title": "Zelda II Adventure of Link Nintendo NES Gold Cartridge Box Manual Tested"
+     },
+     {
+      "date": "2026-10-05",
+      "eur": 111.65,
+      "usd": 124.99,
+      "url": "https://www.ebay.nl/itm/189028999311",
+      "title": "Original Nintendo NES Zelda II The Adventure of Link Cartridge and Box, Works"
+     },
+     {
+      "date": "2026-10-04",
+      "eur": 88.43,
+      "usd": 99.0,
+      "url": "https://www.ebay.nl/itm/178547035965",
+      "title": "Nintendo NES Zelda II The Adventure of Link Classic CIB Complete in Box, Works"
+     },
+     {
+      "date": "2026-10-04",
+      "eur": 111.65,
+      "usd": 124.99,
+      "url": "https://www.ebay.nl/itm/820191438294",
+      "title": "Zelda II The Adventure of Link Gray Cart Nintendo NES CIB Tested"
+     },
+     {
+      "date": "2026-09-27",
+      "eur": 177.76,
+      "usd": 199.0,
+      "url": "https://www.ebay.nl/itm/168705117406",
+      "title": "Nintendo NES Zelda 2 The Adventure Of LINK CIB"
+     }
+    ],
+    "pct": -0.031
+   },
+   "basis": "last5",
+   "pc_pct": 0.359
+  },
+  {
+   "key": "ebay:407291684591",
+   "marketplace": "ebay",
+   "id": "407291684591",
+   "title": "Attack of the Killer Tomatoes (Nintendo NES, 1992)",
+   "url": "https://www.ebay.com/itm/407291684591",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 224.99,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 22.2,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Attack of the Killer Tomatoes",
+   "pc_url": "https://www.pricecharting.com/game/nes/attack-of-the-killer-tomatoes",
+   "pc_usd": {
+    "loose": 86.67,
+    "cib": 219.94,
+    "new": 880.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 200.97,
+    "buy_now": null,
+    "shipping": 19.83,
+    "total": 220.8,
+    "pc_loose": 77.42,
+    "pc_cib": 196.46,
+    "import": null,
+    "pc_new": 786.07
+   },
+   "verdict": "Overpriced",
+   "pct": 1.852,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 224.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": "pricecharting",
+   "pc_pct": 1.852
+  },
+  {
+   "key": "ebay:227568140287",
+   "marketplace": "ebay",
+   "id": "227568140287",
+   "title": "Fester's Quest (Nintendo Entertainment System, 1989)",
+   "url": "https://www.ebay.com/itm/227568140287",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 4.99,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 19.54,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Fester's Quest",
+   "pc_url": "https://www.pricecharting.com/game/nes/fester%27s-quest",
+   "pc_usd": {
+    "loose": 9.79,
+    "cib": 36.5,
+    "new": 284.36,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 4.46,
+    "buy_now": null,
+    "shipping": 17.45,
+    "total": 21.91,
+    "pc_loose": 8.74,
+    "pc_cib": 32.6,
+    "import": null,
+    "pc_new": 254.01
+   },
+   "verdict": "Overpriced",
+   "pct": 1.432,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 4.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-13T18:36:31+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/fester%27s-quest",
+    "avg_usd": 10.09,
+    "avg_eur": 9.01,
+    "from": "2026-09-28",
+    "to": "2026-10-01",
+    "sales": [
+     {
+      "date": "2026-10-01",
+      "eur": 12.46,
+      "usd": 13.95,
+      "url": "https://www.ebay.com/itm/366677267758",
+      "title": "Fester's Quest (Nintendo NES Authentic Game) Cleaned Tested Working"
+     },
+     {
+      "date": "2026-09-30",
+      "eur": 6.25,
+      "usd": 7.0,
+      "url": "https://www.ebay.com/itm/236704080064",
+      "title": "Fester's Quest Nintendo Entertainment System, 1989 NES Tested Authentic"
+     },
+     {
+      "date": "2026-09-28",
+      "eur": 9.38,
+      "usd": 10.5,
+      "url": "https://www.ebay.com/itm/127954400992",
+      "title": "Festers Quest Nintendo NES Cartridge Only Tested"
+     },
+     {
+      "date": "2026-09-28",
+      "eur": 10.71,
+      "usd": 11.99,
+      "url": "https://www.ebay.com/itm/236966903230",
+      "title": "Fester's Quest (Nintendo NES, 1989) Loose, Tested & Working"
+     },
+     {
+      "date": "2026-09-28",
+      "eur": 6.24,
+      "usd": 6.99,
+      "url": "https://www.ebay.com/itm/256924741623",
+      "title": "Fester's Quest Nintendo NES - Cleaned, Tested & Works Great"
+     }
+    ],
+    "pct": 1.432
+   },
+   "basis": "last5",
+   "pc_pct": 1.507
+  },
+  {
+   "key": "ebay:960069369094",
+   "marketplace": "ebay",
+   "id": "960069369094",
+   "title": "Donkey Kong Jr Math NES Cartridge 5 Screws Authentic With Dust Cover",
+   "url": "https://www.ebay.com/itm/960069369094",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 229.99,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 30.46,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Donkey Kong Jr Math",
+   "pc_url": "https://www.pricecharting.com/game/nes/donkey-kong-jr-math",
+   "pc_usd": {
+    "loose": 199.0,
+    "cib": 2999.0,
+    "new": 11996.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 205.44,
+    "buy_now": null,
+    "shipping": 27.21,
+    "total": 232.65,
+    "pc_loose": 177.76,
+    "pc_cib": 2678.87,
+    "import": null,
+    "pc_new": 10715.5
+   },
+   "verdict": "Overpriced",
+   "pct": 0.309,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 229.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": "pricecharting",
+   "pc_pct": 0.309
+  },
+  {
+   "key": "ebay:206628114863",
+   "marketplace": "ebay",
+   "id": "206628114863",
+   "title": "Rad Racer Nintendo NES Square Car Racing Game",
+   "url": "https://www.ebay.com/itm/206628114863",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 14.25,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Rad Racer",
+   "pc_url": "https://www.pricecharting.com/game/nes/rad-racer",
+   "pc_usd": {
+    "loose": 11.56,
+    "cib": 45.0,
+    "new": 505.6,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 12.73,
+    "buy_now": null,
+    "shipping": null,
+    "total": 12.73,
+    "pc_loose": 10.33,
+    "pc_cib": 40.2,
+    "import": null,
+    "pc_new": 451.63
+   },
+   "verdict": "Fair",
+   "pct": 0.189,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 14.25,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:13:41+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/rad-racer",
+    "avg_usd": 11.99,
+    "avg_eur": 10.71,
+    "from": "2026-09-25",
+    "to": "2026-09-30",
+    "sales": [
+     {
+      "date": "2026-09-30",
+      "eur": 16.96,
+      "usd": 18.99,
+      "url": "https://www.ebay.com/itm/407239884939",
+      "title": "Rad Racer Nintendo Entertainment System NES Authentic Tested Working"
+     },
+     {
+      "date": "2026-09-29",
+      "eur": 11.6,
+      "usd": 12.99,
+      "url": "https://www.ebay.com/itm/278333256077",
+      "title": "Rad Racer (NES) Loose Cart Only - Auth Good Cond"
+     },
+     {
+      "date": "2026-09-27",
+      "eur": 10.72,
+      "usd": 12.0,
+      "url": "https://www.ebay.com/itm/237031079461",
+      "title": "Nintendo NES Rad Racer (Cleaned, Tested & Working)"
+     },
+     {
+      "date": "2026-09-25",
+      "eur": 9.83,
+      "usd": 11.0,
+      "url": "https://www.ebay.com/itm/267772986486",
+      "title": "Nintendo NES - Rad Racer - Cartridge Only - Tested"
+     },
+     {
+      "date": "2026-09-25",
+      "eur": 4.46,
+      "usd": 4.99,
+      "url": "https://www.ebay.com/itm/237080693157",
+      "title": "Nintendo NES Rad Racer (Cleaned, Tested & Working)"
+     }
+    ],
+    "pct": 0.189
+   },
+   "basis": "last5",
+   "pc_pct": 0.232
+  },
+  {
+   "key": "ebay:227568115753",
+   "marketplace": "ebay",
+   "id": "227568115753",
+   "title": "1985 Super Mario Bros. AND Duck Hunt Original Nintendo NES-MH-USA Game Cartridge",
+   "url": "https://www.ebay.com/itm/227568115753",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 4.99,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 22.91,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros and Duck Hunt",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-and-duck-hunt",
+   "pc_usd": {
+    "loose": 6.11,
+    "cib": 98.25,
+    "new": 393.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 4.46,
+    "buy_now": null,
+    "shipping": 20.46,
+    "total": 24.92,
+    "pc_loose": 5.46,
+    "pc_cib": 87.76,
+    "import": null,
+    "pc_new": 351.05
+   },
+   "verdict": "Overpriced",
+   "pct": 2.9,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 4.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:35:00+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-and-duck-hunt",
+    "avg_usd": 7.16,
+    "avg_eur": 6.39,
+    "from": "2026-10-06",
+    "to": "2026-10-07",
+    "sales": [
+     {
+      "date": "2026-10-07",
+      "eur": 5.36,
+      "usd": 6.0,
+      "url": "https://www.ebay.com/itm/117385528398",
+      "title": "Super Mario Bros./Duck Hunt (Nintendo Entertainment System NES, 1988) Tested"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 7.14,
+      "usd": 7.99,
+      "url": "https://www.ebay.com/itm/205354230436",
+      "title": "Original NES Nintendo Game Super Mario Bros, Duck Hunt and Track Meet One"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 10.72,
+      "usd": 12.0,
+      "url": "https://www.ebay.com/itm/277213496624",
+      "title": "Vintage Original Nintendo NES Super Mario Bros and Duck Hunt Video Game Cart"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 4.46,
+      "usd": 4.99,
+      "url": "https://www.ebay.com/itm/407081889743",
+      "title": "Super Mario Bros./Duck Hunt (Nintendo Entertainment System, 1988)"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 4.29,
+      "usd": 4.8,
+      "url": "https://www.ebay.com/itm/168210988042",
+      "title": "Super Mario Bros./Duck Hunt (Nintendo Entertainment System, 1985)"
+     }
+    ],
+    "pct": 2.9
+   },
+   "basis": "last5",
+   "pc_pct": 3.564
+  },
+  {
+   "key": "ebay:227568094985",
+   "marketplace": "ebay",
+   "id": "227568094985",
+   "title": "Super Mario Bros. 3 NES Nintendo 1988 Original Game Cartridge Tested w/ Case",
+   "url": "https://www.ebay.com/itm/227568094985",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 24.95,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 24.47,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros 3",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+   "pc_usd": {
+    "loose": 17.48,
+    "cib": 79.43,
+    "new": 850.5,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 22.29,
+    "buy_now": null,
+    "shipping": 21.86,
+    "total": 44.15,
+    "pc_loose": 15.61,
+    "pc_cib": 70.95,
+    "import": null,
+    "pc_new": 759.71
+   },
+   "verdict": "Overpriced",
+   "pct": 2.232,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 24.95,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:34:58+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+    "avg_usd": 15.29,
+    "avg_eur": 13.66,
+    "from": "2026-10-07",
+    "to": "2026-10-08",
+    "sales": [
+     {
+      "date": "2026-10-08",
+      "eur": 12.51,
+      "usd": 14.0,
+      "url": "https://www.ebay.com/itm/407274463012",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-08",
+      "eur": 16.93,
+      "usd": 18.95,
+      "url": "https://www.ebay.com/itm/117453504425",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 11.61,
+      "usd": 13.0,
+      "url": "https://www.ebay.com/itm/237113374159",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 12.95,
+      "usd": 14.5,
+      "url": "https://www.ebay.com/itm/237113372939",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 14.28,
+      "usd": 15.99,
+      "url": "https://www.ebay.com/itm/189025339778",
+      "title": "Super Mario Bros 3 (Nintendo Entertainment System, 1990) NES - Tested and Works"
+     }
+    ],
+    "pct": 2.232
+   },
+   "basis": "last5",
+   "pc_pct": 1.828
+  },
+  {
+   "key": "ebay:128136241936",
+   "marketplace": "ebay",
+   "id": "128136241936",
+   "title": "Konami Castlevania (Nintendo NES) NTSC-U/C (US/Canada) Castlevania Series",
+   "url": "https://www.ebay.com/itm/128136241936",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 35.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Castlevania",
+   "pc_url": "https://www.pricecharting.com/game/nes/castlevania",
+   "pc_usd": {
+    "loose": 30.62,
+    "cib": 191.06,
+    "new": 4033.25,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 31.26,
+    "buy_now": null,
+    "shipping": null,
+    "total": 31.26,
+    "pc_loose": 27.35,
+    "pc_cib": 170.67,
+    "import": null,
+    "pc_new": 3602.72
+   },
+   "verdict": "Overpriced",
+   "pct": 0.275,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 35.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-14T08:19:43+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/castlevania",
+    "avg_usd": 27.43,
+    "avg_eur": 24.51,
+    "from": "2026-10-11",
+    "to": "2026-10-13",
+    "sales": [
+     {
+      "date": "2026-10-13",
+      "eur": 19.64,
+      "usd": 21.99,
+      "url": "https://www.ebay.com/itm/257796227284",
+      "title": "Castlevania Nintendo NES Authentic Tested"
+     },
+     {
+      "date": "2026-10-12",
+      "eur": 27.69,
+      "usd": 31.0,
+      "url": "https://www.ebay.com/itm/880011001002",
+      "title": "Castlevania Nintendo NES Authentic Tested and Working"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 26.79,
+      "usd": 29.99,
+      "url": "https://www.ebay.com/itm/407272469387",
+      "title": "Castlevania Nintendo NES Tested and Working"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 25.0,
+      "usd": 27.99,
+      "url": "https://www.ebay.com/itm/206618003288",
+      "title": "Castlevania NES Cleaned/Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 23.4,
+      "usd": 26.2,
+      "url": "https://www.ebay.com/itm/840006639399",
+      "title": "🗡 Castlevania NINTENDO NES Video Game Authentic! Cartridge Only! TESTED!"
+     }
+    ],
+    "pct": 0.275
+   },
+   "basis": "last5",
+   "pc_pct": 0.143
+  },
+  {
+   "key": "ebay:227568076811",
+   "marketplace": "ebay",
+   "id": "227568076811",
+   "title": "Nintendo NES Exctiebike (Tested & Working)",
+   "url": "https://www.ebay.com/itm/227568076811",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 5.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 19.54,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": null,
+   "pc_url": null,
+   "pc_usd": null,
+   "eur": {
+    "price": 4.47,
+    "buy_now": null,
+    "shipping": 17.45,
+    "total": 21.92,
+    "pc_loose": null,
+    "pc_cib": null,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "game not matched on PriceCharting",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 5.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:840022919332",
+   "marketplace": "ebay",
+   "id": "840022919332",
+   "title": "Life Force Konami NES Game Cartridge - Authentic & TESTED",
+   "url": "https://www.ebay.com/itm/840022919332",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 20.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 23.4,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Life Force",
+   "pc_url": "https://www.pricecharting.com/game/nes/life-force",
+   "pc_usd": {
+    "loose": 17.85,
+    "cib": 63.5,
+    "new": 254.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 17.87,
+    "buy_now": null,
+    "shipping": 20.9,
+    "total": 38.77,
+    "pc_loose": 15.94,
+    "pc_cib": 56.72,
+    "import": null,
+    "pc_new": 226.89
+   },
+   "verdict": "Overpriced",
+   "pct": 1.227,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 20.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:11:20+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/life-force",
+    "avg_usd": 19.5,
+    "avg_eur": 17.41,
+    "from": "2026-09-27",
+    "to": "2026-10-05",
+    "sales": [
+     {
+      "date": "2026-10-05",
+      "eur": 19.65,
+      "usd": 22.0,
+      "url": "https://www.ebay.com/itm/178507648757",
+      "title": "Life Force (Nintendo Entertainment System, 1988) CARTRIDGE ONLY"
+     },
+     {
+      "date": "2026-10-02",
+      "eur": 12.51,
+      "usd": 14.0,
+      "url": "https://www.ebay.com/itm/287613181751",
+      "title": "Konami Life Force Nintendo NES Shooter 1988 1 Player 2 Players Game"
+     },
+     {
+      "date": "2026-10-01",
+      "eur": 19.21,
+      "usd": 21.5,
+      "url": "https://www.ebay.com/itm/235538965000",
+      "title": "Life Force Nintendo NES Authentic Tested Working Free Shipping video game"
+     },
+     {
+      "date": "2026-09-29",
+      "eur": 13.39,
+      "usd": 14.99,
+      "url": "https://www.ebay.com/itm/287425063132",
+      "title": "Life Force (Nintendo Entertainment System, 1988) - Cartridge Only - T&W"
+     },
+     {
+      "date": "2026-09-27",
+      "eur": 22.32,
+      "usd": 24.99,
+      "url": "https://www.ebay.com/itm/188990628633",
+      "title": "Life Force NES Nintendo Cartridge Tested Working Free Shipping"
+     }
+    ],
+    "pct": 1.227
+   },
+   "basis": "last5",
+   "pc_pct": 1.432
+  },
+  {
+   "key": "ebay:227568075897",
+   "marketplace": "ebay",
+   "id": "227568075897",
+   "title": "Used Super Mario Bros. 2 NINTENDO NES GAME Cartridge",
+   "url": "https://www.ebay.com/itm/227568075897",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 15.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 23.24,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros 2",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-2",
+   "pc_usd": {
+    "loose": 21.83,
+    "cib": 69.95,
+    "new": 1173.31,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 13.4,
+    "buy_now": null,
+    "shipping": 20.76,
+    "total": 34.16,
+    "pc_loose": 19.5,
+    "pc_cib": 62.48,
+    "import": null,
+    "pc_new": 1048.07
+   },
+   "verdict": "Overpriced",
+   "pct": 1.0,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 15.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:34:42+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-2",
+    "avg_usd": 19.12,
+    "avg_eur": 17.08,
+    "from": "2026-10-06",
+    "to": "2026-10-08",
+    "sales": [
+     {
+      "date": "2026-10-08",
+      "eur": 16.08,
+      "usd": 18.0,
+      "url": "https://www.ebay.com/itm/407239992539",
+      "title": "Nintendo NES 1988 Super Mario Bros. 2 Game Cartridge Tested/Working"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 20.54,
+      "usd": 22.99,
+      "url": "https://www.ebay.com/itm/237102387116",
+      "title": "Super Mario Bros. 2 Nintendo Entertainment System NES, 1988, Tested"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 22.01,
+      "usd": 24.64,
+      "url": "https://www.ebay.com/itm/287630357718",
+      "title": "Super Mario Bros. 2 (Nintendo Entertainment System NES, 1988) Tested Works"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 10.72,
+      "usd": 12.0,
+      "url": "https://www.ebay.com/itm/820210454015",
+      "title": "Super Mario Bros. 2 • Nintendo NES • Game Cartridge Only • Untested"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 16.07,
+      "usd": 17.99,
+      "url": "https://www.ebay.com/itm/377548724769",
+      "title": "Nintendo Super Mario Bros. 2 Nintendo NES Game Cartridge & Sleeve - Tested!"
+     }
+    ],
+    "pct": 1.0
+   },
+   "basis": "last5",
+   "pc_pct": 0.752
+  },
+  {
+   "key": "ebay:860046023645",
+   "marketplace": "ebay",
+   "id": "860046023645",
+   "title": "Lot of NES Games and Game Sleaves - Tested",
+   "url": "https://www.ebay.com/itm/860046023645",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 20.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "lot",
+   "pc_title": null,
+   "pc_url": null,
+   "pc_usd": null,
+   "eur": {
+    "price": 17.87,
+    "buy_now": null,
+    "shipping": null,
+    "total": 17.87,
+    "pc_loose": null,
+    "pc_cib": null,
+    "import": null
+   },
+   "verdict": "Unclear",
+   "pct": null,
+   "notes": [
+    "lot: not auto-priced",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 20.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": null,
+   "pc_pct": null
+  },
+  {
+   "key": "ebay:227568074533",
+   "marketplace": "ebay",
+   "id": "227568074533",
+   "title": "Snake Rattle N Roll (Nintendo Entertainment System, 1991) Cartridge Only",
+   "url": "https://www.ebay.com/itm/227568074533",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 8.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 19.63,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Snake Rattle n Roll",
+   "pc_url": "https://www.pricecharting.com/game/nes/snake-rattle-n-roll",
+   "pc_usd": {
+    "loose": 8.97,
+    "cib": 44.98,
+    "new": 180.0,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 7.15,
+    "buy_now": null,
+    "shipping": 17.53,
+    "total": 24.68,
+    "pc_loose": 8.01,
+    "pc_cib": 40.18,
+    "import": null,
+    "pc_new": 160.79
+   },
+   "verdict": "Overpriced",
+   "pct": 2.081,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 8.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": "pricecharting",
+   "pc_pct": 2.081
+  },
+  {
+   "key": "ebay:840022905513",
+   "marketplace": "ebay",
+   "id": "840022905513",
+   "title": "Super Mario Bros. (Nintendo Entertainment System, NES) 5 Screw TESTED",
+   "url": "https://www.ebay.com/itm/840022905513",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 25.0,
+    "currency": "USD",
+    "type": "BIN+BO"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 23.56,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros",
+   "pc_usd": {
+    "loose": 16.92,
+    "cib": 263.36,
+    "new": 4671.77,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 22.33,
+    "buy_now": null,
+    "shipping": 21.05,
+    "total": 43.38,
+    "pc_loose": 15.11,
+    "pc_cib": 235.25,
+    "import": null,
+    "pc_new": 4173.09
+   },
+   "verdict": "Overpriced",
+   "pct": 2.35,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 25.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:35:04+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros",
+    "avg_usd": 14.5,
+    "avg_eur": 12.95,
+    "from": "2026-10-05",
+    "to": "2026-10-06",
+    "sales": [
+     {
+      "date": "2026-10-06",
+      "eur": 14.29,
+      "usd": 16.0,
+      "url": "https://www.ebay.com/itm/920009443781",
+      "title": "Nintendo Super Mario Bros. Nintendo NES Game Cartridge Super Mario Series"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 16.08,
+      "usd": 18.0,
+      "url": "https://www.ebay.com/itm/327388741885",
+      "title": "Super Mario Bros (Nintendo NES) 5 Screw Varient - Tested See Photos"
+     },
+     {
+      "date": "2026-10-06",
+      "eur": 8.93,
+      "usd": 10.0,
+      "url": "https://www.ebay.com/itm/377546757869",
+      "title": "Nintendo Super Mario Bros. NES Game Cartridge - Action & Adventure, Super Mario"
+     },
+     {
+      "date": "2026-10-05",
+      "eur": 12.06,
+      "usd": 13.5,
+      "url": "https://www.ebay.com/itm/128103990314",
+      "title": "Nintendo Super Mario Bros. Nintendo NES Game Cartridge"
+     },
+     {
+      "date": "2026-10-05",
+      "eur": 13.4,
+      "usd": 15.0,
+      "url": "https://www.ebay.com/itm/366707724778",
+      "title": "Nintendo Super Mario Land Nintendo Game *TESTED WORKS* *AUTHENTIC*"
+     }
+    ],
+    "pct": 2.35
+   },
+   "basis": "last5",
+   "pc_pct": 1.871
+  },
+  {
+   "key": "ebay:227568072987",
+   "marketplace": "ebay",
+   "id": "227568072987",
+   "title": "NES Super Mario 3 Game-Cartridge Only",
+   "url": "https://www.ebay.com/itm/227568072987",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 12.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 19.76,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Mario Bros 3",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+   "pc_usd": {
+    "loose": 17.48,
+    "cib": 79.43,
+    "new": 850.5,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 10.72,
+    "buy_now": null,
+    "shipping": 17.65,
+    "total": 28.37,
+    "pc_loose": 15.61,
+    "pc_cib": 70.95,
+    "import": null,
+    "pc_new": 759.71
+   },
+   "verdict": "Overpriced",
+   "pct": 1.077,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 12.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:34:58+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-mario-bros-3",
+    "avg_usd": 15.29,
+    "avg_eur": 13.66,
+    "from": "2026-10-07",
+    "to": "2026-10-08",
+    "sales": [
+     {
+      "date": "2026-10-08",
+      "eur": 12.51,
+      "usd": 14.0,
+      "url": "https://www.ebay.com/itm/407274463012",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-08",
+      "eur": 16.93,
+      "usd": 18.95,
+      "url": "https://www.ebay.com/itm/117453504425",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 11.61,
+      "usd": 13.0,
+      "url": "https://www.ebay.com/itm/237113374159",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 12.95,
+      "usd": 14.5,
+      "url": "https://www.ebay.com/itm/237113372939",
+      "title": "Super Mario 3 Game-Cartridge Only Nintendo NES / Authentic - Tested and Working"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 14.28,
+      "usd": 15.99,
+      "url": "https://www.ebay.com/itm/189025339778",
+      "title": "Super Mario Bros 3 (Nintendo Entertainment System, 1990) NES - Tested and Works"
+     }
+    ],
+    "pct": 1.077
+   },
+   "basis": "last5",
+   "pc_pct": 0.817
+  },
+  {
+   "key": "ebay:800796781297",
+   "marketplace": "ebay",
+   "id": "800796781297",
+   "title": "LJN Back to the Future for Nintendo NES Game Cartridge Power Play NTSC 1989",
+   "url": "https://www.ebay.com/itm/800796781297",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 10.0,
+    "currency": "USD",
+    "type": "auction"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": null,
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Back to the Future",
+   "pc_url": "https://www.pricecharting.com/game/nes/back-to-the-future",
+   "pc_usd": {
+    "loose": 14.63,
+    "cib": 76.01,
+    "new": 670.06,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 8.93,
+    "buy_now": null,
+    "shipping": null,
+    "total": 8.93,
+    "pc_loose": 13.07,
+    "pc_cib": 67.9,
+    "import": null,
+    "pc_new": 598.54
+   },
+   "verdict": "Good buy",
+   "pct": -0.317,
+   "notes": [
+    "auction: verdict at current bid, will likely rise",
+    "shipping unknown",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 10.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "auction",
+   "also_buy_now": false,
+   "sales5": null,
+   "basis": "pricecharting",
+   "pc_pct": -0.317
+  },
+  {
+   "key": "ebay:227568064865",
+   "marketplace": "ebay",
+   "id": "227568064865",
+   "title": "Nintendo Tetris Nintendo NES Puzzle Game Cartridge Tetris Series",
+   "url": "https://www.ebay.com/itm/227568064865",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 9.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 23.04,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Puzzle",
+   "pc_url": "https://www.pricecharting.com/game/nes/puzzle",
+   "pc_usd": {
+    "loose": 11.8,
+    "cib": 35.0,
+    "new": 110.11,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 8.04,
+    "buy_now": null,
+    "shipping": 20.58,
+    "total": 28.62,
+    "pc_loose": 10.54,
+    "pc_cib": 31.26,
+    "import": null,
+    "pc_new": 98.36
+   },
+   "verdict": "Overpriced",
+   "pct": 1.631,
+   "notes": [
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 9.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-14T08:18:50+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/puzzle",
+    "avg_usd": 12.18,
+    "avg_eur": 10.88,
+    "from": "2026-05-08",
+    "to": "2026-09-09",
+    "sales": [
+     {
+      "date": "2026-09-09",
+      "eur": 10.71,
+      "usd": 11.99,
+      "url": "https://www.ebay.com/itm/227467912789",
+      "title": "NES Nintendo Puzzle AVE American Video Entertainment Unlicensed Authentic Tested"
+     },
+     {
+      "date": "2026-06-09",
+      "eur": 8.92,
+      "usd": 9.99,
+      "url": "https://www.ebay.com/itm/147277624273",
+      "title": "The Ultimate Stuntman (NES, Camerica) Gold Cart - Rare – Tested Working"
+     },
+     {
+      "date": "2026-06-06",
+      "eur": 11.53,
+      "usd": 12.91,
+      "url": "https://www.ebay.com/itm/356883898715",
+      "title": "Puzzle - Authentic Nintendo NES Game - 3rd Party - American Video Tested"
+     },
+     {
+      "date": "2026-05-26",
+      "eur": 9.83,
+      "usd": 11.0,
+      "url": "https://www.ebay.com/itm/287351621590",
+      "title": "Puzzle Nintendo NES American Video Game Cartridge"
+     },
+     {
+      "date": "2026-05-08",
+      "eur": 13.39,
+      "usd": 14.99,
+      "url": "https://www.ebay.com/itm/364972543387",
+      "title": "Puzzle Authentic Nintendo NES Game 3rd Party American Video Entertain. FREE SHIP"
+     }
+    ],
+    "pct": 1.631
+   },
+   "basis": "last5",
+   "pc_pct": 1.715
+  },
+  {
+   "key": "ebay:880018191823",
+   "marketplace": "ebay",
+   "id": "880018191823",
+   "title": "NES Nintendo - Friday the 13th",
+   "url": "https://www.ebay.com/itm/880018191823",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 1.0,
+    "currency": "USD",
+    "type": "auction"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 21.09,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Friday the 13th",
+   "pc_url": "https://www.pricecharting.com/game/nes/friday-the-13th",
+   "pc_usd": {
+    "loose": 17.14,
+    "cib": 131.49,
+    "new": 507.11,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 0.89,
+    "buy_now": null,
+    "shipping": 18.84,
+    "total": 19.73,
+    "pc_loose": 15.31,
+    "pc_cib": 117.45,
+    "import": null,
+    "pc_new": 452.98
+   },
+   "verdict": "Fair",
+   "pct": 0.194,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "auction: verdict at current bid, will likely rise",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 1.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "auction",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-15T12:31:28+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/friday-the-13th",
+    "avg_usd": 18.5,
+    "avg_eur": 16.52,
+    "from": "2026-10-11",
+    "to": "2026-10-14",
+    "sales": [
+     {
+      "date": "2026-10-14",
+      "eur": 10.72,
+      "usd": 12.0,
+      "url": "https://www.ebay.nl/itm/227386892011",
+      "title": "Friday the 13th (Nintendo Entertainment System, 1989) Tested Working"
+     },
+     {
+      "date": "2026-10-13",
+      "eur": 17.91,
+      "usd": 20.05,
+      "url": "https://www.ebay.nl/itm/147460221284",
+      "title": "Friday the 13th (NES, 1989) CART ONLY"
+     },
+     {
+      "date": "2026-10-13",
+      "eur": 20.09,
+      "usd": 22.49,
+      "url": "https://www.ebay.nl/itm/820118766128",
+      "title": "Friday the 13th Video Game (Nintendo Entertainment System, NES) GAME ONLY"
+     },
+     {
+      "date": "2026-10-13",
+      "eur": 17.82,
+      "usd": 19.95,
+      "url": "https://www.ebay.nl/itm/880011113417",
+      "title": "Friday the 13th Authentic Nintendo NES Tested"
+     },
+     {
+      "date": "2026-10-11",
+      "eur": 16.07,
+      "usd": 17.99,
+      "url": "https://www.ebay.nl/itm/377553596447",
+      "title": "Friday the 13th (Nintendo NES, 1989) Authentic Cartridge, Tested & Working"
+     }
+    ],
+    "pct": 0.194
+   },
+   "basis": "last5",
+   "pc_pct": 0.289
+  },
+  {
+   "key": "ebay:128136209260",
+   "marketplace": "ebay",
+   "id": "128136209260",
+   "title": "Vintage 1985 Nintendo Zelda 2 The Adventure Of LINK Video Game",
+   "url": "https://www.ebay.com/itm/128136209260",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 24.99,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 17.63,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Zelda II The Adventure of Link",
+   "pc_url": "https://www.pricecharting.com/game/nes/zelda-ii-the-adventure-of-link",
+   "pc_usd": {
+    "loose": 25.47,
+    "cib": 99.5,
+    "new": 400.99,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 22.32,
+    "buy_now": null,
+    "shipping": 15.75,
+    "total": 38.07,
+    "pc_loose": 22.75,
+    "pc_cib": 88.88,
+    "import": null,
+    "pc_new": 358.19
+   },
+   "verdict": "Overpriced",
+   "pct": 0.354,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 24.99,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-08T22:09:35+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/zelda-ii-the-adventure-of-link",
+    "avg_usd": 31.48,
+    "avg_eur": 28.12,
+    "from": "2026-10-07",
+    "to": "2026-10-07",
+    "sales": [
+     {
+      "date": "2026-10-07",
+      "eur": 25.9,
+      "usd": 28.99,
+      "url": "https://www.ebay.nl/itm/398426286823",
+      "title": "Zelda II: The Adventure of Link (NES, 1988) Gold Cartridge Only"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 23.17,
+      "usd": 25.94,
+      "url": "https://www.ebay.nl/itm/297190818366",
+      "title": "Zelda II: The Adventure of Link - Gold Cart (Nintendo, NES) Cart Only - Tested"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 29.9,
+      "usd": 33.47,
+      "url": "https://www.ebay.nl/itm/298690595161",
+      "title": "Zelda II 2 - The Adventure Of Link - NES Nintendo Gold"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 31.26,
+      "usd": 34.99,
+      "url": "https://www.ebay.nl/itm/237101344997",
+      "title": "Zelda II: The Adventure of Link (NES, TESTED) Cartridge & Manual"
+     },
+     {
+      "date": "2026-10-07",
+      "eur": 30.36,
+      "usd": 33.99,
+      "url": "https://www.ebay.nl/itm/117420879978",
+      "title": "Zelda II Adventure of Link - Game & Instruction Booklet - NINTENDO NES - Tested"
+     }
+    ],
+    "pct": 0.354
+   },
+   "basis": "last5",
+   "pc_pct": 0.673
+  },
+  {
+   "key": "ebay:227568063708",
+   "marketplace": "ebay",
+   "id": "227568063708",
+   "title": "Super Sprint (Nintendo Entertainment System, 1989) Tested Cleaned Works Great",
+   "url": "https://www.ebay.com/itm/227568063708",
+   "image_url": null,
+   "thumb_url": null,
+   "location": "US",
+   "price": {
+    "amount": 5.0,
+    "currency": "USD",
+    "type": "fixed"
+   },
+   "buy_now": null,
+   "bids": null,
+   "end_time": null,
+   "shipping": {
+    "amount": 19.54,
+    "currency": "USD",
+    "note": "quoted to NL"
+   },
+   "region": "NTSC",
+   "condition": "loose",
+   "pc_title": "Super Sprint",
+   "pc_url": "https://www.pricecharting.com/game/nes/super-sprint",
+   "pc_usd": {
+    "loose": 6.5,
+    "cib": 30.0,
+    "new": 73.44,
+    "as_of": "2026-10-15T12:20:20+02:00"
+   },
+   "eur": {
+    "price": 4.47,
+    "buy_now": null,
+    "shipping": 17.45,
+    "total": 21.92,
+    "pc_loose": 5.81,
+    "pc_cib": 26.8,
+    "import": null,
+    "pc_new": 65.6
+   },
+   "verdict": "Overpriced",
+   "pct": 2.893,
+   "notes": [
+    "assumed loose: no box/manual mentioned",
+    "US/CA import: ~21% VAT + handling fee may apply"
+   ],
+   "first_seen": "2026-10-15T12:44:11+02:00",
+   "last_seen": "2026-10-15T12:44:56+02:00",
+   "status": "active",
+   "price_history": [
+    {
+     "t": "2026-10-15T12:44:11+02:00",
+     "amount": 5.0,
+     "currency": "USD"
+    }
+   ],
+   "promoted": null,
+   "condition_label": null,
+   "img": null,
+   "ask_shipping": false,
+   "seller_country": null,
+   "sale_type": "buy_now",
+   "also_buy_now": false,
+   "sales5": {
+    "bucket": "used",
+    "label": "loose",
+    "n": 5,
+    "fetched_at": "2026-10-10T23:35:10+02:00",
+    "pc_url": "https://www.pricecharting.com/game/nes/super-sprint",
+    "avg_usd": 6.3,
+    "avg_eur": 5.63,
+    "from": "2026-08-12",
+    "to": "2026-09-18",
+    "sales": [
+     {
+      "date": "2026-09-18",
+      "eur": 4.47,
+      "usd": 5.0,
+      "url": "https://www.ebay.com/itm/178476605127",
+      "title": "Super Sprint (Nintendo Entertainment System, 1989) NES Game Tengen Authentic"
+     },
+     {
+      "date": "2026-09-17",
+      "eur": 6.28,
+      "usd": 7.03,
+      "url": "https://www.ebay.com/itm/407183224855",
+      "title": "Super Sprint - Nintendo Entertainment System Nes - Game Cartridge Only"
+     },
+     {
+      "date": "2026-08-20",
+      "eur": 6.25,
+      "usd": 7.0,
+      "url": "https://www.ebay.com/itm/168609453769",
+      "title": "Super Sprint (NES) Nintendo TESTED AND WORKING VGC"
+     },
+     {
+      "date": "2026-08-14",
+      "eur": 4.46,
+      "usd": 4.99,
+      "url": "https://www.ebay.com/itm/398263691668",
+      "title": "Super Sprint (Nintendo Entertainment System NES, 1989) - Authentic - Tested"
+     },
+     {
+      "date": "2026-08-12",
+      "eur": 6.67,
+      "usd": 7.47,
+      "url": "https://www.ebay.com/itm/298579364999",
+      "title": "Super Sprint - Tengen NES Nintendo Game"
+     }
+    ],
+    "pct": 2.893
+   },
+   "basis": "last5",
+   "pc_pct": 2.773
+  },
   {
    "key": "marktplaats:m2453923995",
    "marketplace": "marktplaats",
