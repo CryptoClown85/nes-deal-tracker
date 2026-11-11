@@ -2,10 +2,10 @@
  "valued": "2026-10-09",
  "fx_usd_per_eur": 1.1206,
  "method": {
-  "sales_used": 725,
-  "sales_excluded": 98,
-  "outliers_dropped": 43,
-  "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026",
+  "sales_used": 756,
+  "sales_excluded": 102,
+  "outliers_dropped": 45,
+  "source": "PriceCharting PAL NES sold listings (eBay), fetched 9 Oct 2026; Donkey Kong 3, Bubble Bobble and Mach Rider fetched 11 Nov 2026",
   "window": "past 12 months; 24–36 months if fewer than 5 sales",
   "good": "70th percentile of the sales when there are ≥6, otherwise the median",
   "very_good": "85th percentile of the sales (≥6, window extended to 24–36 months if needed), capped at the highest sale"
@@ -97,6 +97,19 @@
    "few": false,
    "basis": "median & P70 of 9 sales (12m)",
    "pc_url": "https://www.pricecharting.com/game/pal-nes/blue-shadow"
+  },
+  "bubble-bobble": {
+   "condition": "CIB",
+   "careful": 66,
+   "good": 81,
+   "pc": 74,
+   "n": 15,
+   "window": "12m",
+   "from": "2025-11-25",
+   "to": "2026-10-30",
+   "few": false,
+   "basis": "median & P70 of 15 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/bubble-bobble"
   },
   "castlevania": {
    "condition": "CIB",
@@ -200,6 +213,19 @@
     "from": "2026-06-24",
     "to": "2026-09-27"
    }
+  },
+  "donkey-kong-3": {
+   "condition": "CIB",
+   "careful": 174,
+   "good": 203,
+   "pc": 166,
+   "n": 7,
+   "window": "24m",
+   "from": "2024-11-29",
+   "to": "2026-03-23",
+   "few": false,
+   "basis": "median & P70 of 7 sales (24m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/donkey-kong-3"
   },
   "double-dragon": {
    "condition": "CIB",
@@ -374,6 +400,19 @@
    "few": true,
    "basis": "median of 5 sales (36m); too few for a P70 uplift",
    "pc_url": "https://www.pricecharting.com/game/pal-nes/kung-fu"
+  },
+  "mach-rider": {
+   "condition": "CIB",
+   "careful": 45,
+   "good": 54,
+   "pc": 45,
+   "n": 9,
+   "window": "12m",
+   "from": "2025-11-16",
+   "to": "2026-08-05",
+   "few": false,
+   "basis": "median & P70 of 9 sales (12m)",
+   "pc_url": "https://www.pricecharting.com/game/pal-nes/mach-rider"
   },
   "mario-bros": {
    "condition": "CIB",

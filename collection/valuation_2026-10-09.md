@@ -1,15 +1,15 @@
 # NES collection valuation – 9 Oct 2026
 
-Owner: w van der bellen · 50 games (49 PAL CIB + Kung Fu factory sealed) + 2 graded extras. Prices in EUR at the tracker's FX rate for 9 Oct 2026 (1 EUR = 1.1206 USD).
-Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL, CIB). Update 10 Oct 2026: The Lion King is the German version (Der König der Löwen, PAL-B NOE), valued from German-version sales only.
+Owner: w van der bellen · 53 games (52 CIB + Kung Fu factory sealed) + 2 graded extras. Prices in EUR at the tracker's FX rate for 9 Oct 2026 (1 EUR = 1.1206 USD).
+Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL, CIB). Update 10 Oct 2026: The Lion King is the German version (Der König der Löwen, PAL-B NOE), valued from German-version sales only. Update 11 Nov 2026: + Donkey Kong 3, + Bubble Bobble, + Mach Rider (all PAL-B CIB), valued the same way from their PriceCharting PAL sold listings (windows as of 11 Nov 2026).
 
 ## Totals
 
 | | Conservative (median) | Good condition (P70) | PriceCharting |
 |---|---:|---:|---:|
-| Games (50) | €4.474 | €5.765 | €4.779 |
+| Games (53) | €5.109 | €6.562 | €5.312 |
 | Graded extras (2) | €487 | €647 | €461 (gold cart not priced by PC) |
-| **Overall** | **€4.961** | **€6.412** | **€5.240** |
+| **Overall** | **€5.596** | **€7.209** | **€5.773** |
 
 ## Method
 
@@ -17,7 +17,6 @@ Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL,
 - Window: last 12 months; if fewer than 5 clean sales, extended to 24, then 36 months. Fewer than 3 → PriceCharting value used and flagged.
 - Excluded: graded/slabbed, sealed (in CIB tables), consoles/bundles/lots, repros/prototypes, incomplete copies, NTSC/Famicom/GBA Classics, Game & Watch handhelds, other titles in the series, then anything outside ⅓×–3× the window median.
 - Conservative = median. Good condition = 70th percentile when there are ≥6 sales, otherwise the median (no invented uplift).
-- Very good condition (owner's grade; Castlevania, Castlevania II, Castlevania III): 85th percentile of the same sales (≥6 sales, window extended to 24–36 months if needed), capped at the highest sale.
 - Tracker asking prices are listed as an upper reference only. eBay sold search needs a login and Catawiki hides closed prices, so neither added data beyond PriceCharting's eBay record.
 
 ## Top 10 by good-condition value
@@ -28,12 +27,12 @@ Update 9 Oct 2026 23:50: Punch-Out!! corrected to Mike Tyson's Punch-Out!! (PAL,
 | Mega Man | €414 | €573 | €324 | 6 (12m, 2026-03-10 → 2026-04-29) | €152–€853 | ok |
 | Kung Fu (sealed) | €357 | €357 | €295 | 5 (36m, 2024-07-16 → 2026-05-02) | €168–€487 | thin |
 | Castlevania | €205 | €267 | €178 | 10 (12m, 2025-10-21 → 2026-07-20) | €85–€270 | good |
+| Balloon Fight | €170 | €240 | €201 | 26 (12m, 2025-11-05 → 2026-09-11) | €62–€425 | good |
+| Donkey Kong | €200 | €225 | €187 | 13 (12m, 2025-12-29 → 2026-09-27) | €80–€330 | good |
 | Batman: Return of the Joker | €174 | €216 | €204 | 6 (12m, 2026-01-23 → 2026-07-14) | €133–€357 | ok |
+| Ice Climber | €189 | €210 | €184 | 24 (12m, 2025-11-20 → 2026-08-15) | €70–€495 | good |
+| Donkey Kong 3 | €174 | €203 | €166 | 7 (24m, 2024-11-29 → 2026-03-23) | €67–€368 | ok |
 | Chip 'n Dale: Rescue Rangers 2 | €159 | €183 | €194 | 10 (24m, 2024-10-31 → 2026-01-14) | €61–€312 | ok |
-| Mike Tyson's Punch-Out!! | €182 | €182 | €116 | 5 (12m, 2026-02-14 → 2026-05-26) | €94–€208 | thin |
-| Castlevania II: Simon's Quest | €98 | €173 | €77 | 22 (12m, 2025-10-21 → 2026-07-05) | €37–€209 | good |
-| Mario Bros. | €87 | €155 | €176 | 6 (12m, 2025-12-06 → 2026-04-16) | €64–€285 | ok |
-| Probotector | €105 | €150 | €116 | 21 (12m, 2025-10-25 → 2026-09-07) | €36–€279 | good |
 
 ## Graded extras
 
@@ -49,13 +48,13 @@ No WATA 7.0 sale of a 5-screw gold cart found. Nearest graded-cart sales of the 
 
 ## Thin or odd data
 
-- Few sales (no uplift applied): Double Dragon (0, none), Gyromite (5, 12m), Ice Climber (5, 12m), Kung Fu (5, 36m), Mike Tyson's Punch-Out!! (5, 12m), The Lion King (4, 36m).
+- Few sales (no uplift applied): Double Dragon (0, none), Gyromite (5, 12m), Kung Fu (5, 36m), Mike Tyson's Punch-Out!! (5, 12m), The Lion King (4, 36m).
 - **Double Dragon**: no PAL CIB sale after 2019 on PriceCharting; its PriceCharting value is used.
 - **Mike Tyson's Punch-Out!!**: 5 sales in 12 months (€94–€208, median €182); the older 2025 sales were mostly €114–€119, so the 12-month median may run high.
 - **The Lion King (Der König der Löwen, PAL-B NOE)**: PriceCharting has no separate German product (only Le Roi Lion), so only the German-version sales on its PAL The Lion King page were used (titled König der Löwen / NOE / German): 4 in 36 months (€51 Aug 2025, €48 Mar 2025, €29 and €45 May 2024), median €46. English PAL-A (UKV) and SCN copies sell for far more (€200+), which is why the mixed PriceCharting value (€126) is much higher; that €126 is shown for reference only.
 - Wide spreads (P70 rests on 1–2 sales): Mega Man, Mario Bros., Castlevania III, Batman: Return of the Joker.
 - Donkey Kong, Mario Bros., Popeye: PriceCharting's PAL CIB tables include Game & Watch handheld sales; excluded here.
-- PAL-A vs PAL-B: most sales don't state the region (437 unstated, 121 PAL-B, 80 PAL-A); differences are game-specific and too thin for a blanket adjustment (per-game medians in the CSV).
+- PAL-A vs PAL-B: most sales don't state the region (548 unstated, 125 PAL-B, 83 PAL-A); differences are game-specific and too thin for a blanket adjustment (per-game medians in the CSV).
 
 ## Full table
 
